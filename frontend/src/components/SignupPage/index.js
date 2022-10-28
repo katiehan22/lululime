@@ -1,19 +1,19 @@
-import LoginForm from "../LoginForm";
+import SignupForm from "../SignupForm";
 import WelcomeSide from "../WelcomeSide";
-import "./LoginPage.css";
+import "./SignupPage.css";
 
-const LoginPage = () => {
+const SignupPage = () => {
   return (
-    <div className="login-page">
+    <div className='signup-page'>
       <div className="welcome-top">
         <h1>Wellbeing made easier. We've got you.</h1>
       </div>
       <div className="welcome-bottom">
         <WelcomeSide />
-        <LoginForm />
+        <SignupForm />
       </div>
     </div>
   )
 }
 
-export default LoginPage;
+export default SignupPage;

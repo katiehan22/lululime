@@ -1,13 +1,13 @@
-.login-form-container {
+.signup-form-container {
   width: 50%;
 }
 
-.login-form-container h1 {
+.signup-form-container h1 {
   font-weight: bold;
   font-size: 20px;
 }
 
-.login-form-container input {
+.signup-form-container input {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
@@ -15,7 +15,7 @@
   height: 35px;
 }
 
-#login-button {
+#signup-button {
   width: 50%;
   height: 35px;
   border-radius: 5px;
@@ -23,4 +23,10 @@
   background-color: #d31334;
   color: white;
   text-align: center;
+}
+
+#login-link {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 20px;
 }

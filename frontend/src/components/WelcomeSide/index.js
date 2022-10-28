@@ -4,7 +4,7 @@ const WelcomeSide = () => {
   return (
     <>
       <div className="welcome-side">
-        <h2>Discover lululemon Membership</h2>
+        <h2>Discover lululime Membership</h2>
         <hr />
         <p>One account. Tons of benefits. Endless possibilities.</p>
         <br />
