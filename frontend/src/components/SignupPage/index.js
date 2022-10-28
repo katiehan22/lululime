@@ -10,6 +10,7 @@ const SignupPage = () => {
       </div>
       <div className="welcome-bottom">
         <WelcomeSide />
+        <div class="vl"></div>
         <SignupForm />
       </div>
     </div>

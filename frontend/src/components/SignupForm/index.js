@@ -39,7 +39,7 @@ const SignupForm = () => {
     <>
       <div className="signup-form-container">
         <h1>Create a member account</h1>
-        <hr />
+        <hr className="red-break"/>
         <form className="signup-form">
           <ul>
             {errors.map(error => <li key={error}>{error}</li>)}

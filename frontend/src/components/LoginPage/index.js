@@ -10,6 +10,7 @@ const LoginPage = () => {
       </div>
       <div className="welcome-bottom">
         <WelcomeSide />
+        <div class="vl"></div>
         <LoginForm />
       </div>
     </div>

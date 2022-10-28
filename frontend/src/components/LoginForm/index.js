@@ -41,7 +41,7 @@ const LoginForm = () => {
     <>
       <div className='login-form-container'>
         <h1>Sign in to your member account</h1>
-        <hr />
+        <hr className="red-break"/>
         <form className="login-form">
           <ul>
             {errors.map(error => <li key={error}>{error}</li>)}
@@ -61,6 +61,7 @@ const LoginForm = () => {
           <br />
         </form>
         <button onClick={handleDemoLogin} id="demo-login-button">SIGN IN WITH DEMO ACCOUNT</button>
+        <br />
         <br />
         <hr />
         <Link to="/signup" id="signup-link">Create a member account</Link>
