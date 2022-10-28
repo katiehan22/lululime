@@ -1,0 +1,21 @@
+.welcome-side {
+  width: 50%;
+}
+
+.welcome-side h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.welcome-side li {
+  margin-top: 10px;
+}
+
+.welcome-side i {
+  width: 30px;
+}
+
+.welcome-side hr {
+  border-top: 3px solid #d31334;
+  width: 50%;
+}
