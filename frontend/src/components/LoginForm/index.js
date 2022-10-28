@@ -31,6 +31,10 @@ const LoginForm = () => {
     // setPassword('');
   }
 
+  const handleDemoLogin = (e) => {
+    return dispatch(sessionActions.login({email: "demo@user.io", password: "password"}))
+  }
+
   if (currentUser) return <Redirect to="/" />;
 
   return (
@@ -54,7 +58,9 @@ const LoginForm = () => {
           <br />
           <button onClick={handleLogin} id="login-button">SIGN IN TO YOUR MEMBER ACCOUNT</button>
           <br />
+          <br />
         </form>
+        <button onClick={handleDemoLogin} id="demo-login-button">SIGN IN WITH DEMO ACCOUNT</button>
         <br />
         <hr />
         <Link to="/signup" id="signup-link">Create a member account</Link>

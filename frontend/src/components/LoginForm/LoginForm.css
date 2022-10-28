@@ -28,5 +28,15 @@
 #signup-link {
   text-decoration: underline;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+#demo-login-button {
+  width: 50%;
+  height: 35px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(165, 165, 165);
+  color: white;
+  text-align: center;
 }
