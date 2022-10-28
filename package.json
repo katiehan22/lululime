@@ -1,9 +1,9 @@
 {
-  "name": "authenticate-me",
+  "name": "lululime",
   "version": "1.0.0",
-  "description": "A basic authentication app",
+  "description": "lululime App Academy full stack",
   "engines": {
-    "node": "16.x"
+    "node": "16.16.0"
   },
   "directories": {
     "lib": "lib"
@@ -13,5 +13,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiehan22/lululime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/katiehan22/lululime/issues"
+  },
+  "homepage": "https://github.com/katiehan22/lululime#readme"
 }

@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: lululime_production
-  username: lululime
-  password: <%= ENV["LULULIME_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
