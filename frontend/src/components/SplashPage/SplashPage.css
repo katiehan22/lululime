@@ -36,3 +36,43 @@
   text-decoration: underline;
   text-decoration-color: #d31334;
 }
+
+.splash-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.splash-feature-1, .splash-feature-2 {
+  width: 49%;
+}
+
+.splash-feature-1-header, .splash-feature-2-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.splash-feature-1-subheader, .splash-feature-2-subheader {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.splash-feature-1-button, .splash-feature-2-button {
+  margin-top: 15px;
+  height: 25px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.splash-feature-1-button:hover, .splash-feature-2-button:hover {
+  color: white;
+  background-color: black;
+}
+
+.product-carousel-placeholder {
+  height: 100px;
+}

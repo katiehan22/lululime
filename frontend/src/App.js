@@ -5,6 +5,7 @@ import UserNavigation from './components/UserNavigation';
 import MainNavigation from './components/MainNavigation';
 import SignupPage from './components/SignupPage';
 import SplashPage from './components/SplashPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" component={SignupPage} />
         <Route path="/" component={SplashPage} />
       </Switch>
+      <Footer />
     </>
   );
 }

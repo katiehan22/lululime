@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import "./SplashMembership.css";
 import { useHistory } from 'react-router-dom';
 
-
 const SplashMembership = () => {
   const sessionUser = useSelector(state => state.session.user);
   const history = useHistory();
@@ -22,7 +21,7 @@ const SplashMembership = () => {
 
   if(sessionUser) {
     headerText = "Welcome to lululime Membership.";
-    subheaderText = "Do more of what you love. We've got you";
+    subheaderText = "Do more of what you love. We've got you.";
     buttonText = (
       <button onClick={handleLearnMore} className="membership-button">LEARN MORE</button>
     )
