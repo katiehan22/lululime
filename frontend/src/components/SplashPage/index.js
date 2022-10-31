@@ -42,7 +42,7 @@ const SplashPage = () => {
         <div className="splash-features">
           <div className="splash-feature-1">
             <div className="splash-feature-1-img">
-              <img src={featureImg1}/>
+              <img src={featureImg1} alt=""/>
             </div>
             <div className="splash-feature-1-header">
               <h2>Beakout performer: fleece.</h2>
@@ -54,7 +54,7 @@ const SplashPage = () => {
           </div>
           <div className="splash-feature-2">
             <div className="splash-feature-2-img">
-              <img src={featureImg2} />
+              <img src={featureImg2} alt=""/>
             </div>
             <div className="splash-feature-2-header">
               <h2>Icon material.</h2>

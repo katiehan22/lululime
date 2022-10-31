@@ -25,6 +25,10 @@
   text-align: center;
 }
 
+#signup-button:hover {
+  background-color: #b0102b;
+}
+
 #login-link {
   text-decoration: underline;
   font-weight: bold;

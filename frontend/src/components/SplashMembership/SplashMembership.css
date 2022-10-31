@@ -30,3 +30,7 @@
   color: white;
   text-align: center;
 }
+
+.membership-button:hover {
+  background-color: #b0102b;
+}
