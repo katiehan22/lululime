@@ -4,6 +4,7 @@ import React from 'react';
 import UserNavigation from './components/UserNavigation';
 import MainNavigation from './components/MainNavigation';
 import SignupPage from './components/SignupPage';
+import SplashPage from './components/SplashPage';
 
 function App() {
   return (
@@ -11,12 +12,9 @@ function App() {
       <UserNavigation />
       <MainNavigation />
       <Switch>
-        <Route path="/login">
-          <LoginPage />
-        </Route>
-        <Route path="/signup">
-          <SignupPage />
-        </Route>
+        <Route path="/login" component={LoginPage} />
+        <Route path="/signup" component={SignupPage} />
+        <Route path="/" component={SplashPage} />
       </Switch>
     </>
   );

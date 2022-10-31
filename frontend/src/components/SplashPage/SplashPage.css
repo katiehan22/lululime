@@ -1,0 +1,38 @@
+.splash-page {
+  width: 100%;
+}
+
+.splash-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.splash-img {
+  width: 90%;
+}
+
+.splash-links {
+  position: absolute;
+  background-color: #fafafa;
+  width: 250px;
+  height: 280px;
+  left: 40px;
+}
+
+#splash-header {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.splash-li {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.splash-li:hover {
+  text-decoration: underline;
+  text-decoration-color: #d31334;
+}
