@@ -1,16 +1,27 @@
 .main-nav-container {
   background-color: white;
   height: 75px;
-  width: 100%;
+  /* width: 100%; */
+  width: 100vw;
+  margin-left: -5vh;
   display: flex;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 14px;
   align-items: center;
+}
+
+#womens-li, #mens-li, #accessories-li {
+  font-weight: bold;
 }
 
 #logo-img {
   width: 40px;
   margin-right: 10px;
+  margin-left: 50px;
+}
+
+.main-nav-li {
+  display: flex;
 }
 
 .main-nav {
@@ -22,7 +33,7 @@
   position: relative;
   margin-left: 15px;
   margin-right: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
 }
 
 .main-nav li:after {
@@ -36,9 +47,38 @@
   background-color: #d31334;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+  /* z-index: 10; */
 }
 
 .main-nav li:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.womens-dropdown {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  /* margin-left: -5vw; */
+  z-index: 1;
+  background-color: white;
+  padding-top: 30px;
+  top: 17px; /* positions absolute */
+}
+
+#womens-li:hover .womens-dropdown {
+  display: block;
+}
+
+.womens-list li {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.category-li {
+  font-size: 12px;
+}
+
+.subcategory-li {
+  font-weight: normal;
 }

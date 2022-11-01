@@ -12,10 +12,20 @@ function MainNavigation() {
         </NavLink>
       </div>
       <nav className="main-nav">
-        <ul>
-          <li><NavLink to="#">WOMEN</NavLink></li>
-          <li><NavLink to="#">MEN</NavLink></li>
-          <li><NavLink to="#">ACCESSORIES</NavLink></li>
+        <ul className='main-nav-li'>
+          <li id="womens-li"><NavLink to="#">WOMEN</NavLink>
+            <div className='womens-dropdown'>
+              <ul className='womens-list'>
+                <li className='category-li'><NavLink to="#">WOMEN'S CLOTHES</NavLink></li>
+                <li className='subcategory-li'><NavLink to="#">Leggings</NavLink></li>
+                <li className='subcategory-li'><NavLink to="#">Hoodies & Sweatshirts</NavLink></li>
+                <li className='subcategory-li'><NavLink to="#">Joggers</NavLink></li>
+                <li className='subcategory-li'><NavLink to="#">Shirts</NavLink></li>
+              </ul>
+            </div>
+          </li>
+          <li id="mens-li"><NavLink to="#">MEN</NavLink></li>
+          <li id="accessories-li"><NavLink to="#">ACCESSORIES</NavLink></li>
         </ul>
       </nav>
     </div>
