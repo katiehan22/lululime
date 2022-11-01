@@ -50,7 +50,7 @@ const SplashPage = () => {
             <div className="splash-feature-1-subheader">
               <p>Just when you thought the Scuba Oversized Funnel-Neck couldn’t get any better—may we introduce: the new, longer-length fleece edition.</p>
             </div>
-            <button className="splash-feature-1-button" onClick={handleFeature1}>SHOP HOODIES</button>
+            <button className="splash-feature-1-button" onClick={handleFeature1}>SHOP HOODIES & SWEATSHIRTS</button>
           </div>
           <div className="splash-feature-2">
             <div className="splash-feature-2-img">

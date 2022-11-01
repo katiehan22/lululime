@@ -6,6 +6,7 @@ import MainNavigation from './components/MainNavigation';
 import SignupPage from './components/SignupPage';
 import SplashPage from './components/SplashPage';
 import Footer from './components/Footer';
+import ProductIndex from './components/ProductIndex';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Switch>
         <Route path="/login" component={LoginPage} />
         <Route path="/signup" component={SignupPage} />
+        <Route path="/products/:category/:subcategory" component={ProductIndex}/>
+        <Route path="/products/:category" component={ProductIndex} />
         <Route path="/" component={SplashPage} />
       </Switch>
       {/* <Footer /> */}
