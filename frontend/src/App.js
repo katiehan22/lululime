@@ -19,7 +19,7 @@ function App() {
         <Route path="/signup" component={SignupPage} />
         <Route path="/products/:category/:subcategory" component={ProductIndex}/>
         <Route path="/products/:category" component={ProductIndex} />
-        <Route path="/products/:productId" component={ProductDetailPage} />
+        <Route path="/productdetail/:productId" component={ProductDetailPage} />
         <Route path="/" component={SplashPage} />
       </Switch>
       {/* <Footer /> */}

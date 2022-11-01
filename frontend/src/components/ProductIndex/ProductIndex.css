@@ -1,0 +1,10 @@
+.product-index-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-index-item-container {
+  border: 1px solid black;
+  width: 33%;
+}

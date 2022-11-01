@@ -3,9 +3,11 @@ import "./ProductIndexItem.css";
 const ProductIndexItem = ({product}) => {
   return (
     <>
-      <li>{product.name}</li>
-      <li>{product.price}</li>
-      <li>{product.colours}</li>
+      <div className="product-index-item-container">
+        {product.name}
+        {product.price}
+        {product.colours}
+      </div>
     </>
   )
 }

@@ -10,12 +10,12 @@ const SplashPage = () => {
 
   const handleFeature1 = (e) => {
     e.preventDefault();
-    history.push('/#');
+    history.push('/products/womens/hoodies');
   }
 
   const handleFeature2 = (e) => {
     e.preventDefault();
-    history.push('/#');
+    history.push('/products/womens/joggers');
   }
 
   return (
@@ -29,9 +29,9 @@ const SplashPage = () => {
           <div className="splash-links">
             <h2 id="splash-header">lululime</h2>
             <ul>
-              <li className="splash-li"><NavLink to="#">All Women's</NavLink></li>
-              <li className="splash-li"><NavLink to="#">All Men's</NavLink></li>
-              <li className="splash-li"><NavLink to="#">All Accessories</NavLink></li>
+              <li className="splash-li"><NavLink to="/products/womens">All Women's</NavLink></li>
+              <li className="splash-li"><NavLink to="/products/mens">All Men's</NavLink></li>
+              <li className="splash-li"><NavLink to="/products/accessories">All Accessories</NavLink></li>
             </ul>
           </div>
         </div>
