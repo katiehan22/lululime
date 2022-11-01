@@ -55,11 +55,12 @@
   transform-origin: bottom left;
 }
 
-.womens-dropdown {
+.womens-dropdown, .mens-dropdown, .accessories-dropdown {
   display: none;
   position: absolute;
   width: 100vw;
   /* margin-left: -5vw; */
+  /* width: 200px; */
   z-index: 1;
   background-color: white;
   padding-top: 30px;
@@ -70,7 +71,17 @@
   display: block;
 }
 
-.womens-list li {
+#mens-li:hover .mens-dropdown {
+  display: block;
+}
+
+#accessories-li:hover .accessories-dropdown {
+  display: block;
+}
+
+.womens-list li,
+.mens-list li,
+.accessories-list li {
   display: block;
   margin-bottom: 15px;
 }
