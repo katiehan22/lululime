@@ -36,9 +36,9 @@ export const fetchProduct = (productId) => async dispatch => {
 
 export default function productsReducer(state={}, action) {
   switch (action.type) {
-    case receiveProducts:
-      return action.products;
-    case receiveProduct:
+    case RECEIVE_PRODUCTS:
+      return {...action.products};
+    case RECEIVE_PRODUCT:
       return { ...state, [action.product.id]: action.product }
     default:
       return state;

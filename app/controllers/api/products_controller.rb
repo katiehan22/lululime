@@ -1,5 +1,5 @@
 class Api::ProductsController < ApplicationController
-  def index 
+  def index
     case params[:category]
       when "womens"
         case params[:subcategory]
@@ -37,7 +37,7 @@ class Api::ProductsController < ApplicationController
             @products ||= Product.where(category: "accessories", subcategory: "backpacks")
         end
     end
-    
+  
     render :index
   end
 

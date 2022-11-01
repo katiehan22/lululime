@@ -7,6 +7,7 @@ import SignupPage from './components/SignupPage';
 import SplashPage from './components/SplashPage';
 import Footer from './components/Footer';
 import ProductIndex from './components/ProductIndex';
+import ProductDetailsPage from './components/ProductDetailsPage';
 
 function App() {
   return (
@@ -14,11 +15,12 @@ function App() {
       <UserNavigation />
       <MainNavigation />
       <Switch>
-        <Route path="/login" component={LoginPage} />
-        <Route path="/signup" component={SignupPage} />
-        <Route path="/products/:category/:subcategory" component={ProductIndex}/>
-        <Route path="/products/:category" component={ProductIndex} />
-        <Route path="/" component={SplashPage} />
+        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/signup" component={SignupPage} />
+        <Route exact path="/products/:category/:subcategory" component={ProductIndex}/>
+        <Route exact path="/products/:category" component={ProductIndex} />
+        {/* <Route exact path="/products/:productId" component={ProductDetailsPage} /> */}
+        <Route exact path="/" component={SplashPage} />
       </Switch>
       {/* <Footer /> */}
     </>
