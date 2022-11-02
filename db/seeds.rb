@@ -99,7 +99,7 @@ ApplicationRecord.transaction do
     subcategory: "hoodies",
     details: ["Designed for On the Move", "Naturally Breathable, Cotton-Blend Fleece Fabric", "Oversized Fit, Waist Length"],
     description: "With an oversized fit and the soft, cozy fabric you love, this new half-zip Scuba silhouette keeps your post-practice comfort at peak levels.",
-    colours: ["Powder Blue", "Wasabi", "Pomegranate", "Black"],
+    colours: ["Electric Turquoise", "Wasabi", "Pomegranate", "Black"],
     sizes: ["XS/S", "M/L", "XL/XXL"], 
     featured_product: true
   })
@@ -379,7 +379,7 @@ ApplicationRecord.transaction do
     subcategory: "hoodies",
     details: ["Designed for Training", "Sweat-Wicking Fabric", "Classic Fit"],
     description: "Go ahead, sweat. This hoodie, powered by our anti-stink technology, won't cling and feels good against sweaty skin.",
-    colours: ["True Navy", "Black", "Natural Ivory", ""],
+    colours: ["True Navy", "Black", "Natural Ivory"],
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
