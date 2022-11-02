@@ -1,7 +1,9 @@
 .product-index-item-container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 23%;
   cursor: pointer;
+  margin-left: 20px;
+  margin-top: 40px;
 }
 
 .product-index-img {
