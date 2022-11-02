@@ -157,6 +157,10 @@ const ProductDetailForm = ({product}) => {
             <p>{product.sizes[10]}</p>
           </button>
         </div>
+
+        <div className="add-to-bag-container">
+          <button id="add-to-bag-button">ADD TO BAG</button>
+        </div>
       </div>
     </>
   )

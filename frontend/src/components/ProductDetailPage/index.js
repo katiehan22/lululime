@@ -39,7 +39,22 @@ const ProductDetailPage = () => {
               <div className="product-details-price">
                 <h3>${product.price} USD</h3>
               </div>
+
               <ProductDetailForm product={product}/>
+
+              <div className="reviews-anchor">
+                <i class="fa-regular fa-star"></i>
+                <Link to="#" className="reviews-anchor-link"><h2>&nbsp;Reviews</h2></Link>
+              </div>
+
+              <div className="details-container">
+                <h2>Details</h2>
+                <ul>
+                  <li><i class="fa-solid fa-person-running"></i>{product.details[0]}</li>
+                  <li><i class="fa-solid fa-cloud"></i>{product.details[1]}</li>
+                  <li><i class="fa-solid fa-arrows-up-to-line"></i>{product.details[2]}</li>
+                </ul>
+              </div>
             </div>
 
             <div className="product-details-recommended-top">
