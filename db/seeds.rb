@@ -1,11 +1,15 @@
+require 'open-uri';
+
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
   # Unnecessary if using `rails db:seed:replant`
   User.destroy_all
+  Product.destroy_all
 
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
   ApplicationRecord.connection.reset_pk_sequence!('users')
+  ApplicationRecord.connection.reset_pk_sequence!('products')
 
   puts "Creating users..."
   # Create one user with an easy to remember email, and password:
@@ -26,7 +30,7 @@ ApplicationRecord.transaction do
 
   # Womens leggings
   product1 = Product.create! ({
-    name: "lululemon Align High-Rise Pant 25\"",
+    name: "lululime Align High-Rise Pant 25\"",
     price: 98.00,
     category: "womens",
     subcategory: "leggings",
@@ -36,6 +40,8 @@ ApplicationRecord.transaction do
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: true
   })
+  product1.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_1.png"), filename: "align_black_1.png")
+  product1.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_2.png"), filename: "align_black_2.png")
 
   product2 = Product.create! ({
     name: "Wunder Train High-Rise Crop 23\"",
@@ -209,12 +215,12 @@ ApplicationRecord.transaction do
 
   # Womens shirts
   product16 = Product.create! ({
-    name: "lululemon Align™ Tank Top",
+    name: "lululime Align™ Tank Top",
     price: 68.00,
     category: "womens",
     subcategory: "shirts",
     details: ["Designed for Yoga", "Feels Buttery-Soft and Weightless, Nulu Fabric", "Light Support"],
-    description: "When feeling nothing is everything. The lululemon Align collection, powered by Nulu fabric, is so weightless and buttery soft, all you feel is your practice.",
+    description: "When feeling nothing is everything. The lululime Align collection, powered by Nulu fabric, is so weightless and buttery soft, all you feel is your practice.",
     colours: ["Poolside", "Green Foliage", "White", "Black"],
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: true

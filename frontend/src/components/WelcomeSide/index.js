@@ -14,7 +14,7 @@ const WelcomeSide = () => {
         <ul>
           <li><i class="fa-solid fa-bag-shopping"></i>Early Access to Product Drops</li>
           <li><i class="fa-solid fa-rotate-left"></i>Returns on Sale Items</li>
-          <li><i class="fa-solid fa-play"></i>Select lululemon Studio Content</li>
+          <li><i class="fa-solid fa-play"></i>Select lululime Studio Content</li>
           <li><i class="fa-solid fa-person"></i>Virtual Community Events</li>
           <li><i class="fa-solid fa-truck-fast"></i>Receipt-Free and Fast-Track Returns</li>
           <li><i class="fa-solid fa-scissors"></i>Free Hemming</li>

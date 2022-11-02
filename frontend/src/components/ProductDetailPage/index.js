@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { fetchProduct } from "../../store/products";
 import "./ProductDetailPage.css";
 import testImg from '../../assets/images/product-item-test.png';
+import ProductDetailForm from "../ProductDetailForm";
 
 const ProductDetailPage = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const ProductDetailPage = () => {
           <div className="product-details-top">
             <div className="product-details-img">
               <img src={testImg}/>
+              {/* <img src={product.photos[0]} /> */}
             </div>
 
             <div className="product-details-top-middle">
@@ -33,6 +35,7 @@ const ProductDetailPage = () => {
               <div className="product-details-price">
                 <h3>${product.price} USD</h3>
               </div>
+              <ProductDetailForm product={product}/>
             </div>
 
             <div className="product-details-recommended-top">

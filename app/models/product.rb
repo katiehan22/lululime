@@ -19,7 +19,6 @@ class Product < ApplicationRecord
   validates :name, :price, :category, :subcategory, :details, :description, :colours, :sizes, presence: true 
   validates :featured_product, inclusion: {in: [true, false]}
 
-  # has_one_attached :photo
   has_many_attached :photos
 
   #has many reviews and has many carts
