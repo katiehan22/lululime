@@ -36,7 +36,7 @@ ApplicationRecord.transaction do
     subcategory: "leggings",
     details: ["Designed for Yoga", "Feels Buttery-Soft and Weightless, Nulu Fabric", "High Rise, 25\" Length"],
     description: "Weightless flexibility and focus, for deepening your practice.",
-    colours: ["Icing Blue", "True Navy", "White", "Black"],
+    colours: ["Black", "Icing Blue", "True Navy", "White"],
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: true
   })

@@ -22,7 +22,7 @@ const ProductDetailPage = () => {
           <div className="product-details-top">
             <div className="product-details-img">
               <img src={testImg}/>
-              {/* <img src={product.photos[0]} /> */}
+              {/* <img src={product.photoURLs[0]} /> */}
             </div>
 
             <div className="product-details-top-middle">

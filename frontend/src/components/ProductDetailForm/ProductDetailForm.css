@@ -1,0 +1,52 @@
+.size-buttons-containter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.size-buttons-containter h2 {
+  width: 100%;
+}
+
+.size-button-unchecked {
+  border: 1px solid gray;
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.size-button-checked {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.colour-button-unchecked {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 5px;
+  outline: 2px solid rgb(205, 205, 205);
+}
+
+.colour-button-checked {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 5px;
+  outline: 2px solid black;
+  outline-offset: 3px;
+}
