@@ -16,8 +16,11 @@ const ProductIndex = () => {
 
   return (
     <>
-      <div className='product-index-container'>
-        {products?.map(product => <ProductIndexItem product={product} key={product.id}/>)}
+      <div className='product-index-page'>
+        {/* can add pov images here */}
+        <div className='product-index-container'>
+          {products?.map(product => <ProductIndexItem product={product} key={product.id}/>)}
+        </div>
       </div>
     </>
   )

@@ -1,0 +1,32 @@
+.product-index-item-container {
+  border: 1px solid black;
+  width: 23%;
+  cursor: pointer;
+}
+
+.product-index-img {
+  width: 100%;
+}
+
+.product-index-colours {
+  color: gray;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.product-index-lower-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.product-index-name {
+  width: 75%;
+  font-weight: bold;
+}
+
+.product-index-price {
+  width: 25%;
+  text-align: right;
+}
