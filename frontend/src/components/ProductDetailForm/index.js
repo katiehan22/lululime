@@ -1,7 +1,9 @@
 import "./ProductDetailForm.css";
 import { useEffect, useState } from "react"
+import {useDispatch} from 'react-redux'
 
 const ProductDetailForm = ({product}) => {
+  const dispatch = useDispatch();
 
   const COLOURCODES = {
     "Black": "#212121", 
@@ -37,6 +39,22 @@ const ProductDetailForm = ({product}) => {
     "Black": "colour-button-unchecked", "Icing Blue": "colour-button-unchecked", "True Navy": "colour-button-unchecked", "White": "colour-button-unchecked", "Water Drop": "colour-button-unchecked", "Dark Olive": "colour-button-unchecked", "Green Foliage": "colour-button-unchecked", "Dark Red": "colour-button-unchecked", "Electric Turquoise": "colour-button-unchecked", "Wasabi": "colour-button-unchecked", "Pomegranate": "colour-button-unchecked", "White Opal": "colour-button-unchecked", "Faint Lavender": "colour-button-unchecked", "Smoked Spruce": "colour-button-unchecked", "Heathered Core Ultra Light Grey": "colour-button-unchecked", "Carob Brown": "colour-button-unchecked", "Poolside": "colour-button-unchecked", "Roasted Brown": "colour-button-unchecked", "Graphite Grey": "colour-button-unchecked", "Red Merlot": "colour-button-unchecked", "Natural Ivory": "colour-button-unchecked", "Brier Rose": "colour-button-unchecked", "Burnt Caramel": "colour-button-unchecked"
   });
 
+  const [size, setSize] = useState({ "0": false, "2": false, "4": false, "6": false, "8": false, "10": false, "12": false, "14": false, "16": false, "18": false, "20": false, "XS/S": false, "S/M": false, "M/L": false, "L/XL": false, "XL/XXL": false, "XS": false, "S": false, "M": false, "L": false, "XL": false, "XXL": false, "XXXL": false, "ONE SIZE": false })
+
+  const [sizeDisplay, setSizeDisplay] = useState('');
+
+  const [sizeStyleClassName, setSizeStyleClassName] = useState({ "0": 'size-button-unchecked', "2": 'size-button-unchecked', "4": 'size-button-unchecked', "6": 'size-button-unchecked', "8": 'size-button-unchecked', "10": 'size-button-unchecked', "12": 'size-button-unchecked', "14": 'size-button-unchecked', "16": 'size-button-unchecked', "18": 'size-button-unchecked', "20": 'size-button-unchecked', "XS/S": 'size-button-unchecked', "S/M": 'size-button-unchecked', "M/L": 'size-button-unchecked', "L/XL": 'size-button-unchecked', "XL/XXL": 'size-button-unchecked', "XS": 'size-button-unchecked', "S": 'size-button-unchecked', "M": 'size-button-unchecked', "L": 'size-button-unchecked', "XL": 'size-button-unchecked', "XXL": 'size-button-unchecked', "XXXL": 'size-button-unchecked', "ONE SIZE": 'size-button-unchecked' });
+
+  const handleSize = (sizeSelection) => {
+    const sizeCopy = { "0": false, "2": false, "4": false, "6": false, "8": false, "10": false, "12": false, "14": false, "16": false, "18": false, "20": false, "XS/S": false, "S/M": false, "M/L": false, "L/XL": false, "XL/XXL": false, "XS": false, "S": false, "M": false, "L": false, "XL": false, "XXL": false, "XXXL": false, "ONE SIZE": false }
+
+    const sizeStyleCopy = { "0": 'size-button-unchecked', "2": 'size-button-unchecked', "4": 'size-button-unchecked', "6": 'size-button-unchecked', "8": 'size-button-unchecked', "10": 'size-button-unchecked', "12": 'size-button-unchecked', "14": 'size-button-unchecked', "16": 'size-button-unchecked', "18": 'size-button-unchecked', "20": 'size-button-unchecked', "XS/S": 'size-button-unchecked', "S/M": 'size-button-unchecked', "M/L": 'size-button-unchecked', "L/XL": 'size-button-unchecked', "XL/XXL": 'size-button-unchecked', "XS": 'size-button-unchecked', "S": 'size-button-unchecked', "M": 'size-button-unchecked', "L": 'size-button-unchecked', "XL": 'size-button-unchecked', "XXL": 'size-button-unchecked', "XXXL": 'size-button-unchecked', "ONE SIZE": 'size-button-unchecked' }
+
+    setSize({ ...sizeCopy, [sizeSelection]: true })
+    setSizeStyleClassName({ ...sizeStyleCopy, [sizeSelection]: 'size-button-checked' })
+    setSizeDisplay(sizeSelection);
+  }
+
   const handleColour = (colourSelection) => {
     const colourCopy = { "Black": false, "Icing Blue": false, "True Navy": false, "White": false, "Water Drop": false, "Dark Olive": false, "Green Foliage": false, "Dark Red": false, "Electric Turquoise": false, "Wasabi": false, "Pomegranate": false, "White Opal": false, "Faint Lavender": false, "Smoked Spruce": false, "Heathered Core Ultra Light Grey": false, "Carob Brown": false, "Poolside": false, "Roasted Brown": false, "Graphite Grey": false, "Red Merlot": false, "Natural Ivory": false, "Brier Rose": false, "Burnt Caramel": false };
 
@@ -49,26 +67,10 @@ const ProductDetailForm = ({product}) => {
 
   // set first color as checked by default 
   useEffect(() => {
-    const colourStyleClassNameCopy2 = { "Black": "colour-button-unchecked", "Icing Blue": "colour-button-unchecked", "True Navy": "colour-button-unchecked", "White": "colour-button-unchecked", "Water Drop": "colour-button-unchecked", "Dark Olive": "colour-button-unchecked", "Green Foliage": "colour-button-unchecked", "Dark Red": "colour-button-unchecked", "Electric Turquoise": "colour-button-unchecked", "Wasabi": "colour-button-unchecked", "Pomegranate": "colour-button-unchecked", "White Opal": "colour-button-unchecked", "Faint Lavender": "colour-button-unchecked", "Smoked Spruce": "colour-button-unchecked", "Heathered Core Ultra Light Grey": "colour-button-unchecked", "Carob Brown": "colour-button-unchecked", "Poolside": "colour-button-unchecked", "Roasted Brown": "colour-button-unchecked", "Graphite Grey": "colour-button-unchecked", "Red Merlot": "colour-button-unchecked", "Natural Ivory": "colour-button-unchecked", "Brier Rose": "colour-button-unchecked", "Burnt Caramel": "colour-button-unchecked" }
+    const colourStyleClassNameCopy2 = { "Black": "colour-button-unchecked", "Icing Blue": "colour-button-unchecked", "True Navy": "colour-button-unchecked", "White": "colour-button-unchecked", "Water Drop": "colour-button-unchecked", "Dark Olive": "colour-button-unchecked", "Green Foliage": "colour-button-unchecked", "Dark Red": "colour-button-unchecked", "Electric Turquoise": "colour-button-unchecked", "Wasabi": "colour-button-unchecked", "Pomegranate": "colour-button-unchecked", "White Opal": "colour-button-unchecked", "Faint Lavender": "colour-button-unchecked", "Smoked Spruce": "colour-button-unchecked", "Heathered Core Ultra Light Grey": "colour-button-unchecked", "Carob Brown": "colour-button-unchecked", "Poolside": "colour-button-unchecked", "Roasted Brown": "colour-button-unchecked", "Graphite Grey": "colour-button-unchecked", "Red Merlot": "colour-button-unchecked", "Natural Ivory": "colour-button-unchecked", "Brier Rose": "colour-button-unchecked", "Burnt Caramel": "colour-button-unchecked" };
 
-    setColourStyleClassName({ ...colourStyleClassNameCopy2, [product.colours[0]]: "colour-button-checked" })
-  }, [])
-
-  const [size, setSize] = useState({ 0: false, 2: false, 4: false, 6: false, 8: false, 10: false, 12: false, 14: false, 16: false, 18: false, 20: false })
-
-  const [sizeDisplay, setSizeDisplay] = useState('');
-
-  const [sizeStyleClassName, setSizeStyleClassName] = useState({ 0: 'size-button-unchecked', 2: 'size-button-unchecked', 4: 'size-button-unchecked', 6: 'size-button-unchecked', 8: 'size-button-unchecked', 10: 'size-button-unchecked', 12: 'size-button-unchecked', 14: 'size-button-unchecked', 16: 'size-button-unchecked', 18: 'size-button-unchecked', 20: 'size-button-unchecked' })
-
-  const handleSize = (sizeSelection) => {
-    const sizeCopy = { 0: false, 2: false, 4: false, 6: false, 8: false, 10: false, 12: false, 14: false, 16: false, 18: false, 20: false }
-
-    const sizeStyleCopy = { 0: 'size-button-unchecked', 2: 'size-button-unchecked', 4: 'size-button-unchecked', 6: 'size-button-unchecked', 8: 'size-button-unchecked', 10: 'size-button-unchecked', 12: 'size-button-unchecked', 14: 'size-button-unchecked', 16: 'size-button-unchecked', 18: 'size-button-unchecked', 20: 'size-button-unchecked' }
-
-    setSize({ ...sizeCopy, [sizeSelection]: true })
-    setSizeStyleClassName({ ...sizeStyleCopy, [sizeSelection]: 'size-button-checked' })
-    setSizeDisplay(sizeSelection);
-  }
+    setColourStyleClassName({ ...colourStyleClassNameCopy2, [product.colours[0]]: "colour-button-checked" });
+  }, [dispatch])
 
   return (
     <>
@@ -95,47 +97,64 @@ const ProductDetailForm = ({product}) => {
             className={colourStyleClassName[product.colours[3]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[3]]}}>
           </button>
-          <button 
-            onClick={() => handleColour([product.colours[4]])}
-            className={colourStyleClassName[product.colours[4]]} 
-            style={{ backgroundColor: COLOURCODES[product.colours[4]]}}>
-          </button>
         </div>
 
         <div className="size-buttons-containter">
           <h2>Size: {sizeDisplay} </h2> 
-          <button onClick={() => handleSize('0')} className={sizeStyleClassName[0]}>
-            <p>0</p>
+          <button 
+            onClick={() => handleSize([product.sizes[0]])} 
+            className={sizeStyleClassName[product.sizes[0]]}>
+            <p>{product.sizes[0]}</p>
           </button>
-          <button onClick={() => handleSize('2')} className={sizeStyleClassName[2]}>
-            <p>2</p>
+          <button 
+            onClick={() => handleSize([product.sizes[1]])}
+            className={sizeStyleClassName[product.sizes[1]]}>
+            <p>{product.sizes[1]}</p>
           </button>
-          <button onClick={() => handleSize('4')} className={sizeStyleClassName[4]}>
-            <p>4</p>
+          <button 
+            onClick={() => handleSize([product.sizes[2]])}
+            className={sizeStyleClassName[product.sizes[2]]}>
+            <p>{product.sizes[2]}</p>
           </button>
-          <button onClick={() => handleSize('6')} className={sizeStyleClassName[6]}>
-            <p>6</p>
+          <button 
+            onClick={() => handleSize([product.sizes[3]])}
+            className={sizeStyleClassName[product.sizes[3]]}>
+            <p>{product.sizes[3]}</p>
           </button>
-          <button onClick={() => handleSize('8')} className={sizeStyleClassName[8]}>
-            <p>8</p>
+          <button 
+          onClick={() => handleSize([product.sizes[4]])}
+            className={sizeStyleClassName[product.sizes[4]]}>
+            <p>{product.sizes[4]}</p>
           </button>
-          <button onClick={() => handleSize('10')} className={sizeStyleClassName[10]}>
-            <p>10</p>
+          <button 
+            onClick={() => handleSize([product.sizes[5]])}
+            className={sizeStyleClassName[product.sizes[5]]}>
+            <p>{product.sizes[5]}</p>
           </button>
-          <button onClick={() => handleSize('12')} className={sizeStyleClassName[12]}>
-            <p>12</p>
+          <button 
+            onClick={() => handleSize([product.sizes[6]])}
+            className={sizeStyleClassName[product.sizes[6]]}>
+            <p>{product.sizes[6]}</p>
           </button>
-          <button onClick={() => handleSize('14')} className={sizeStyleClassName[14]}>
-            <p>14</p>
+          <button 
+            onClick={() => handleSize([product.sizes[7]])}
+            className={sizeStyleClassName[product.sizes[7]]}>
+            <p>{product.sizes[7]}</p>
           </button>
-          <button onClick={() => handleSize('16')} className={sizeStyleClassName[16]}>
-            <p>16</p>
+          <button 
+            onClick={() => handleSize([product.sizes[8]])}
+            className={sizeStyleClassName[product.sizes[8]]}>
+            <p>{product.sizes[8]}</p>
           </button>
-          <button onClick={() => handleSize('18')} className={sizeStyleClassName[18]}>
-            <p>18</p>
+          <button 
+            onClick={() => handleSize([product.sizes[9]])}
+            className={sizeStyleClassName[product.sizes[9]]}>
+            <p>{product.sizes[9]}</p>
           </button>
-          <button onClick={() => handleSize('20')} className={sizeStyleClassName[20]}>
-            <p>20</p>
+          <button 
+            onClick={() => handleSize([product.sizes[10]])}
+            className={sizeStyleClassName[product.sizes[10]]}>
+            <p>{product.sizes[10]}</p>
           </button>
         </div>
       </div>

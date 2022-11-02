@@ -539,7 +539,7 @@ ApplicationRecord.transaction do
     details: ["Designed for Running", "Lightweight, Nulux Fabric", "Measurements"],
     description: "This sleek run belt is lightweight, breathable, and fits all your essentials so you can go the distance.",
     colours: ["Black"],
-    sizes: ["XS/S" "S/M", "L/XL"], 
+    sizes: ["XS/S", "S/M", "L/XL"], 
     featured_product: false
   })
 

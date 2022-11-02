@@ -15,6 +15,10 @@ const ProductDetailPage = () => {
     dispatch(fetchProduct(productId))
   }, [dispatch, productId])
 
+  if(!product.sizes) {
+    return null;
+  }
+
   if(product) {
     return (
       <>

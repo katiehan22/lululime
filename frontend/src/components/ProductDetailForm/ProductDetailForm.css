@@ -10,8 +10,11 @@
 
 .size-button-unchecked {
   border: 1px solid gray;
-  height: 35px;
-  width: 35px;
+  /* height: 35px;
+  width: 35px; */
+  padding: 5px;
+  min-width: 30px;
+  min-height: 30px;
   margin: 5px;
   border-radius: 5px;
   display: flex;
@@ -24,8 +27,11 @@
   border: 1px solid black;
   background-color: black;
   color: white;
-  height: 35px;
-  width: 35px;
+  /* height: 35px;
+  width: 35px; */
+  padding: 5px;
+  min-width: 30px;
+  min-height: 30px;
   margin: 5px;
   border-radius: 5px;
   display: flex;
