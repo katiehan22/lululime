@@ -79,9 +79,9 @@ const SplashPage = () => {
           </div>
         </div>
 
-        <div className="splash-carousel">
+        {/* <div className="splash-carousel">
           <ProductCarousel category={"womens"} />
-        </div>
+        </div> */}
 
 
         <div className="splash-feature-container-2">
