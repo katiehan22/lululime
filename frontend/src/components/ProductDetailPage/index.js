@@ -61,6 +61,24 @@ const ProductDetailPage = () => {
               <h2>You may like</h2>
             </div>
           </div>
+
+          <div className="product-description-container">
+            <div className="description-left">
+              <div className="description-left-header">
+                <p>Why we made this</p>
+                <hr className="red-break" />
+              </div>
+              <div className="description-left-text">
+                <p>{product.description}</p>
+              </div>
+            </div>
+            <div className="description-middle">
+              <img src={testImg} />
+            </div>
+            <div className="description-right">
+              <img src={testImg} />
+            </div>
+          </div>
         </div>
       </>
     )

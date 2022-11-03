@@ -76,3 +76,36 @@
 .details-container i {
   width: 30px;
 }
+
+.product-description-container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.description-left {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description-left-header {
+  /* width: 100%; */
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.description-left-text {
+  /* width: 100%; */
+}
+
+.description-middle, .description-right {
+  width: 32%;
+}
+
+.description-middle img,
+.description-right img {
+  border-radius: 5px;
+}
