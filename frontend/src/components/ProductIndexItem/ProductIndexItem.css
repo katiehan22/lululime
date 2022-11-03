@@ -1,8 +1,10 @@
 .product-index-item-container {
   /* border: 1px solid black; */
-  width: 23%;
-  margin-left: 20px;
+  width: 23.5%;
+  /* margin-left: 20px; */
   margin-top: 40px;
+  margin-left: 1.5%;
+  /* margin-left: 1%; */
 }
 
 .product-index-img {
