@@ -5,6 +5,7 @@ import { fetchProduct } from "../../store/products";
 import "./ProductDetailPage.css";
 import testImg from '../../assets/images/product-item-test.png';
 import ProductDetailForm from "../ProductDetailForm";
+import ProductCarousel from "../ProductCarousel";
 
 const ProductDetailPage = () => {
   const dispatch = useDispatch();
@@ -78,6 +79,13 @@ const ProductDetailPage = () => {
             <div className="description-right">
               <img src={testImg} />
             </div>
+          </div>
+
+          <div className="pdp-carousel-container">
+            <div className='pdp-carousel-header'>
+              You may also like
+            </div>
+            <ProductCarousel category={product.category}/>
           </div>
         </div>
       </>

@@ -6,6 +6,7 @@ import featureImg3 from "../../assets/images/splashfeature3.png"
 import featureImg4 from "../../assets/images/splashfeature4.png"
 import { NavLink, useHistory } from 'react-router-dom';
 import SplashMembership from "../SplashMembership";
+import ProductCarousel from "../ProductCarousel";
 
 const SplashPage = () => {
   const history = useHistory();
@@ -78,8 +79,10 @@ const SplashPage = () => {
           </div>
         </div>
 
-        <div className="product-carousel-placeholder">
+        <div className="splash-carousel">
+          <ProductCarousel category={"womens"} />
         </div>
+
 
         <div className="splash-feature-container-2">
           <div className="splash-feature-3">

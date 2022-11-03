@@ -109,3 +109,15 @@
 .description-right img {
   border-radius: 5px;
 }
+
+.pdp-carousel-container {
+  margin-top: 50px;
+}
+
+.pdp-carousel-header {
+  /* margin-top: 50px; */
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}

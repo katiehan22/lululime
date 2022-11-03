@@ -13,6 +13,7 @@ function UserNavigation() {
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
+    history.push('/');
   }
 
   const redirectSignIn = (e) => {
