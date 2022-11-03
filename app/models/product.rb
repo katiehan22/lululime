@@ -21,5 +21,10 @@ class Product < ApplicationRecord
 
   has_many_attached :photos
 
-  #has many reviews and has many carts
+  has_many :cart_items,
+    primary_key: :id,
+    foreign_key: :product_id,
+    class_name: :CartItem
+
+  #has many reviews11
 end
