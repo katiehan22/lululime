@@ -15,7 +15,7 @@ const ProductDetailPage = () => {
     dispatch(fetchProduct(productId))
   }, [dispatch, productId])
 
-  if(!product.sizes) {
+  if (!product || !product.sizes) {
     return null;
   }
 
@@ -26,7 +26,7 @@ const ProductDetailPage = () => {
           <div className="product-details-top">
             <div className="product-details-img">
               <img src={testImg}/>
-              {/* <img src={product.photoURLs[0]} /> */}
+              {/* <img src={product.imgUrls[0]} /> */}
             </div>
 
             <div className="product-details-top-middle">

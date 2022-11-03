@@ -1,2 +1,2 @@
 json.extract! @product, :id, :name, :price, :category, :subcategory, :details, :description, :colours, :sizes 
-# json.photoURLs @product.photos.url
+json.img_urls @product.photos.map { |file| url_for(file) }
