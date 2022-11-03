@@ -37,28 +37,32 @@
   text-decoration-color: #d31334;
 }
 
-.splash-features {
+.splash-feature-container-1, .splash-feature-container-2 {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.splash-feature-1, .splash-feature-2 {
+.splash-feature-1, .splash-feature-2, .splash-feature-3,
+.splash-feature-4 {
   width: 49%;
 }
 
-.splash-feature-1-header, .splash-feature-2-header {
+.splash-feature-1-header, .splash-feature-2-header, .splash-feature-3-header,
+.splash-feature-4-header {
   font-size: 24px;
   font-weight: bold;
   margin-top: 15px;
 }
 
-.splash-feature-1-subheader, .splash-feature-2-subheader {
+.splash-feature-1-subheader, .splash-feature-2-subheader, .splash-feature-3-subheader,
+.splash-feature-4-subheader {
   font-size: 16px;
   margin-top: 15px;
 }
 
-.splash-feature-1-button, .splash-feature-2-button {
+.splash-feature-1-button, .splash-feature-2-button, .splash-feature-3-button,
+.splash-feature-4-button {
   margin-top: 15px;
   height: 25px;
   font-weight: bold;
@@ -68,7 +72,8 @@
   text-align: center;
 }
 
-.splash-feature-1-button:hover, .splash-feature-2-button:hover {
+.splash-feature-1-button:hover, .splash-feature-2-button:hover, .splash-feature-3-button:hover,
+.splash-feature-4-button:hover {
   color: white;
   background-color: black;
 }

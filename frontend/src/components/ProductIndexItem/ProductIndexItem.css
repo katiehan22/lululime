@@ -1,19 +1,26 @@
 .product-index-item-container {
   /* border: 1px solid black; */
   width: 23%;
-  cursor: pointer;
   margin-left: 20px;
   margin-top: 40px;
 }
 
 .product-index-img {
   width: 100%;
+  cursor: pointer;
 }
 
-.product-index-colours {
-  color: gray;
-  font-size: 12px;
+.product-index-colours-container {
+  display: flex;
+}
+
+.product-index-colour-display {
+  width: 20px;
+  height: 20px;
   margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+  /* outline: 2px solid rgb(205, 205, 205); */
 }
 
 .product-index-lower-info {
@@ -21,6 +28,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .product-index-name {

@@ -2,6 +2,8 @@ import "./SplashPage.css";
 import splashImg from "../../assets/images/splash.png";
 import featureImg1 from "../../assets/images/splashfeature1.png"
 import featureImg2 from "../../assets/images/splashfeature2.png"
+import featureImg3 from "../../assets/images/splashfeature3.png"
+import featureImg4 from "../../assets/images/splashfeature4.png"
 import { NavLink, useHistory } from 'react-router-dom';
 import SplashMembership from "../SplashMembership";
 
@@ -16,6 +18,16 @@ const SplashPage = () => {
   const handleFeature2 = (e) => {
     e.preventDefault();
     history.push('/products/womens/joggers');
+  }
+
+  const handleFeature3 = (e) => {
+    e.preventDefault();
+    history.push('/products/mens');
+  }
+
+  const handleFeature4 = (e) => {
+    e.preventDefault();
+    history.push('/products/womens');
   }
 
   return (
@@ -39,7 +51,7 @@ const SplashPage = () => {
         <div className="product-carousel-placeholder">
         </div>
 
-        <div className="splash-features">
+        <div className="splash-feature-container-1">
           <div className="splash-feature-1">
             <div className="splash-feature-1-img">
               <img src={featureImg1} alt=""/>
@@ -63,6 +75,36 @@ const SplashPage = () => {
               <p>Spacious. Soft. Next-level cozy. The Relaxed High-Rise Jogger is what other joggers want to be when they grow up.</p>
             </div>
             <button onClick={handleFeature2} className="splash-feature-2-button">SHOP JOGGERS</button>
+          </div>
+        </div>
+
+        <div className="product-carousel-placeholder">
+        </div>
+
+        <div className="splash-feature-container-2">
+          <div className="splash-feature-3">
+            <div className="splash-feature-3-img">
+              <img src={featureImg3} alt="" />
+            </div>
+            <div className="splash-feature-3-header">
+              <h2>“But it’s cold.” But nothing.</h2>
+            </div>
+            <div className="splash-feature-3-subheader">
+              <p>Go in the lightweight warmth of the Surge Warm Half-Zip and your feet will follow.</p>
+            </div>
+            <button className="splash-feature-3-button" onClick={handleFeature3}>SHOP MEN'S</button>
+          </div>
+          <div className="splash-feature-4">
+            <div className="splash-feature-4-img">
+              <img src={featureImg4} alt="" />
+            </div>
+            <div className="splash-feature-4-header">
+              <h2>Your core, accounted for.</h2>
+            </div>
+            <div className="splash-feature-4-subheader">
+              <p>The Down for It All Vest locks in warmth with zoned insulation and lets you move with four-way stretch fabric.</p>
+            </div>
+            <button onClick={handleFeature4} className="splash-feature-4-button">SHOP WOMEN'S</button>
           </div>
         </div>
       </div>
