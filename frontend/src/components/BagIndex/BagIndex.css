@@ -1,0 +1,16 @@
+.bag-index-page {
+  display: flex;
+}
+
+.bag-index-page-left {
+  width: 72%;
+  margin-right: 3%;
+}
+
+.bag-index-page-right {
+  width: 25%;
+}
+
+.bag-index-header {
+  display: flex;
+}

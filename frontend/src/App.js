@@ -8,6 +8,7 @@ import SplashPage from './components/SplashPage';
 import Footer from './components/Footer';
 import ProductIndex from './components/ProductIndex';
 import ProductDetailPage from './components/ProductDetailPage';
+import BagIndex from './components/BagIndex';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/products/:category/:subcategory" component={ProductIndex}/>
         <Route path="/products/:category" component={ProductIndex} />
         <Route path="/productdetail/:productId" component={ProductDetailPage} />
+        <Route path="/bag" component={BagIndex} />
         <Route path="/" component={SplashPage} />
       </Switch>
       {/* <Footer /> */}

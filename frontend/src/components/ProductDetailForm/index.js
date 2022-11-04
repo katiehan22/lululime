@@ -82,7 +82,6 @@ const ProductDetailForm = ({product}) => {
   }, [dispatch])
 
   const handleAddToBag = () => {
-    console.log("adding to bag")
     const newCartItem = {
       cartItem: {
         userId: user.id,

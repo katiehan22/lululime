@@ -1,0 +1,18 @@
+.bag-preview-summary-subtotal-container, .bag-preview-summary-shipping-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#view-bag-button {
+  width: 60%;
+  height: 35px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #d31334;
+  color: white;
+  text-align: center;
+}
+
+#view-bag-button:hover {
+  background-color: #b0102b;
+}
