@@ -1,9 +1,11 @@
 import "./ProductDetailForm.css";
 import { useEffect, useState } from "react"
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
+import { createCartItem } from "../../store/cart";
 
 const ProductDetailForm = ({product}) => {
   const dispatch = useDispatch();
+  const user = useSelector(state => state.session.user)
 
   const COLOURCODES = {
     "Black": "#212121", 
@@ -39,11 +41,15 @@ const ProductDetailForm = ({product}) => {
     "Black": "colour-button-unchecked", "Icing Blue": "colour-button-unchecked", "True Navy": "colour-button-unchecked", "White": "colour-button-unchecked", "Water Drop": "colour-button-unchecked", "Dark Olive": "colour-button-unchecked", "Green Foliage": "colour-button-unchecked", "Dark Red": "colour-button-unchecked", "Electric Turquoise": "colour-button-unchecked", "Wasabi": "colour-button-unchecked", "Pomegranate": "colour-button-unchecked", "White Opal": "colour-button-unchecked", "Faint Lavender": "colour-button-unchecked", "Smoked Spruce": "colour-button-unchecked", "Heathered Core Ultra Light Grey": "colour-button-unchecked", "Carob Brown": "colour-button-unchecked", "Poolside": "colour-button-unchecked", "Roasted Brown": "colour-button-unchecked", "Graphite Grey": "colour-button-unchecked", "Red Merlot": "colour-button-unchecked", "Natural Ivory": "colour-button-unchecked", "Brier Rose": "colour-button-unchecked", "Burnt Caramel": "colour-button-unchecked"
   });
 
-  const [size, setSize] = useState({ "0": false, "2": false, "4": false, "6": false, "8": false, "10": false, "12": false, "14": false, "16": false, "18": false, "20": false, "XS/S": false, "S/M": false, "M/L": false, "L/XL": false, "XL/XXL": false, "XS": false, "S": false, "M": false, "L": false, "XL": false, "XXL": false, "XXXL": false, "ONE SIZE": false })
+  const [size, setSize] = useState({ 
+    "0": false, "2": false, "4": false, "6": false, "8": false, "10": false, "12": false, "14": false, "16": false, "18": false, "20": false, "XS/S": false, "S/M": false, "M/L": false, "L/XL": false, "XL/XXL": false, "XS": false, "S": false, "M": false, "L": false, "XL": false, "XXL": false, "XXXL": false, "ONE SIZE": false 
+  })
 
-  const [sizeDisplay, setSizeDisplay] = useState('');
+  const [sizeDisplay, setSizeDisplay] = useState(product.sizes[0]);
 
-  const [sizeStyleClassName, setSizeStyleClassName] = useState({ "0": 'size-button-unchecked', "2": 'size-button-unchecked', "4": 'size-button-unchecked', "6": 'size-button-unchecked', "8": 'size-button-unchecked', "10": 'size-button-unchecked', "12": 'size-button-unchecked', "14": 'size-button-unchecked', "16": 'size-button-unchecked', "18": 'size-button-unchecked', "20": 'size-button-unchecked', "XS/S": 'size-button-unchecked', "S/M": 'size-button-unchecked', "M/L": 'size-button-unchecked', "L/XL": 'size-button-unchecked', "XL/XXL": 'size-button-unchecked', "XS": 'size-button-unchecked', "S": 'size-button-unchecked', "M": 'size-button-unchecked', "L": 'size-button-unchecked', "XL": 'size-button-unchecked', "XXL": 'size-button-unchecked', "XXXL": 'size-button-unchecked', "ONE SIZE": 'size-button-unchecked' });
+  const [sizeStyleClassName, setSizeStyleClassName] = useState({ 
+    "0": 'size-button-unchecked', "2": 'size-button-unchecked', "4": 'size-button-unchecked', "6": 'size-button-unchecked', "8": 'size-button-unchecked', "10": 'size-button-unchecked', "12": 'size-button-unchecked', "14": 'size-button-unchecked', "16": 'size-button-unchecked', "18": 'size-button-unchecked', "20": 'size-button-unchecked', "XS/S": 'size-button-unchecked', "S/M": 'size-button-unchecked', "M/L": 'size-button-unchecked', "L/XL": 'size-button-unchecked', "XL/XXL": 'size-button-unchecked', "XS": 'size-button-unchecked', "S": 'size-button-unchecked', "M": 'size-button-unchecked', "L": 'size-button-unchecked', "XL": 'size-button-unchecked', "XXL": 'size-button-unchecked', "XXXL": 'size-button-unchecked', "ONE SIZE": 'size-button-unchecked' 
+  });
 
   const handleSize = (sizeSelection) => {
     const sizeCopy = { "0": false, "2": false, "4": false, "6": false, "8": false, "10": false, "12": false, "14": false, "16": false, "18": false, "20": false, "XS/S": false, "S/M": false, "M/L": false, "L/XL": false, "XL/XXL": false, "XS": false, "S": false, "M": false, "L": false, "XL": false, "XXL": false, "XXXL": false, "ONE SIZE": false }
@@ -65,12 +71,29 @@ const ProductDetailForm = ({product}) => {
     setColourDisplay(colourSelection);
   }
 
-  // set first color as checked by default 
+  // set first color and size as checked by default 
   useEffect(() => {
     const colourStyleClassNameCopy2 = { "Black": "colour-button-unchecked", "Icing Blue": "colour-button-unchecked", "True Navy": "colour-button-unchecked", "White": "colour-button-unchecked", "Water Drop": "colour-button-unchecked", "Dark Olive": "colour-button-unchecked", "Green Foliage": "colour-button-unchecked", "Dark Red": "colour-button-unchecked", "Electric Turquoise": "colour-button-unchecked", "Wasabi": "colour-button-unchecked", "Pomegranate": "colour-button-unchecked", "White Opal": "colour-button-unchecked", "Faint Lavender": "colour-button-unchecked", "Smoked Spruce": "colour-button-unchecked", "Heathered Core Ultra Light Grey": "colour-button-unchecked", "Carob Brown": "colour-button-unchecked", "Poolside": "colour-button-unchecked", "Roasted Brown": "colour-button-unchecked", "Graphite Grey": "colour-button-unchecked", "Red Merlot": "colour-button-unchecked", "Natural Ivory": "colour-button-unchecked", "Brier Rose": "colour-button-unchecked", "Burnt Caramel": "colour-button-unchecked" };
 
+    const sizeStyleCopy2 = { "0": 'size-button-unchecked', "2": 'size-button-unchecked', "4": 'size-button-unchecked', "6": 'size-button-unchecked', "8": 'size-button-unchecked', "10": 'size-button-unchecked', "12": 'size-button-unchecked', "14": 'size-button-unchecked', "16": 'size-button-unchecked', "18": 'size-button-unchecked', "20": 'size-button-unchecked', "XS/S": 'size-button-unchecked', "S/M": 'size-button-unchecked', "M/L": 'size-button-unchecked', "L/XL": 'size-button-unchecked', "XL/XXL": 'size-button-unchecked', "XS": 'size-button-unchecked', "S": 'size-button-unchecked', "M": 'size-button-unchecked', "L": 'size-button-unchecked', "XL": 'size-button-unchecked', "XXL": 'size-button-unchecked', "XXXL": 'size-button-unchecked', "ONE SIZE": 'size-button-unchecked' }
+
     setColourStyleClassName({ ...colourStyleClassNameCopy2, [product.colours[0]]: "colour-button-checked" });
+    setSizeStyleClassName({ ...sizeStyleCopy2, [product.sizes[0]]: 'size-button-checked' })
   }, [dispatch])
+
+  const handleAddToBag = () => {
+    console.log("adding to bag")
+    const newCartItem = {
+      cartItem: {
+        userId: user.id,
+        productId: product.id,
+        quantity: 1,
+        colour: colourDisplay,
+        size: sizeDisplay
+      }
+    }
+    dispatch(createCartItem(newCartItem));
+  }
 
   return (
     <>
@@ -78,22 +101,22 @@ const ProductDetailForm = ({product}) => {
         <div className="colour-buttons-containter">
           <h2>Colour: {colourDisplay}</h2>
           <button 
-            onClick={() => handleColour([product.colours[0]])}
+            onClick={() => handleColour(product.colours[0])}
             className={colourStyleClassName[product.colours[0]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[0]]}} >
           </button>
           <button 
-            onClick={() => handleColour([product.colours[1]])}
+            onClick={() => handleColour(product.colours[1])}
             className={colourStyleClassName[product.colours[1]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[1]]}}>
           </button>
           <button  
-            onClick={() => handleColour([product.colours[2]])}
+            onClick={() => handleColour(product.colours[2])}
             className={colourStyleClassName[product.colours[2]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[2]]}}>
           </button>
           <button 
-            onClick={() => handleColour([product.colours[3]])}
+            onClick={() => handleColour(product.colours[3])}
             className={colourStyleClassName[product.colours[3]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[3]]}}>
           </button>
@@ -102,64 +125,64 @@ const ProductDetailForm = ({product}) => {
         <div className="size-buttons-containter">
           <h2>Size: {sizeDisplay} </h2> 
           <button 
-            onClick={() => handleSize([product.sizes[0]])} 
+            onClick={() => handleSize(product.sizes[0])} 
             className={sizeStyleClassName[product.sizes[0]]}>
             <p>{product.sizes[0]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[1]])}
+            onClick={() => handleSize(product.sizes[1])}
             className={sizeStyleClassName[product.sizes[1]]}>
             <p>{product.sizes[1]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[2]])}
+            onClick={() => handleSize(product.sizes[2])}
             className={sizeStyleClassName[product.sizes[2]]}>
             <p>{product.sizes[2]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[3]])}
+            onClick={() => handleSize(product.sizes[3])}
             className={sizeStyleClassName[product.sizes[3]]}>
             <p>{product.sizes[3]}</p>
           </button>
           <button 
-          onClick={() => handleSize([product.sizes[4]])}
+          onClick={() => handleSize(product.sizes[4])}
             className={sizeStyleClassName[product.sizes[4]]}>
             <p>{product.sizes[4]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[5]])}
+            onClick={() => handleSize(product.sizes[5])}
             className={sizeStyleClassName[product.sizes[5]]}>
             <p>{product.sizes[5]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[6]])}
+            onClick={() => handleSize(product.sizes[6])}
             className={sizeStyleClassName[product.sizes[6]]}>
             <p>{product.sizes[6]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[7]])}
+            onClick={() => handleSize(product.sizes[7])}
             className={sizeStyleClassName[product.sizes[7]]}>
             <p>{product.sizes[7]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[8]])}
+            onClick={() => handleSize(product.sizes[8])}
             className={sizeStyleClassName[product.sizes[8]]}>
             <p>{product.sizes[8]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[9]])}
+            onClick={() => handleSize(product.sizes[9])}
             className={sizeStyleClassName[product.sizes[9]]}>
             <p>{product.sizes[9]}</p>
           </button>
           <button 
-            onClick={() => handleSize([product.sizes[10]])}
+            onClick={() => handleSize(product.sizes[10])}
             className={sizeStyleClassName[product.sizes[10]]}>
             <p>{product.sizes[10]}</p>
           </button>
         </div>
 
         <div className="add-to-bag-container">
-          <button id="add-to-bag-button">ADD TO BAG</button>
+          <button id="add-to-bag-button" onClick={() => handleAddToBag()}>ADD TO BAG</button>
         </div>
       </div>
     </>

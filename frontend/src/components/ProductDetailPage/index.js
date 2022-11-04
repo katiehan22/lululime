@@ -26,9 +26,8 @@ const ProductDetailPage = () => {
         <div className="product-details-page">
           <div className="product-details-top">
             <div className="product-details-img">
-              <img src={testImg}/>
-              {/* <img src={product.imgUrls[0]} /> */}
-              {/* <img src={product.imgUrls[1]} /> */}
+              <img src={testImg} alt=""/>
+              {/* <img src={product.imgUrls[0]} alt="" /> */}
             </div>
 
             <div className="product-details-top-middle">
@@ -75,10 +74,12 @@ const ProductDetailPage = () => {
               </div>
             </div>
             <div className="description-middle">
-              <img src={testImg} />
+              <img src={testImg} alt="" />
+              {/* <img src={product.imgUrls[1]} alt="" /> */}
             </div>
             <div className="description-right">
-              <img src={testImg} />
+              <img src={testImg} alt="" />
+              {/* <img src={product.imgUrls[0]} alt="" /> */}
             </div>
           </div>
 

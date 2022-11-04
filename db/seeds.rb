@@ -5,7 +5,7 @@ ApplicationRecord.transaction do
   # Unnecessary if using `rails db:seed:replant`
   User.destroy_all
   Product.destroy_all
-  CartItem.destory_all
+  CartItem.destroy_all
 
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
@@ -45,8 +45,7 @@ ApplicationRecord.transaction do
   product1.photos.attach([
     {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_1.png"), filename: "align_black_1.png"}, 
     {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_2.png"), filename: "align_black_2.png"}
-])
-  # product1.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_2.png"), filename: "align_black_2.png")
+  ])
 
   product2 = Product.create! ({
     name: "Wunder Train High-Rise Crop 23\"",
@@ -59,8 +58,10 @@ ApplicationRecord.transaction do
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
-  # product2.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v1.png"), filename: "wunder_navy_1.png")
-  # product2.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v2.png"), filename: "wunder_navy_2.png")
+  product2.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v1.png"), filename: "wunder_navy_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v2.png"), filename: "wunder_navy_2.png"}
+  ])
 
   product3 = Product.create! ({
     name: "InStill High-Rise Tight 25\"",
