@@ -54,6 +54,8 @@ ApplicationRecord.transaction do
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product2.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v1.png"), filename: "wunder_navy_1.png")
+  product2.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v2.png"), filename: "wunder_navy_2.png")
 
   product3 = Product.create! ({
     name: "InStill High-Rise Tight 25\"",

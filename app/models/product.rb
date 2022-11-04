@@ -26,5 +26,5 @@ class Product < ApplicationRecord
     foreign_key: :product_id,
     class_name: :CartItem
 
-  #has many reviews11
+  #has many reviews
 end
