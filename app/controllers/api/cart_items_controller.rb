@@ -27,7 +27,7 @@ class Api::CartItemsController < ApplicationController
 
   def destroy 
     @cart_item = CartItem.find_by(id: params[:id])
-    if @goal.destroy 
+    if @cart_item.destroy 
       render :show 
     else
       render json: @cart_item.errors.full_messages, status: 422

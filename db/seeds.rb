@@ -5,15 +5,17 @@ ApplicationRecord.transaction do
   # Unnecessary if using `rails db:seed:replant`
   User.destroy_all
   Product.destroy_all
+  CartItem.destory_all
 
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
   ApplicationRecord.connection.reset_pk_sequence!('users')
   ApplicationRecord.connection.reset_pk_sequence!('products')
+  ApplicationRecord.connection.reset_pk_sequence!('cart_items')
 
   puts "Creating users..."
   # Create one user with an easy to remember email, and password:
-  User.create!(
+  demoUser = User.create!(
     email: 'demo@user.io', 
     password: 'password'
   )
@@ -40,8 +42,11 @@ ApplicationRecord.transaction do
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: true
   })
-  product1.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_1.png"), filename: "align_black_1.png")
-  product1.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_2.png"), filename: "align_black_2.png")
+  product1.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_1.png"), filename: "align_black_1.png"}, 
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_2.png"), filename: "align_black_2.png"}
+])
+  # product1.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_2.png"), filename: "align_black_2.png")
 
   product2 = Product.create! ({
     name: "Wunder Train High-Rise Crop 23\"",
@@ -54,8 +59,8 @@ ApplicationRecord.transaction do
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
-  product2.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v1.png"), filename: "wunder_navy_1.png")
-  product2.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v2.png"), filename: "wunder_navy_2.png")
+  # product2.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v1.png"), filename: "wunder_navy_1.png")
+  # product2.photos.attach(io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v2.png"), filename: "wunder_navy_2.png")
 
   product3 = Product.create! ({
     name: "InStill High-Rise Tight 25\"",
@@ -591,6 +596,24 @@ ApplicationRecord.transaction do
     colours: ["Burnt Caramel", "Black"],
     sizes: ["ONE SIZE"], 
     featured_product: false
+  })
+
+  puts "Creating cart items..."
+
+  cartItem1 = CartItem.create! ({
+    user_id: demoUser.id,
+    product_id: product1.id,
+    quantity: 1, 
+    colour: "Black",
+    size: "4"
+  })
+
+  cartItem2 = CartItem.create! ({
+    user_id: demoUser.id,
+    product_id: product21.id,
+    quantity: 1, 
+    colour: "True Navy",
+    size: "M"
   })
 
   puts "Done!"
