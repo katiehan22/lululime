@@ -6,6 +6,7 @@ import "./ProductDetailPage.css";
 import testImg from '../../assets/images/product-item-test.png';
 import ProductDetailForm from "../ProductDetailForm";
 import ProductCarousel from "../ProductCarousel";
+import BagPreviewIndex from "../BagPreviewIndex";
 
 const ProductDetailPage = () => {
   const dispatch = useDispatch();
@@ -89,6 +90,8 @@ const ProductDetailPage = () => {
             </div>
             <ProductCarousel category={product.category}/>
           </div> */}
+
+          <BagPreviewIndex />
         </div>
       </>
     )
