@@ -14,3 +14,22 @@
 .bag-index-header {
   display: flex;
 }
+
+.bag-index-summary-subtotal-container, .bag-index-summary-shipping-container, .bag-index-summary-total-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#checkout-button {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #d31334;
+  color: white;
+  text-align: center;
+}
+
+#checkout-button:hover {
+  background-color: #b0102b;
+}
