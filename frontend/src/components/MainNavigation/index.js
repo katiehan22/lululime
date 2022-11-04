@@ -1,9 +1,11 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import './MainNavigation.css';
 import logo from '../../assets/images/logo.png';
 
 
 function MainNavigation() {
+  const history = useHistory();
+
   return (
     <div className='main-nav-container'>
       <div className='logo'>
@@ -46,6 +48,9 @@ function MainNavigation() {
           </li>
         </ul>
       </nav>
+      <div className='bag-icon-container'>
+        <i id='bag-icon' class="fa-solid fa-bag-shopping" onClick={() => history.push('/bag')}></i>
+      </div>
     </div>
   )
 }
