@@ -7,6 +7,11 @@ class Api::CartItemsController < ApplicationController
     render :index 
   end
 
+  def show 
+    @cart_item = CartItem.find_by(id: params[:id])
+    render :show
+  end
+
   def create 
     @cart_item = CartItem.new(cart_params)
     if @cart_item.save 

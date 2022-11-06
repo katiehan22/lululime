@@ -1,0 +1,13 @@
+.edit-cart-form-container {
+  display: flex;
+  width: 100%;
+}
+
+.edit-cart-img {
+  width: 49%;
+  margin-right: 2%;
+}
+
+.edit-cart-form-right {
+  width: 49%;
+}

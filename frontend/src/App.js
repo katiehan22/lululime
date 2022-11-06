@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import ProductIndex from './components/ProductIndex';
 import ProductDetailPage from './components/ProductDetailPage';
 import BagIndex from './components/BagIndex';
+import EditCartForm from './components/EditCartForm';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/products/:category" component={ProductIndex} />
         <Route path="/productdetail/:productId" component={ProductDetailPage} />
         <Route path="/bag" component={BagIndex} />
+        <Route path="/edit-item/:cartItemId" component={EditCartForm} />
         <Route path="/" component={SplashPage} />
       </Switch>
       {/* <Footer /> */}

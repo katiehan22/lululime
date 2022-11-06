@@ -2,9 +2,16 @@ import "./BagIndexItem.css";
 import testImg from '../../assets/images/product-item-test.png';
 import { useDispatch } from "react-redux";
 import { deleteCartItem } from "../../store/cart";
+import { useHistory } from "react-router-dom";
+
 
 const BagIndexItem = ({cartItem}) => {
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  const redirectToEditCart = (cartItemId) => {
+    history.push(`/edit-item/${cartItemId}`)
+  }
 
   return (
     <>
@@ -39,7 +46,7 @@ const BagIndexItem = ({cartItem}) => {
             </div>
           </div>
           <div className="bag-item-edit-remove-container">
-            <div className="bag-item-edit-button">Edit</div>
+            <div className="bag-item-edit-button" onClick={() => redirectToEditCart(cartItem.id) }>Edit</div>
             <div className="bag-item-remove-button" onClick={() => dispatch(deleteCartItem(cartItem.id)) }>Remove</div>
           </div>
         </div>
