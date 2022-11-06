@@ -11,3 +11,12 @@
 .edit-cart-form-right {
   width: 49%;
 }
+
+.edit-cart-size-buttons-containter h2 {
+  width: 100%;
+}
+
+.edit-cart-size-buttons-containter {
+  display: flex;
+  width: 100%;
+}
