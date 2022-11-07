@@ -1,10 +1,11 @@
 .bag-index-page {
   display: flex;
+  margin-top: 25px;
 }
 
 .bag-index-page-left {
-  width: 72%;
-  margin-right: 3%;
+  width: 70%;
+  margin-right: 5%;
 }
 
 .bag-index-page-right {
@@ -15,9 +16,31 @@
   display: flex;
 }
 
+.bag-index-header h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.bag-index-header p {
+  font-size: 26px;
+}
+
+.bag-index-summary-header {
+  font-size: 26px;
+  font-weight: bold;
+}
+
 .bag-index-summary-subtotal-container, .bag-index-summary-shipping-container, .bag-index-summary-total-container {
   display: flex;
   justify-content: space-between;
+  font-size: 16px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.bag-index-summary-total-container {
+  font-weight: bold;
 }
 
 #checkout-button {

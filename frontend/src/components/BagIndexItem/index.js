@@ -3,6 +3,7 @@ import testImg from '../../assets/images/product-item-test.png';
 import { useDispatch } from "react-redux";
 import { deleteCartItem } from "../../store/cart";
 import { useHistory } from "react-router-dom";
+import { updateCartItem } from '../../store/cart';
 
 
 const BagIndexItem = ({cartItem}) => {
@@ -11,6 +12,15 @@ const BagIndexItem = ({cartItem}) => {
 
   const redirectToEditCart = (cartItemId) => {
     history.push(`/edit-item/${cartItemId}`)
+  }
+
+  const handleQtyChange = () => {
+    return (e) => {
+      console.log(e);
+      console.log(e.target.value);
+      const updatedItem = Object.assign({}, cartItem, {["quantity"]: e.target.value})
+      dispatch(updateCartItem(updatedItem));
+    }
   }
 
   return (
@@ -33,15 +43,28 @@ const BagIndexItem = ({cartItem}) => {
             <div className="bag-item-price-qty-container">
               <div className="bag-item-single-price">
                 <p>Item Price</p>
-                <p>${cartItem.productPrice}</p>
+                <p className="bag-item-price-qty-value">${cartItem.productPrice}</p>
               </div>
               <div className="bag-item-qty">
                 <p>Quantity</p>
-                <p>{cartItem.quantity}</p>
+                <form className="bag-item-price-qty-value">
+                  <select name="quantity" value={cartItem.quantity} onChange={handleQtyChange()} id="qty-dropdown">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </form>
               </div>
               <div className="bag-item-total-price">
                 <p>Total Price</p>
-                <p>${cartItem.productPrice * cartItem.quantity}</p>
+                <p className="bag-item-price-qty-value">${cartItem.productPrice * cartItem.quantity}</p>
               </div>
             </div>
           </div>
