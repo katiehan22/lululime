@@ -4,14 +4,25 @@
 }
 
 .edit-cart-img {
-  /* width: 41%; */
-  width: 417px;
+  width: 41%;
+  /* width: 417px; */
   margin-right: 2%;
   /* height: 50%; */
 }
 
 .edit-cart-form-right {
-  width: 49%;
+  width: 57%;
+}
+
+.edit-cart-form-right-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#close-edit-modal-button {
+  margin-top: 15px;
+  margin-right: 15px;
+  /* padding-left: 10px; */
 }
 
 .edit-cart-size-buttons-containter {

@@ -9,9 +9,9 @@ const SplashMembership = () => {
   let subheaderText;
   let buttonText;
 
-  const handleLearnMore = (e) => {
+  const handleShopNow = (e) => {
     e.preventDefault();
-    history.push('/#');
+    history.push('/products/womens');
   }
 
   const handleJoinNow = (e) => {
@@ -23,7 +23,7 @@ const SplashMembership = () => {
     headerText = "Welcome to lululime Membership.";
     subheaderText = "Do more of what you love. We've got you.";
     buttonText = (
-      <button onClick={handleLearnMore} className="membership-button">LEARN MORE</button>
+      <button onClick={handleShopNow} className="membership-button">SHOP NOW</button>
     )
   } else {
     headerText = "lululime Membership is here.";

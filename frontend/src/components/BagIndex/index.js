@@ -1,11 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchCartItems } from "../../store/cart";
+import { deleteCartItem, fetchCartItems } from "../../store/cart";
 import BagIndexItem from "../BagIndexItem";
 import "./BagIndex.css";
+import { useHistory } from "react-router-dom";
+
 
 const BagIndex = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   let cartItems = useSelector(state => state.cartItems ? Object.values(state.cartItems) : []);
 
   useEffect(() => {
@@ -23,6 +26,11 @@ const BagIndex = () => {
 
   const calculateSubtotal = () => {
     return cartItems.reduce((acc, ele) => acc + (ele.quantity * ele.productPrice), 0);
+  }
+
+  const handleCheckout = () => {
+    cartItems.map(cartItem => dispatch(deleteCartItem(cartItem.id)));
+    history.push('/checkout-confirmation');
   }
 
   return (
@@ -65,7 +73,7 @@ const BagIndex = () => {
               <p>${calculateSubtotal()}</p>
             </div>
           </div>
-          <button id="checkout-button">CHECKOUT</button>
+          <button id="checkout-button" onClick={() => handleCheckout()}>CHECKOUT</button>
         </div>
       </div>
     </>

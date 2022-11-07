@@ -6,6 +6,7 @@ import { updateCartItem } from '../../store/cart';
 import testImg from '../../assets/images/product-item-test.png';
 import './EditCartForm.css';
 
+
 const EditCartForm = ({ cartItemId }) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user)
@@ -101,6 +102,7 @@ const EditCartForm = ({ cartItemId }) => {
       size: sizeDisplay
     }
     dispatch(updateCartItem(updatedItem));
+    
   }
 
   if (!cartItem) {
@@ -114,8 +116,13 @@ const EditCartForm = ({ cartItemId }) => {
           <img src={testImg} alt="" />
         </div>
         <div className='edit-cart-form-right'>
-          <div className='edit-cart-product-details-name'>
-            {cartItem.productName}
+          <div className='edit-cart-form-right-header'>
+            <div className='edit-cart-product-details-name'>
+              {cartItem.productName}
+            </div>
+            <div>
+              <button id="close-edit-modal-button">X</button>
+            </div>
           </div>
           <div className='edit-cart-product-details-price'>
             ${cartItem.productPrice}
