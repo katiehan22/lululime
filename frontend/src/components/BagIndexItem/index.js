@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { deleteCartItem } from "../../store/cart";
 import { useHistory } from "react-router-dom";
 import { updateCartItem } from '../../store/cart';
+import EditCartFormModal from "../EditCartFormModal";
 
 
 const BagIndexItem = ({cartItem}) => {

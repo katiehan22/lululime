@@ -87,9 +87,9 @@
 .womens-dropdown, .mens-dropdown, .accessories-dropdown {
   display: none;
   position: absolute;
-  width: 100vw;
+  /* width: 100vw; */
   /* margin-left: -5vw; */
-  /* width: 200px; */
+  width: 300px;
   z-index: 1;
   background-color: white;
   padding-top: 30px;

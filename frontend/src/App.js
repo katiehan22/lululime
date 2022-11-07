@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import ProductIndex from './components/ProductIndex';
 import ProductDetailPage from './components/ProductDetailPage';
 import BagIndex from './components/BagIndex';
-import EditCartForm from './components/EditCartForm';
+import EditCartForm from './components/EditCartFormModal/EditCartForm';
 
 function App() {
   return (
