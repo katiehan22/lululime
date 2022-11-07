@@ -4,7 +4,7 @@
 }
 
 #view-bag-button {
-  width: 60%;
+  width: 95%;
   height: 35px;
   border-radius: 5px;
   padding: 10px;
@@ -15,4 +15,35 @@
 
 #view-bag-button:hover {
   background-color: #b0102b;
+}
+
+.bag-preview-header {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid rgb(222, 222, 222);
+  padding-bottom: 10px;
+}
+
+.bag-preview-index-container {
+  margin-top: 15px;
+  max-height: 330px;
+  overflow: scroll;
+}
+
+.bag-preview-summary-container {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgb(222, 222, 222);
+}
+
+.bag-preview-summary-subtotal-container {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bag-preview-summary-shipping-container {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }

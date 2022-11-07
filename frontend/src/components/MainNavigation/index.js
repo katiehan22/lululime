@@ -1,6 +1,7 @@
 import { NavLink, useHistory } from 'react-router-dom';
 import './MainNavigation.css';
 import logo from '../../assets/images/logo.png';
+import BagPreviewIndex from '../BagPreviewIndex';
 
 
 function MainNavigation() {
@@ -50,6 +51,7 @@ function MainNavigation() {
       </nav>
       <div className='bag-icon-container'>
         <i id='bag-icon' class="fa-solid fa-bag-shopping" onClick={() => history.push('/bag')}></i>
+        <BagPreviewIndex />
       </div>
     </div>
   )

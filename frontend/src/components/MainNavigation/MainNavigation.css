@@ -96,6 +96,22 @@
   top: 17px; /* positions absolute */
 }
 
+.bag-preview-sidebar {
+  display: none;  
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  width: 350px;
+  right: 40px;
+  padding: 20px;
+  font-size: 14px;
+  border: 1px solid rgb(222, 222, 222);
+}
+
+.bag-icon-container:hover .bag-preview-sidebar{
+  display: block;
+}
+
 #womens-li:hover .womens-dropdown {
   display: block;
 }

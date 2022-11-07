@@ -91,7 +91,7 @@ const ProductDetailPage = () => {
             <ProductCarousel category={product.category}/>
           </div> */}
 
-          <BagPreviewIndex />
+          {/* <BagPreviewIndex /> */}
         </div>
       </>
     )
