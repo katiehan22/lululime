@@ -7,7 +7,7 @@ import testImg from '../../assets/images/product-item-test.png';
 import './EditCartForm.css';
 
 
-const EditCartForm = ({ cartItemId }) => {
+const EditCartForm = ({ cartItemId, setShowModal }) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user)
   // const { cartItemId } = useParams();
@@ -102,7 +102,7 @@ const EditCartForm = ({ cartItemId }) => {
       size: sizeDisplay
     }
     dispatch(updateCartItem(updatedItem));
-    
+    setShowModal(false);
   }
 
   if (!cartItem) {
@@ -121,7 +121,7 @@ const EditCartForm = ({ cartItemId }) => {
               {cartItem.productName}
             </div>
             <div>
-              <button id="close-edit-modal-button">X</button>
+              <button id="close-edit-modal-button" onClick={() => setShowModal(false)}>X</button>
             </div>
           </div>
           <div className='edit-cart-product-details-price'>

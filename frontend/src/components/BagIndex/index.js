@@ -4,6 +4,7 @@ import { deleteCartItem, fetchCartItems } from "../../store/cart";
 import BagIndexItem from "../BagIndexItem";
 import "./BagIndex.css";
 import { useHistory } from "react-router-dom";
+import CheckoutConfirmModal from "../CheckoutConfirmModal";
 
 
 const BagIndex = () => {
@@ -30,7 +31,6 @@ const BagIndex = () => {
 
   const handleCheckout = () => {
     cartItems.map(cartItem => dispatch(deleteCartItem(cartItem.id)));
-    history.push('/checkout-confirmation');
   }
 
   return (
@@ -73,7 +73,8 @@ const BagIndex = () => {
               <p>${calculateSubtotal()}</p>
             </div>
           </div>
-          <button id="checkout-button" onClick={() => handleCheckout()}>CHECKOUT</button>
+          {/* <button id="checkout-button" onClick={() => handleCheckout()}>CHECKOUT</button> */}
+          <CheckoutConfirmModal handleCheckout={handleCheckout}/>
         </div>
       </div>
     </>

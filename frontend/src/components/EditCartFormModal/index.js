@@ -10,7 +10,7 @@ function EditCartFormModal({cartItemId}) {
       <button className="bag-item-edit-button" onClick={() => setShowModal(true)}>Edit</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <EditCartForm cartItemId={cartItemId} />
+          <EditCartForm cartItemId={cartItemId} setShowModal={setShowModal}/>
         </Modal>
       )}
     </>

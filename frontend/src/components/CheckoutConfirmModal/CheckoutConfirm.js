@@ -1,10 +1,11 @@
 import { useHistory } from "react-router-dom";
 import "./CheckoutConfirmation.css";
 
-const CheckoutConfirmation = () => {
+const CheckoutConfirmation = ({ setShowCheckoutModal }) => {
   const history = useHistory();
 
-  const redirectToHome = () => {
+  const handleClick = () => {
+    setShowCheckoutModal(false);
     history.push("/");
   }
 
@@ -15,7 +16,7 @@ const CheckoutConfirmation = () => {
           <h2>Thanks for your order!</h2>
         </div>
         <div className="continue-shopping-button-container">
-          <button id="continue-shopping-button" onClick={() => redirectToHome()}>
+          <button id="continue-shopping-button" onClick={() => handleClick()}>
             Continue Shopping
           </button>
         </div>
