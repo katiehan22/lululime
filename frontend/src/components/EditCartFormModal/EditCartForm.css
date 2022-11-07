@@ -4,8 +4,10 @@
 }
 
 .edit-cart-img {
-  width: 49%;
+  /* width: 41%; */
+  width: 417px;
   margin-right: 2%;
+  /* height: 50%; */
 }
 
 .edit-cart-form-right {
@@ -30,7 +32,7 @@
   font-size: 30px;
   font-weight: bold;
   width: 80%;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .edit-cart-product-details-price {

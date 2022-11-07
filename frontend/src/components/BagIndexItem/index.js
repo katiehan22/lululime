@@ -70,7 +70,8 @@ const BagIndexItem = ({cartItem}) => {
             </div>
           </div>
           <div className="bag-item-edit-remove-container">
-            <div className="bag-item-edit-button" onClick={() => redirectToEditCart(cartItem.id) }>Edit</div>
+            {/* <div className="bag-item-edit-button" onClick={() => redirectToEditCart(cartItem.id) }>Edit</div> */}
+            <EditCartFormModal cartItemId={cartItem.id}/>
             <div className="bag-item-remove-button" onClick={() => dispatch(deleteCartItem(cartItem.id)) }>Remove</div>
           </div>
         </div>

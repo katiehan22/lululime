@@ -6,10 +6,10 @@ import { updateCartItem } from '../../store/cart';
 import testImg from '../../assets/images/product-item-test.png';
 import './EditCartForm.css';
 
-const EditCartForm = () => {
+const EditCartForm = ({ cartItemId }) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user)
-  const { cartItemId } = useParams();
+  // const { cartItemId } = useParams();
   let cartItem = useSelector(state => state.cartItems ? state.cartItems[cartItemId] : null);
 
   useEffect(() => {

@@ -23,7 +23,7 @@ function App() {
         <Route path="/products/:category" component={ProductIndex} />
         <Route path="/productdetail/:productId" component={ProductDetailPage} />
         <Route path="/bag" component={BagIndex} />
-        <Route path="/edit-item/:cartItemId" component={EditCartForm} />
+        {/* <Route path="/edit-item/:cartItemId" component={EditCartForm} /> */}
         <Route path="/" component={SplashPage} />
       </Switch>
       {/* <Footer /> */}

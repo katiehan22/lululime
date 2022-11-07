@@ -2,15 +2,15 @@ import EditCartForm from "./EditCartForm";
 import { useState } from "react";
 import { Modal } from "../../context/Modal";
 
-function EditCartFormModal() {
+function EditCartFormModal({cartItemId}) {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <>
-      <button onClick={() => setShowModal(true)}>Edit Cart Item</button>
+      <button className="bag-item-edit-button" onClick={() => setShowModal(true)}>Edit</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <EditCartForm />
+          <EditCartForm cartItemId={cartItemId} />
         </Modal>
       )}
     </>
