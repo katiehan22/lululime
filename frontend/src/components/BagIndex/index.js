@@ -10,10 +10,24 @@ import CheckoutConfirmModal from "../CheckoutConfirmModal";
 const BagIndex = () => {
   const dispatch = useDispatch();
   const history = useHistory();
+  const user = useSelector(state => state.session.user)
   let cartItems = useSelector(state => state.cartItems ? Object.values(state.cartItems) : []);
+  let bagIndexContent;
+
+  if(user) {
+    bagIndexContent = (
+      cartItems?.map(cartItem => <BagIndexItem cartItem={cartItem} key={cartItem.id} />)
+    )
+  } else {
+    bagIndexContent = (
+      <div className="bag-index-sign-in-message">Please sign in to view items in your cart.</div>
+    )
+  }
 
   useEffect(() => {
-    dispatch(fetchCartItems());
+    if(user) {
+      dispatch(fetchCartItems());
+    }
   }, [dispatch, cartItems.length])
 
   const calculateNumItems = () => {
@@ -42,7 +56,8 @@ const BagIndex = () => {
             <p>{calculateNumItems()}</p>
           </div>
           <div className="bag-index-container">
-            {cartItems?.map(cartItem => <BagIndexItem cartItem={cartItem} key={cartItem.id} />)}
+            {bagIndexContent}
+            {/* {cartItems?.map(cartItem => <BagIndexItem cartItem={cartItem} key={cartItem.id} />)} */}
           </div>
         </div>
         <div className="bag-index-page-right">
@@ -73,7 +88,6 @@ const BagIndex = () => {
               <p>${calculateSubtotal()}</p>
             </div>
           </div>
-          {/* <button id="checkout-button" onClick={() => handleCheckout()}>CHECKOUT</button> */}
           <CheckoutConfirmModal handleCheckout={handleCheckout}/>
         </div>
       </div>

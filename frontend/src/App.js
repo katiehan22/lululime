@@ -9,8 +9,6 @@ import Footer from './components/Footer';
 import ProductIndex from './components/ProductIndex';
 import ProductDetailPage from './components/ProductDetailPage';
 import BagIndex from './components/BagIndex';
-import CheckoutSuccess from './components/CheckoutConfirmModal/CheckoutConfirm'
-import EditCartForm from './components/EditCartFormModal/EditCartForm';
 
 function App() {
   return (
@@ -24,8 +22,6 @@ function App() {
         <Route path="/products/:category" component={ProductIndex} />
         <Route path="/productdetail/:productId" component={ProductDetailPage} />
         <Route path="/bag" component={BagIndex} />
-        {/* <Route path="/edit-item/:cartItemId" component={EditCartForm} /> */}
-        {/* <Route path='/checkout-confirmation' component={CheckoutSuccess}/> */}
         <Route path="/" component={SplashPage} />
       </Switch>
       {/* <Footer /> */}

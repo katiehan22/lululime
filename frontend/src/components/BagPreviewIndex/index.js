@@ -8,7 +8,19 @@ import "./BagPreviewIndex.css";
 const BagPreviewIndex = () => {
   const dispatch = useDispatch();
   const history = useHistory();
+  const user = useSelector(state => state.session.user)
   let cartItems = useSelector(state => state.cartItems ? Object.values(state.cartItems) : []);
+  let bagPreviewIndexContent;
+
+  if (user) {
+    bagPreviewIndexContent = (
+      cartItems?.map(cartItem => <BagPreviewIndexItem cartItem={cartItem} key={cartItem.id} />)
+    )
+  } else {
+    bagPreviewIndexContent = (
+      <div className="bag-preview-sign-in-message">Please sign in to view items in your cart</div>
+    )
+  }
 
   const calculateNumItems = () => {
     let num = cartItems.reduce((acc, ele) => acc + ele.quantity, 0);
@@ -29,8 +41,10 @@ const BagPreviewIndex = () => {
   }
 
   useEffect(() => {
-    dispatch(fetchCartItems());
-  }, [dispatch, cartItems.length])
+    if (user) {
+      dispatch(fetchCartItems());
+    }
+  }, [dispatch, cartItems.length, user])
 
   return (
     <>
@@ -39,7 +53,8 @@ const BagPreviewIndex = () => {
           <h2>Items In Your Bag</h2>
         </div>
         <div className="bag-preview-index-container">
-          {cartItems?.map(cartItem => <BagPreviewIndexItem cartItem={cartItem} key={cartItem.id} />)}
+          {bagPreviewIndexContent}
+          {/* {cartItems?.map(cartItem => <BagPreviewIndexItem cartItem={cartItem} key={cartItem.id} />)} */}
         </div>
         <div className="bag-preview-summary-container">
           <div className="bag-preview-summary-subtotal-container">
