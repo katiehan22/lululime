@@ -16,6 +16,10 @@ const ProductDetailPage = () => {
   let product = useSelector(state => state.products ? state.products[productId] : null);
   let reviews = useSelector(state => state.reviews ? Object.values(state.reviews) : [])
 
+  const scrollToReviews = () => {
+    document.querySelector('.reviews-container').scrollIntoView({behavior: "smooth"});
+  }
+
   useEffect(() => {
     dispatch(fetchProduct(productId));
     dispatch(fetchReviews(productId));
@@ -48,7 +52,7 @@ const ProductDetailPage = () => {
 
               <ProductDetailForm product={product}/>
 
-              <div className="reviews-anchor">
+              <div className="reviews-anchor" onClick={() => scrollToReviews()}>
                 <i class="fa-regular fa-star"></i>
                 <Link to="#" className="reviews-anchor-link"><h2>&nbsp;Reviews ({reviews.length})</h2></Link>
               </div>
