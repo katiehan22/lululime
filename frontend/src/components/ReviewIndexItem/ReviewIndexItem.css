@@ -5,3 +5,50 @@
   min-height: 200px;
   border-bottom: 2px solid rgb(222, 222, 222);
 }
+
+.review-index-item-nickname-container {
+  /* top right bottom left */
+  margin: 20px 20px 0px 15px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.review-index-item-rating-container {
+  margin: 10px 20px 0px 20px;
+}
+
+.review-index-item-title-container {
+  margin: 10px 20px 0px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.review-index-item-body-container {
+  margin: 10px 20px 0px 20px;
+}
+
+.nickname-thumbnail {
+  background-color: #959595;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nickname-text {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.date-submitted {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #7b7b7b;
+}

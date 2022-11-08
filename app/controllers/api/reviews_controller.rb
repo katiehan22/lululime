@@ -7,7 +7,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create 
-    @review = CartItem.new(review_params)
+    @review = Review.new(review_params)
     if @review.save 
       render :show 
     else
