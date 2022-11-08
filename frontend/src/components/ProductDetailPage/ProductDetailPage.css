@@ -164,3 +164,23 @@
 #star-icon-gray {
   color: rgb(177, 177, 177);
 }
+
+.avg-rating-amount {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.based-on-reviews {
+  margin-top: 5px;
+  color: gray;
+  font-size: 14px;
+}
+
+.avg-rating-and-stars {
+  display: flex;
+  align-items: center;
+}
+
+.avg-rating-stars {
+  margin-left: 5px;
+}

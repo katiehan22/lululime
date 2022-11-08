@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { fetchProduct } from "../../store/products";
@@ -21,10 +21,44 @@ const ProductDetailPage = () => {
     document.querySelector('.reviews-container').scrollIntoView({behavior: "smooth"});
   }
 
+  const calculateAvgRating = () => {
+    const ratingSum = reviews.reduce((acc, ele) => acc + ele.rating, 0);
+    return (ratingSum/reviews.length).toFixed(1);
+  }
+
+  const calculatedRoundedRating = () => {
+    const avgRating = calculateAvgRating();
+    return Math.round(avgRating * 2) / 2;
+  }
+
+  const [starStyles, setStarStyles] = useState(["fa-regular fa-star", "fa-regular fa-star", "fa-regular fa-star", "fa-regular fa-star", "fa-regular fa-star"]);
+
+  const fillStars = () => {
+    const starStylesCopy = ["fa-regular fa-star", "fa-regular fa-star", "fa-regular fa-star", "fa-regular fa-star", "fa-regular fa-star"];
+
+    let before = Math.floor(calculatedRoundedRating());
+    let after = calculatedRoundedRating() - before;
+
+    let i = 0;
+    for(i; i < before; i++) {
+      starStylesCopy[i] = "fa-solid fa-star";
+    }
+
+    if(i < 5 && after === .5) {
+      starStylesCopy[i] = "fa-solid fa-star-half-stroke";
+    }
+
+    setStarStyles(starStylesCopy);
+  }
+
   useEffect(() => {
     dispatch(fetchProduct(productId));
     dispatch(fetchReviews(productId));
   }, [dispatch, productId])
+
+  useEffect(() => {
+    fillStars();
+  }, [dispatch, calculatedRoundedRating()])
 
   if (!product || !product.sizes) {
     return null;
@@ -103,7 +137,21 @@ const ProductDetailPage = () => {
           <div className="reviews-container">
             <div className="reviews-header-container">
               <div className="reviews-header-text">Reviews</div>
-              <div className="reviews-header-average">ADD AVG RATING</div>
+              <div className="reviews-header-average">
+                <div className="avg-rating-and-stars">
+                  <div className="avg-rating-amount">{calculateAvgRating()}</div>
+                  <div className="avg-rating-stars">
+                    <i class={starStyles[0]}></i>
+                    <i class={starStyles[1]}></i>
+                    <i class={starStyles[2]}></i>
+                    <i class={starStyles[3]}></i>
+                    <i class={starStyles[4]}></i>
+                  </div>
+                </div>
+                <div className="based-on-reviews">
+                  Based on {reviews.length} reviews
+                </div>
+              </div>
               <div className="create-review-button-container">
                 <ReviewFormModal productId={productId}/>
               </div>
