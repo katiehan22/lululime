@@ -74,3 +74,8 @@
 #add-to-bag-button:hover {
   background-color: #b0102b;
 }
+
+.add-to-bag-form-errors {
+  color: #d31334;
+  margin-top: 5px;
+}

@@ -20,7 +20,7 @@ const BagIndex = () => {
     )
   } else {
     bagIndexContent = (
-      <div className="bag-index-sign-in-message">Please sign in to view items in your cart.</div>
+      <div className="bag-index-sign-in-message">Please sign in to view items in your bag.</div>
     )
   }
 
@@ -28,7 +28,7 @@ const BagIndex = () => {
     if(user) {
       dispatch(fetchCartItems());
     }
-  }, [dispatch, cartItems.length])
+  }, [dispatch, cartItems.length, user])
 
   const calculateNumItems = () => {
     let num = cartItems.reduce((acc, ele) => acc + ele.quantity, 0);
@@ -36,11 +36,19 @@ const BagIndex = () => {
     if (num > 1) {
       itemString += "s";
     }
-    return `(${num} ${itemString})`;
+    if(user) {
+      return `(${num} ${itemString})`;
+    } else {
+      return "(0 items)";
+    }
   }
 
   const calculateSubtotal = () => {
-    return cartItems.reduce((acc, ele) => acc + (ele.quantity * ele.productPrice), 0);
+    if(user) {
+      return cartItems.reduce((acc, ele) => acc + (ele.quantity * ele.productPrice), 0);
+    } else {
+      return 0;
+    }
   }
 
   const handleCheckout = () => {

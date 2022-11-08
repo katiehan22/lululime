@@ -18,7 +18,7 @@ const BagPreviewIndex = () => {
     )
   } else {
     bagPreviewIndexContent = (
-      <div className="bag-preview-sign-in-message">Please sign in to view items in your cart</div>
+      <div className="bag-preview-sign-in-message">Please sign in to view items in your bag.</div>
     )
   }
 
@@ -28,11 +28,19 @@ const BagPreviewIndex = () => {
     if (num > 1) {
       itemString += "s";
     }
-    return `(${num} ${itemString})`;
+    if(user) {
+      return `(${num} ${itemString})`;
+    } else {
+      return "(0 items)";
+    }
   }
 
   const calculateSubtotal = () => {
-    return cartItems.reduce((acc, ele) => acc + (ele.quantity * ele.productPrice), 0);
+    if(user) {
+      return cartItems.reduce((acc, ele) => acc + (ele.quantity * ele.productPrice), 0);
+    } else {
+      return 0;
+    }
   }
 
   const handleClickToBag = (e) => {

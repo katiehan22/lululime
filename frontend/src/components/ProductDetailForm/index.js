@@ -5,7 +5,8 @@ import { createCartItem } from "../../store/cart";
 
 const ProductDetailForm = ({product}) => {
   const dispatch = useDispatch();
-  const user = useSelector(state => state.session.user)
+  const user = useSelector(state => state.session.user);
+  const [errors, setErrors] = useState([]);
 
   const COLOURCODES = {
     "Black": "#212121", 
@@ -82,6 +83,11 @@ const ProductDetailForm = ({product}) => {
   }, [dispatch])
 
   const handleAddToBag = () => {
+    setErrors([]);
+    if(!user) {
+      setErrors(["Please sign in in to add items to your bag"]);
+    }
+
     const newCartItem = {
       cartItem: {
         userId: user.id,
@@ -91,7 +97,7 @@ const ProductDetailForm = ({product}) => {
         size: sizeDisplay
       }
     }
-    dispatch(createCartItem(newCartItem));
+    dispatch(createCartItem(newCartItem))
   }
 
   return (
@@ -183,6 +189,9 @@ const ProductDetailForm = ({product}) => {
         <div className="add-to-bag-container">
           <button id="add-to-bag-button" onClick={() => handleAddToBag()}>ADD TO BAG</button>
         </div>
+        <ul className="add-to-bag-form-errors">
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul>
       </div>
     </>
   )
