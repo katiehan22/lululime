@@ -2,19 +2,23 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { fetchProduct } from "../../store/products";
+import { fetchReviews } from "../../store/reviews";
 import "./ProductDetailPage.css";
 import testImg from '../../assets/images/product-item-test.png';
 import ProductDetailForm from "../ProductDetailForm";
 import ProductCarousel from "../ProductCarousel";
 import BagPreviewIndex from "../BagPreviewIndex";
+import ReviewIndexItem from "../ReviewIndexItem";
 
 const ProductDetailPage = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
   let product = useSelector(state => state.products ? state.products[productId] : null);
+  let reviews = useSelector(state => state.reviews ? Object.values(state.reviews) : [])
 
   useEffect(() => {
-    dispatch(fetchProduct(productId))
+    dispatch(fetchProduct(productId));
+    dispatch(fetchReviews(productId));
   }, [dispatch, productId])
 
   if (!product || !product.sizes) {
@@ -46,7 +50,7 @@ const ProductDetailPage = () => {
 
               <div className="reviews-anchor">
                 <i class="fa-regular fa-star"></i>
-                <Link to="#" className="reviews-anchor-link"><h2>&nbsp;Reviews</h2></Link>
+                <Link to="#" className="reviews-anchor-link"><h2>&nbsp;Reviews ({reviews.length})</h2></Link>
               </div>
 
               <div className="details-container">
@@ -91,6 +95,18 @@ const ProductDetailPage = () => {
             <ProductCarousel category={product.category}/>
           </div> */}
 
+          <div className="reviews-container">
+            <div className="reviews-header-container">
+              <div className="reviews-header-text">Reviews</div>
+              <div className="reviews-header-average">ADD AVG RATING</div>
+              <div className="create-revew-button-container">
+                <button id="create-revew-button">WRITE A REVIEW</button>
+              </div>
+            </div>
+            <div className="reviews-index-item-container">
+              {reviews?.map(review => <ReviewIndexItem review={review} key={review.id} />)}
+            </div>
+          </div>
         </div>
       </>
     )

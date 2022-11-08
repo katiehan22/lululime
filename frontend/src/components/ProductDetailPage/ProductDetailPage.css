@@ -121,3 +121,42 @@
   display: flex;
   justify-content: center;
 }
+
+.reviews-container {
+  width: 100%;
+  border-top: 1px solid rgb(222, 222, 222);
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.reviews-header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews-header-text {
+  font-size: 40px;
+  font-weight: bold;
+  width: 200px;
+}
+
+#create-revew-button {
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#create-revew-button:hover {
+  background-color: rgb(77, 77, 77);
+}
+
+.reviews-index-item-container {
+  margin-left: 200px;
+  margin-top: 50px;
+}

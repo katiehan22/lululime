@@ -2,6 +2,7 @@ require 'open-uri';
 
   puts "Destroying tables..."
   # Unnecessary if using `rails db:seed:replant`
+  Review.destroy_all
   CartItem.destroy_all
   Product.destroy_all
   User.destroy_all
@@ -11,6 +12,7 @@ require 'open-uri';
   ApplicationRecord.connection.reset_pk_sequence!('users')
   ApplicationRecord.connection.reset_pk_sequence!('products')
   ApplicationRecord.connection.reset_pk_sequence!('cart_items')
+  ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
   puts "Creating users..."
   # Create one user with an easy to remember email, and password:
@@ -614,6 +616,35 @@ require 'open-uri';
     quantity: 1, 
     colour: "True Navy",
     size: "M"
+  })
+
+  puts "Creating reviews..."
+
+  review1 = Review.create! ({
+    user_id: demoUser.id,
+    product_id: product1.id,
+    rating: 5,
+    nickname: "demo-lish",
+    title: "Great pants",
+    body: "These are so comfortable! Great for lounging."
+  })
+
+  review2 = Review.create! ({
+    user_id: User.second.id,
+    product_id: product1.id,
+    rating: 3,
+    nickname: "Kt",
+    title: "So soft!",
+    body: "Great color and so comfy. My favorite pants for yoga. Always gets so many compliments!"
+  })
+
+  review3 = Review.create! ({
+    user_id: demoUser.id,
+    product_id: product2.id,
+    rating: 4,
+    nickname: "Amber123",
+    title: "Awesome!!",
+    body: "Perfect pants for working out. Fabric keeps me cool and wicks away sweat."
   })
 
   puts "Done!"
