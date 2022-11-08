@@ -13,15 +13,26 @@ const BagIndex = () => {
   const user = useSelector(state => state.session.user)
   let cartItems = useSelector(state => state.cartItems ? Object.values(state.cartItems) : []);
   let bagIndexContent;
+  let checkoutButton;
+
+  const handleCheckout = () => {
+    cartItems.map(cartItem => dispatch(deleteCartItem(cartItem.id)));
+  }
 
   if(user) {
     bagIndexContent = (
       cartItems?.map(cartItem => <BagIndexItem cartItem={cartItem} key={cartItem.id} />)
-    )
+    );
+    checkoutButton = (
+      <CheckoutConfirmModal handleCheckout={handleCheckout} />
+    );
   } else {
     bagIndexContent = (
       <div className="bag-index-sign-in-message">Please sign in to view items in your bag.</div>
-    )
+    );
+    checkoutButton = (
+      <div className="checkout-sign-in-message">PLEASE SIGN IN TO CHECKOUT</div>
+    );
   }
 
   useEffect(() => {
@@ -49,10 +60,6 @@ const BagIndex = () => {
     } else {
       return 0;
     }
-  }
-
-  const handleCheckout = () => {
-    cartItems.map(cartItem => dispatch(deleteCartItem(cartItem.id)));
   }
 
   return (
@@ -96,7 +103,8 @@ const BagIndex = () => {
               <p>${calculateSubtotal()}</p>
             </div>
           </div>
-          <CheckoutConfirmModal handleCheckout={handleCheckout}/>
+          {checkoutButton}
+          {/* <CheckoutConfirmModal handleCheckout={handleCheckout}/> */}
         </div>
       </div>
     </>

@@ -23,7 +23,8 @@ const ProductDetailPage = () => {
 
   const calculateAvgRating = () => {
     const ratingSum = reviews.reduce((acc, ele) => acc + ele.rating, 0);
-    return (ratingSum/reviews.length).toFixed(1);
+    // return (ratingSum/reviews.length).toFixed(1);
+    return 2.8;
   }
 
   const calculatedRoundedRating = () => {
