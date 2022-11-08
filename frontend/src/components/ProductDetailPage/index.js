@@ -9,6 +9,7 @@ import ProductDetailForm from "../ProductDetailForm";
 import ProductCarousel from "../ProductCarousel";
 import BagPreviewIndex from "../BagPreviewIndex";
 import ReviewIndexItem from "../ReviewIndexItem";
+import ReviewFormModal from "../ReviewFormModal";
 
 const ProductDetailPage = () => {
   const dispatch = useDispatch();
@@ -103,8 +104,8 @@ const ProductDetailPage = () => {
             <div className="reviews-header-container">
               <div className="reviews-header-text">Reviews</div>
               <div className="reviews-header-average">ADD AVG RATING</div>
-              <div className="create-revew-button-container">
-                <button id="create-revew-button">WRITE A REVIEW</button>
+              <div className="create-review-button-container">
+                <ReviewFormModal productId={productId}/>
               </div>
             </div>
             <div className="reviews-index-item-container">

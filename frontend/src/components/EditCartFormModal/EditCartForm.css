@@ -4,14 +4,14 @@
 }
 
 .edit-cart-img {
-  width: 41%;
+  width: 50%;
   /* width: 417px; */
   margin-right: 2%;
-  /* height: 50%; */
+  /* height: 100%; */
 }
 
 .edit-cart-form-right {
-  width: 57%;
+  width: 50%;
 }
 
 .edit-cart-form-right-header {

@@ -15,6 +15,60 @@ const ReviewIndexItem = ({review}) => {
     return month + "/" + day + "/" + year
   }
 
+  const fillStarIcons = () => {
+    if (review.rating === 1) {
+      return (
+        <>
+          <i class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+        </>
+      )
+    } else if (review.rating === 2) {
+      return (
+        <>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+        </>
+      )
+    } else if (review.rating === 3) {
+      return (
+        <>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+        </>
+      )
+    } else if (review.rating === 4) {
+      return (
+        <>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i id="star-icon-gray" class="fa-solid fa-star"></i>
+        </>
+      )
+    } else {
+      return (
+        <>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </>
+      )
+    }
+  }
+
   return (
     <>
       <div className="review-index-item">
@@ -30,7 +84,7 @@ const ReviewIndexItem = ({review}) => {
           </div>
         </div>
         <div className="review-index-item-rating-container">
-          {review.rating}
+          {fillStarIcons()}
         </div>
         <div className="review-index-item-title-container">
           {review.title}

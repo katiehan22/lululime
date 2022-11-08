@@ -11,10 +11,6 @@ const BagIndexItem = ({cartItem}) => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const redirectToEditCart = (cartItemId) => {
-    history.push(`/edit-item/${cartItemId}`)
-  }
-
   const handleQtyChange = () => {
     return (e) => {
       console.log(e);
