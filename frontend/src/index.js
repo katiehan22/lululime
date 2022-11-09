@@ -11,6 +11,7 @@ import * as productActions from './store/products';
 import * as cartItemActions from './store/cart';
 import * as reviewActions from './store/reviews';
 import { ModalProvider } from './context/Modal';
+import ScrollToTop from './components/ScrollToTop';
 
 const store = configureStore();
 
@@ -28,6 +29,7 @@ function Root() {
     <ModalProvider>  
       <Provider store={store}>
         <BrowserRouter>
+          <ScrollToTop />
           <App />
         </BrowserRouter>
       </Provider>

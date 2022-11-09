@@ -1,5 +1,5 @@
 import "./ReviewIndexItem.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteReview } from "../../store/reviews";
 import ReviewEditFormModal from "../ReviewEditFormModal";
@@ -7,7 +7,9 @@ import ReviewEditFormModal from "../ReviewEditFormModal";
 const ReviewIndexItem = ({review}) => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState([]);
+  const [starIconId, setStarIconId] = useState(["star-icon-gray", "star-icon-gray", "star-icon-gray", "star-icon-gray", "star-icon-gray"]);
   const user = useSelector(state => state.session.user);
+
   const capitalizeNickname = () => {
     const inputtedNickname = review.nickname;
     return inputtedNickname.charAt(0).toUpperCase() + inputtedNickname.slice(1);
@@ -23,57 +25,13 @@ const ReviewIndexItem = ({review}) => {
   }
 
   const fillStarIcons = () => {
-    if (review.rating === 1) {
-      return (
-        <>
-          <i class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-        </>
-      )
-    } else if (review.rating === 2) {
-      return (
-        <>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-        </>
-      )
-    } else if (review.rating === 3) {
-      return (
-        <>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-        </>
-      )
-    } else if (review.rating === 4) {
-      return (
-        <>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i id="star-icon-gray" class="fa-solid fa-star"></i>
-        </>
-      )
-    } else {
-      return (
-        <>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </>
-      )
+    let starIconIdCopy = ["star-icon-gray", "star-icon-gray", "star-icon-gray", "star-icon-gray", "star-icon-gray"];
+
+    for(let i = 0; i < review.rating; i++) {
+      starIconIdCopy[i] = "star-icon-black";
     }
+
+    setStarIconId(starIconIdCopy);
   }
 
   const handleDeleteReview = () => {
@@ -85,6 +43,10 @@ const ReviewIndexItem = ({review}) => {
       setErrors(["You can only delete your own reviews."]);
     }
   }
+
+  useEffect(() => {
+    fillStarIcons();
+  }, [dispatch, review.rating])
 
   return (
     <>
@@ -101,7 +63,11 @@ const ReviewIndexItem = ({review}) => {
           </div>
         </div>
         <div className="review-index-item-rating-container">
-          {fillStarIcons()}
+          <i class="fa-solid fa-star" id={starIconId[0]}></i>
+          <i class="fa-solid fa-star" id={starIconId[1]}></i>
+          <i class="fa-solid fa-star" id={starIconId[2]}></i>
+          <i class="fa-solid fa-star" id={starIconId[3]}></i>
+          <i class="fa-solid fa-star" id={starIconId[4]}></i>
         </div>
         <div className="review-index-item-title-container">
           {review.title}

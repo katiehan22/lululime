@@ -165,6 +165,10 @@
   color: rgb(177, 177, 177);
 }
 
+#star-icon-black {
+  color: rgb(0, 0, 0);
+}
+
 .avg-rating-amount {
   font-weight: bold;
   font-size: 26px;
