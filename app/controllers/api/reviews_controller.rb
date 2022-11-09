@@ -20,7 +20,8 @@ class Api::ReviewsController < ApplicationController
     if @review.update(review_params)
       render :show 
     else
-      render json: @review.errors.full_messages, status: 422
+      # render json: @review.errors.full_messages, status: 422
+      render json: {errors: ["Please fill in all fields"]}, status: 422
     end
   end
 

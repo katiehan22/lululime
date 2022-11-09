@@ -2,6 +2,7 @@ import "./ReviewIndexItem.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteReview } from "../../store/reviews";
+import ReviewEditFormModal from "../ReviewEditFormModal";
 
 const ReviewIndexItem = ({review}) => {
   const dispatch = useDispatch();
@@ -109,10 +110,11 @@ const ReviewIndexItem = ({review}) => {
           {review.body}
         </div>
         <div className="review-item-edit-remove-container">
-          <div className="review-item-edit-button">Edit</div>
+          {/* <div className="review-item-edit-button">Edit</div> */}
+          <ReviewEditFormModal review={review} setErrors={setErrors} />
           <div className="review-item-delete-button" onClick={() => handleDeleteReview()}>Delete</div>
         </div>
-        <ul className="review-edit-delete-errors">
+        <ul className="review-delete-errors">
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
       </div>
