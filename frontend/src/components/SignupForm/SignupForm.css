@@ -34,3 +34,8 @@
   font-weight: bold;
   font-size: 18px;
 }
+
+.signup-errors {
+  color: #d31334;
+  margin-bottom: 10px;
+}

@@ -7,9 +7,14 @@ import featureImg4 from "../../assets/images/splashfeature4.png"
 import { NavLink, useHistory } from 'react-router-dom';
 import SplashMembership from "../SplashMembership";
 import ProductCarousel from "../ProductCarousel";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchProductAndRelatedProducts } from "../../store/products";
 
 const SplashPage = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
+  let products = useSelector(state => state.products ? Object.values(state.products) : []);
 
   const handleFeature1 = (e) => {
     e.preventDefault();
@@ -31,6 +36,14 @@ const SplashPage = () => {
     history.push('/products/womens');
   }
 
+  useEffect(() => {
+    dispatch(fetchProductAndRelatedProducts(19));
+  }, [dispatch])
+
+  if(products.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <div className="splash-page">
@@ -47,9 +60,6 @@ const SplashPage = () => {
               <li className="splash-li"><NavLink to="/products/accessories">All Accessories</NavLink></li>
             </ul>
           </div>
-        </div>
-
-        <div className="product-carousel-placeholder">
         </div>
 
         <div className="splash-feature-container-1">
@@ -79,9 +89,10 @@ const SplashPage = () => {
           </div>
         </div>
 
-        {/* <div className="splash-carousel">
-          <ProductCarousel category={"womens"} />
-        </div> */}
+        <div className="splash-carousel">
+          <div className="splash-carousel-header">Best Sellers</div>
+          <ProductCarousel products={products} />
+        </div>
 
 
         <div className="splash-feature-container-2">

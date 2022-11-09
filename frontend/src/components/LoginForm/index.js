@@ -43,9 +43,6 @@ const LoginForm = () => {
         <h1>Sign in to your member account</h1>
         <hr className="red-break"/>
         <form className="login-form">
-          <ul>
-            {errors.map(error => <li key={error}>{error}</li>)}
-          </ul>
           Email address
           <br />
           <input value={email} onChange={e => setEmail(e.target.value)} />
@@ -55,6 +52,10 @@ const LoginForm = () => {
           <br />
           <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
           <br />
+          <br />
+          <ul className='login-errors'>
+            {errors.map(error => <li key={error}>{error}</li>)}
+          </ul>
           <br />
           <button onClick={handleLogin} id="login-button">SIGN IN TO YOUR MEMBER ACCOUNT</button>
           <br />

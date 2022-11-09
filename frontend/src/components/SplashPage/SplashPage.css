@@ -41,6 +41,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .splash-feature-1, .splash-feature-2, .splash-feature-3,
@@ -83,6 +84,13 @@
 }
 
 .splash-carousel {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 75px;
+  margin-bottom: 25px;
+}
+
+.splash-carousel-header {
+  font-weight: bold;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
 }

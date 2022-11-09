@@ -41,9 +41,6 @@ const SignupForm = () => {
         <h1>Create a member account</h1>
         <hr className="red-break"/>
         <form className="signup-form">
-          <ul>
-            {errors.map(error => <li key={error}>{error}</li>)}
-          </ul>
           Email address
           <br />
           <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -54,6 +51,9 @@ const SignupForm = () => {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           <br />
           <br />
+          <ul className="signup-errors">
+            {errors.map(error => <li key={error}>{error}</li>)}
+          </ul>
           <button onClick={handleSignup} id="signup-button">CREATE MEMBER ACCOUNT</button>
         </form>
         <br />
