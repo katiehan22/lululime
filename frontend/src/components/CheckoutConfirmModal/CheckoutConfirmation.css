@@ -28,3 +28,8 @@
 #continue-shopping-button:hover {
   background-color: #b0102b;
 }
+
+.checkout-errors {
+  color: #d31334;
+  margin-top: 5px;
+}

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { deleteCartItem, fetchCartItems } from "../../store/cart";
 import BagIndexItem from "../BagIndexItem";
 import "./BagIndex.css";
@@ -10,28 +10,26 @@ import CheckoutConfirmModal from "../CheckoutConfirmModal";
 const BagIndex = () => {
   const dispatch = useDispatch();
   const history = useHistory();
+  const [errors, setErrors] = useState([]);
   const user = useSelector(state => state.session.user)
   let cartItems = useSelector(state => state.cartItems ? Object.values(state.cartItems) : []);
   let bagIndexContent;
-  let checkoutButton;
 
   const handleCheckout = () => {
-    cartItems.map(cartItem => dispatch(deleteCartItem(cartItem.id)));
+    if(cartItems.length === 0 ) {
+      setErrors(["Please add items to your cart to checkout"])
+    } else {
+      cartItems.map(cartItem => dispatch(deleteCartItem(cartItem.id)));
+    }
   }
 
   if(user) {
     bagIndexContent = (
       cartItems?.map(cartItem => <BagIndexItem cartItem={cartItem} key={cartItem.id} />)
     );
-    checkoutButton = (
-      <CheckoutConfirmModal handleCheckout={handleCheckout} />
-    );
   } else {
     bagIndexContent = (
       <div className="bag-index-sign-in-message">Please sign in to view items in your bag.</div>
-    );
-    checkoutButton = (
-      <div className="checkout-sign-in-message">PLEASE SIGN IN TO CHECKOUT</div>
     );
   }
 
@@ -103,8 +101,7 @@ const BagIndex = () => {
               <p>${calculateSubtotal()}</p>
             </div>
           </div>
-          {checkoutButton}
-          {/* <CheckoutConfirmModal handleCheckout={handleCheckout}/> */}
+          <CheckoutConfirmModal handleCheckout={handleCheckout} cartItems={cartItems} />
         </div>
       </div>
     </>

@@ -22,9 +22,13 @@ const ProductDetailPage = () => {
   }
 
   const calculateAvgRating = () => {
+    if(reviews.length === 0) {
+      return 0;
+    }
+    
     const ratingSum = reviews.reduce((acc, ele) => acc + ele.rating, 0);
-    // return (ratingSum/reviews.length).toFixed(1);
-    return 2.8;
+    return (ratingSum/reviews.length).toFixed(1);
+    // return 2.8;
   }
 
   const calculatedRoundedRating = () => {
