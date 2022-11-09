@@ -77,12 +77,12 @@ const ReviewIndexItem = ({review}) => {
   }
 
   const handleDeleteReview = () => {
-    // console.log(review.userId);
-    // console.log(user.id);
-    if (review.userId === user.id) {
+    if (!user) {
+      setErrors(["Please sign in to modify reviews."])
+    } else if (review.userId === user.id) {
       dispatch(deleteReview(review.id));
     } else {
-      setErrors(["You can only delete your own reviews."])
+      setErrors(["You can only delete your own reviews."]);
     }
   }
 
@@ -110,7 +110,6 @@ const ReviewIndexItem = ({review}) => {
           {review.body}
         </div>
         <div className="review-item-edit-remove-container">
-          {/* <div className="review-item-edit-button">Edit</div> */}
           <ReviewEditFormModal review={review} setErrors={setErrors} />
           <div className="review-item-delete-button" onClick={() => handleDeleteReview()}>Delete</div>
         </div>

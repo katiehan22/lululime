@@ -48,6 +48,7 @@ const ReviewEditForm = ({ review, setShowEditReviewModal }) => {
     }
 
     dispatch(updateReview(newReview))
+      .then(() => setShowEditReviewModal(false))
       .catch(async (res) => {
         let data;
         try {
@@ -64,11 +65,6 @@ const ReviewEditForm = ({ review, setShowEditReviewModal }) => {
           setErrors([res.statusText]);
         }
       });
-    // setShowEditReviewModal(false);
-
-    // if(errors.length === 0) {
-    //   setShowReviewModal(false);
-    // }
   }
 
   useEffect(() => {

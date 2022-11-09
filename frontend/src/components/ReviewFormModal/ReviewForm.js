@@ -42,6 +42,7 @@ const ReviewForm = ({ productId, setShowReviewModal }) => {
     }
 
     dispatch(createReview(newReview))
+      .then(() => setShowReviewModal(false))
       .catch(async (res) => {
         let data;
         try {
@@ -58,11 +59,6 @@ const ReviewForm = ({ productId, setShowReviewModal }) => {
           setErrors([res.statusText]);
         }
       });
-    // setShowReviewModal(false);
-
-    // if(errors.length === 0) {
-    //   setShowReviewModal(false);
-    // }
   }
 
   useEffect(() => {

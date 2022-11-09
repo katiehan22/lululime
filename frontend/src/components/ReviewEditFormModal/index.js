@@ -8,7 +8,9 @@ function ReviewEditFormModal({ review, setErrors }) {
   let user = useSelector(state => state.session.user);
 
   const handleReviewEditClick = () => {
-    if(user.id === review.userId) {
+    if(!user) {
+      setErrors(["Please sign in to modify reviews."]);
+    } else if (review.userId === user.id) {
       setShowEditReviewModal(true);
     } else {
       setErrors(["You can only edit your own reviews."]);
