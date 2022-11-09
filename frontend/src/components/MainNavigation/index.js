@@ -1,11 +1,33 @@
 import { NavLink, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { fetchCartItems } from '../../store/cart';
 import './MainNavigation.css';
 import logo from '../../assets/images/logo.png';
 import BagPreviewIndex from '../BagPreviewIndex';
+import bagIcon from '../../assets/images/shoppingbag.png';
 
 
 function MainNavigation() {
+  const dispatch = useDispatch();
   const history = useHistory();
+  const user = useSelector(state => state.session.user)
+  let cartItems = useSelector(state => state.cartItems ? Object.values(state.cartItems) : []);
+
+  const calculateNumItems = () => {
+    let num = cartItems.reduce((acc, ele) => acc + ele.quantity, 0);
+    if (user) {
+      return num;
+    } else {
+      return 0;
+    }
+  }
+
+  useEffect(() => {
+    if (user) {
+      dispatch(fetchCartItems());
+    }
+  }, [dispatch, cartItems.length, user])
 
   return (
     <div className='main-nav-container'>
@@ -50,7 +72,15 @@ function MainNavigation() {
         </ul>
       </nav>
       <div className='bag-icon-container'>
-        <i id='bag-icon' class="fa-solid fa-bag-shopping" onClick={() => history.push('/bag')}></i>
+        <div className='bag-icon' onClick={() => history.push('/bag')}>
+          <img src={bagIcon} id="bag-icon" />
+        </div>
+        <div className='bag-icon-badge'>
+          <div className='bag-icon-number'>
+            {calculateNumItems()}
+          </div>
+        </div>
+        {/* <i id='bag-icon' class="fa-solid fa-bag-shopping" onClick={() => history.push('/bag')}></i> */}
         <BagPreviewIndex />
       </div>
     </div>

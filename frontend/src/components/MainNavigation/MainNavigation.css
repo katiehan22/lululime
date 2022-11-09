@@ -145,3 +145,23 @@
   font-size: 25px;
   cursor: pointer;
 }
+
+.bag-icon {
+  width: 35px;
+}
+
+.bag-icon-badge {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #d31334;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  color: white;
+  top: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

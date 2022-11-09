@@ -86,18 +86,18 @@ const ProductDetailForm = ({product}) => {
     setErrors([]);
     if(!user) {
       setErrors(["Please sign in in to add items to your bag"]);
-    }
-
-    const newCartItem = {
-      cartItem: {
-        userId: user.id,
-        productId: product.id,
-        quantity: 1,
-        colour: colourDisplay,
-        size: sizeDisplay
+    } else {
+      const newCartItem = {
+        cartItem: {
+          userId: user.id,
+          productId: product.id,
+          quantity: 1,
+          colour: colourDisplay,
+          size: sizeDisplay
+        }
       }
+      dispatch(createCartItem(newCartItem))
     }
-    dispatch(createCartItem(newCartItem))
   }
 
   return (
