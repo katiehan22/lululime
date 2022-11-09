@@ -80,7 +80,6 @@ function MainNavigation() {
             {calculateNumItems()}
           </div>
         </div>
-        {/* <i id='bag-icon' class="fa-solid fa-bag-shopping" onClick={() => history.push('/bag')}></i> */}
         <BagPreviewIndex />
       </div>
     </div>
