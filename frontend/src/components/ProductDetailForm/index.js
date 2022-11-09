@@ -2,8 +2,9 @@ import "./ProductDetailForm.css";
 import { useEffect, useState } from "react"
 import {useDispatch, useSelector} from 'react-redux'
 import { createCartItem } from "../../store/cart";
+import AddToBagModal from "../AddToBagModal";
 
-const ProductDetailForm = ({product}) => {
+const ProductDetailForm = ({product, products}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user);
   const [errors, setErrors] = useState([]);
@@ -187,7 +188,8 @@ const ProductDetailForm = ({product}) => {
         </div>
 
         <div className="add-to-bag-container">
-          <button id="add-to-bag-button" onClick={() => handleAddToBag()}>ADD TO BAG</button>
+          <AddToBagModal handleAddToBag={handleAddToBag} setErrors={setErrors} product={product} products={products}/>
+          {/* <button id="add-to-bag-button" onClick={() => handleAddToBag()}>ADD TO BAG</button> */}
         </div>
         <ul className="add-to-bag-form-errors">
           {errors.map(error => <li key={error}>{error}</li>)}

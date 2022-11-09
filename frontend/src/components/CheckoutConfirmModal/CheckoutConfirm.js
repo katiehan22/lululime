@@ -11,6 +11,9 @@ const CheckoutConfirmation = ({ setShowCheckoutModal }) => {
 
   return (
     <>
+      <div className="close-checkout-modal-button">
+        <button onClick={() => setShowCheckoutModal(false)}>X</button>
+      </div>
       <div className="checkout-confirmation-container">
         <div className="checkout-confirmation-header">
           <h2>Thanks for your order!</h2>

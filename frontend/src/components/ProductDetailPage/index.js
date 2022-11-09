@@ -16,7 +16,6 @@ const ProductDetailPage = () => {
   const { productId } = useParams();
   let productIdInt = parseInt(productId);
   let products = useSelector(state => state.products ? Object.values(state.products) : []);
-  // let product = useSelector(state => state.products ? state.products[productId] : null);
   let reviews = useSelector(state => state.reviews ? Object.values(state.reviews) : [])
 
   let product = products.find(product => product.id === productIdInt)
@@ -94,7 +93,7 @@ const ProductDetailPage = () => {
                 <h3>${product.price} USD</h3>
               </div>
 
-              <ProductDetailForm product={product}/>
+              <ProductDetailForm product={product} products={products}/>
 
               <div className="reviews-anchor" onClick={() => scrollToReviews()}>
                 <i class="fa-regular fa-star"></i>

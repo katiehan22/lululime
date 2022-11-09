@@ -33,3 +33,9 @@
   color: #d31334;
   margin-top: 5px;
 }
+
+.close-checkout-modal-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
