@@ -70,7 +70,6 @@ const BagIndex = () => {
           </div>
           <div className="bag-index-container">
             {bagIndexContent}
-            {/* {cartItems?.map(cartItem => <BagIndexItem cartItem={cartItem} key={cartItem.id} />)} */}
           </div>
         </div>
         <div className="bag-index-page-right">

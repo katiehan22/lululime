@@ -62,7 +62,6 @@ const BagPreviewIndex = () => {
         </div>
         <div className="bag-preview-index-container">
           {bagPreviewIndexContent}
-          {/* {cartItems?.map(cartItem => <BagPreviewIndexItem cartItem={cartItem} key={cartItem.id} />)} */}
         </div>
         <div className="bag-preview-summary-container">
           <div className="bag-preview-summary-subtotal-container">

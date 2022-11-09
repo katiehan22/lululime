@@ -1,6 +1,12 @@
 import "./ReviewIndexItem.css";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteReview } from "../../store/reviews";
 
 const ReviewIndexItem = ({review}) => {
+  const dispatch = useDispatch();
+  const [errors, setErrors] = useState([]);
+  const user = useSelector(state => state.session.user);
   const capitalizeNickname = () => {
     const inputtedNickname = review.nickname;
     return inputtedNickname.charAt(0).toUpperCase() + inputtedNickname.slice(1);
@@ -69,6 +75,16 @@ const ReviewIndexItem = ({review}) => {
     }
   }
 
+  const handleDeleteReview = () => {
+    // console.log(review.userId);
+    // console.log(user.id);
+    if (review.userId === user.id) {
+      dispatch(deleteReview(review.id));
+    } else {
+      setErrors(["You can only delete your own reviews."])
+    }
+  }
+
   return (
     <>
       <div className="review-index-item">
@@ -92,6 +108,13 @@ const ReviewIndexItem = ({review}) => {
         <div className="review-index-item-body-container">
           {review.body}
         </div>
+        <div className="review-item-edit-remove-container">
+          <div className="review-item-edit-button">Edit</div>
+          <div className="review-item-delete-button" onClick={() => handleDeleteReview()}>Delete</div>
+        </div>
+        <ul className="review-edit-delete-errors">
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul>
       </div>
     </>
   )

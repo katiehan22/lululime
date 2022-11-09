@@ -18,7 +18,6 @@ class Api::CartItemsController < ApplicationController
       render :show 
     else 
       render json: @cart_item.errors.full_messages, status: 422
-      # render json: {errors: ["Please log in to add items to your bag"]}, status: 422
     end
   end
 
