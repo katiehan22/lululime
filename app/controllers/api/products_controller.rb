@@ -42,7 +42,18 @@ class Api::ProductsController < ApplicationController
   end
 
   def show 
-    @product = Product.find_by(id: params[:id])
-    render :show 
+    # @product = Product.find_by(id: params[:id])
+    # render :show 
+    product_id = params[:id].to_i
+    # debugger
+    @products = [];
+    @products.push(Product.find_by(id: product_id))
+
+    (0..3).each do |i|
+      new_id = ((product_id + i) % 46) + 1
+      @products.push(Product.find_by(id: new_id))
+    end
+
+    render :show
   end
 end

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
-import { fetchProduct } from "../../store/products";
+import { fetchProduct, fetchProductAndRelatedProducts } from "../../store/products";
 import { fetchReviews } from "../../store/reviews";
 import "./ProductDetailPage.css";
 import testImg from '../../assets/images/product-item-test.png';
@@ -14,8 +14,12 @@ import ReviewFormModal from "../ReviewFormModal";
 const ProductDetailPage = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
-  let product = useSelector(state => state.products ? state.products[productId] : null);
+  let productIdInt = parseInt(productId);
+  let products = useSelector(state => state.products ? Object.values(state.products) : []);
+  // let product = useSelector(state => state.products ? state.products[productId] : null);
   let reviews = useSelector(state => state.reviews ? Object.values(state.reviews) : [])
+
+  let product = products.find(product => product.id === productIdInt)
 
   const scrollToReviews = () => {
     document.querySelector('.reviews-container').scrollIntoView({behavior: "smooth"});
@@ -56,7 +60,8 @@ const ProductDetailPage = () => {
   }
 
   useEffect(() => {
-    dispatch(fetchProduct(productId));
+    // dispatch(fetchProduct(productId));
+    dispatch(fetchProductAndRelatedProducts(productId));
     dispatch(fetchReviews(productId));
   }, [dispatch, productId])
 
@@ -68,7 +73,7 @@ const ProductDetailPage = () => {
     return null;
   }
 
-  if(product) {
+  if (product) {
     return (
       <>
         <div className="product-details-page">
@@ -131,12 +136,12 @@ const ProductDetailPage = () => {
             </div>
           </div>
 
-          {/* <div className="pdp-carousel-container">
+          <div className="pdp-carousel-container">
             <div className='pdp-carousel-header'>
               You may also like
             </div>
-            <ProductCarousel category={product.category}/>
-          </div> */}
+            <ProductCarousel products={products} productIdInt={productIdInt}/>
+          </div>
 
           <div className="reviews-container">
             <div className="reviews-header-container">
