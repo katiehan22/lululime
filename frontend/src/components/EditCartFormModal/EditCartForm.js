@@ -6,18 +6,7 @@ import { updateCartItem } from '../../store/cart';
 import testImg from '../../assets/images/product-item-test.png';
 import './EditCartForm.css';
 
-// import testImg1 from '../../assets/images/color-test/01_black_v1.png';
-// import testImg2 from '../../assets/images/color-test/01_black_v2.png';
-// import testImg3 from '../../assets/images/color-test/02_icingblue_v1.png';
-// import testImg4 from '../../assets/images/color-test/02_icingblue_v2.png';
-// import testImg5 from '../../assets/images/color-test/03_navy_v1.png';
-// import testImg6 from '../../assets/images/color-test/03_navy_v2.png';
-// import testImg7 from '../../assets/images/color-test/04_white_v1.png';
-// import testImg8 from '../../assets/images/color-test/04_white_v2.png';
-
-
 const EditCartForm = ({ cartItemId, setShowModal}) => {
-  // const productImgTest = [testImg1, testImg2, testImg3, testImg4, testImg5, testImg6, testImg7, testImg8];
 
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user)
@@ -127,7 +116,6 @@ const EditCartForm = ({ cartItemId, setShowModal}) => {
     <>
       <div className='edit-cart-form-container'>
         <div className='edit-cart-img'>
-          {/* <img src={productImgTest[primaryImgIdx]} alt="" /> */}
           <img src={imgSource} alt="" />
         </div>
         <div className='edit-cart-form-right'>

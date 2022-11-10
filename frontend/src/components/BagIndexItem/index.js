@@ -7,21 +7,10 @@ import { updateCartItem } from '../../store/cart';
 import EditCartFormModal from "../EditCartFormModal";
 import { useState } from "react";
 
-// import testImg1 from '../../assets/images/color-test/01_black_v1.png';
-// import testImg2 from '../../assets/images/color-test/01_black_v2.png';
-// import testImg3 from '../../assets/images/color-test/02_icingblue_v1.png';
-// import testImg4 from '../../assets/images/color-test/02_icingblue_v2.png';
-// import testImg5 from '../../assets/images/color-test/03_navy_v1.png';
-// import testImg6 from '../../assets/images/color-test/03_navy_v2.png';
-// import testImg7 from '../../assets/images/color-test/04_white_v1.png';
-// import testImg8 from '../../assets/images/color-test/04_white_v2.png';
-
 const BagIndexItem = ({cartItem}) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const imgSource = cartItem.productImgUrls[cartItem.primaryImgIdx];
-
-  // const productImgTest = [testImg1, testImg2, testImg3, testImg4, testImg5, testImg6, testImg7, testImg8];
 
   const [primaryImgIdx, setPrimaryImgIdx] = useState(cartItem.primaryImgIdx);
 
@@ -36,7 +25,6 @@ const BagIndexItem = ({cartItem}) => {
     <>
       <div className="bag-index-item">
         <div className="bag-index-item-left">
-          {/* <img src={productImgTest[cartItem.primaryImgIdx]} alt="" /> */}
           <img src={imgSource} alt="" />
         </div>
         <div className="bag-index-item-right">
