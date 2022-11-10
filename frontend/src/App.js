@@ -26,7 +26,7 @@ function App() {
         <Route path="/search/:query" component={SearchIndex}/>
         <Route path="/" component={SplashPage} />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
