@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../../store/products";
-import testImg from '../../assets/images/product-item-test.png';
 import "./ReviewForm.css";
 import { createReview } from "../../store/reviews";
 
@@ -69,7 +68,7 @@ const ReviewForm = ({ productId, setShowReviewModal }) => {
     <>
       <div className="create-review-form-container">
         <div className="review-img">
-          <img src={testImg} alt="" />
+          <img src={product.imgUrls[0]} alt="" />
         </div>
         <div className="create-review-form-right">
           <div className="create-review-header">

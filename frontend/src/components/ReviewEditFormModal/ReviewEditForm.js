@@ -13,7 +13,8 @@ const ReviewEditForm = ({ review, setShowEditReviewModal }) => {
   const [title, setTitle] = useState(review.title);
   const [body, setBody] = useState(review.body);
   const [errors, setErrors] = useState([]);
-  const user = useSelector(state => state.session.user)
+  const user = useSelector(state => state.session.user);
+  let product = useSelector(state => state.products ? state.products[review.productId] : null);
 
   const setInitialStarStyles = () => {
     let ratingStyleClassCopy = ["star-unchecked", "star-unchecked", "star-unchecked", "star-unchecked", "star-unchecked"];
@@ -75,7 +76,7 @@ const ReviewEditForm = ({ review, setShowEditReviewModal }) => {
     <>
       <div className="create-review-form-container">
         <div className="review-img">
-          <img src={testImg} alt="" />
+          <img src={product.imgUrls[0]} alt="" />
         </div>
         <div className="create-review-form-right">
           <div className="create-review-header">
