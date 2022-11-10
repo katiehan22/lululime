@@ -6,12 +6,24 @@ import { updateCartItem } from '../../store/cart';
 import testImg from '../../assets/images/product-item-test.png';
 import './EditCartForm.css';
 
+import testImg1 from '../../assets/images/color-test/01_black_v1.png';
+import testImg2 from '../../assets/images/color-test/01_black_v2.png';
+import testImg3 from '../../assets/images/color-test/02_icingblue_v1.png';
+import testImg4 from '../../assets/images/color-test/02_icingblue_v2.png';
+import testImg5 from '../../assets/images/color-test/03_navy_v1.png';
+import testImg6 from '../../assets/images/color-test/03_navy_v2.png';
+import testImg7 from '../../assets/images/color-test/04_white_v1.png';
+import testImg8 from '../../assets/images/color-test/04_white_v2.png';
 
-const EditCartForm = ({ cartItemId, setShowModal }) => {
+
+const EditCartForm = ({ cartItemId, setShowModal}) => {
+  const productImgTest = [testImg1, testImg2, testImg3, testImg4, testImg5, testImg6, testImg7, testImg8];
+
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user)
   // const { cartItemId } = useParams();
   let cartItem = useSelector(state => state.cartItems ? state.cartItems[cartItemId] : null);
+  const [primaryImgIdx, setPrimaryImgIdx] = useState(cartItem.primaryImgIdx);
 
   useEffect(() => {
     dispatch(fetchCartItem(cartItemId))
@@ -52,7 +64,7 @@ const EditCartForm = ({ cartItemId, setShowModal }) => {
     "Black": "colour-button-unchecked", "Icing Blue": "colour-button-unchecked", "True Navy": "colour-button-unchecked", "White": "colour-button-unchecked", "Water Drop": "colour-button-unchecked", "Dark Olive": "colour-button-unchecked", "Green Foliage": "colour-button-unchecked", "Dark Red": "colour-button-unchecked", "Electric Turquoise": "colour-button-unchecked", "Wasabi": "colour-button-unchecked", "Pomegranate": "colour-button-unchecked", "White Opal": "colour-button-unchecked", "Faint Lavender": "colour-button-unchecked", "Smoked Spruce": "colour-button-unchecked", "Heathered Core Ultra Light Grey": "colour-button-unchecked", "Carob Brown": "colour-button-unchecked", "Poolside": "colour-button-unchecked", "Roasted Brown": "colour-button-unchecked", "Graphite Grey": "colour-button-unchecked", "Red Merlot": "colour-button-unchecked", "Natural Ivory": "colour-button-unchecked", "Brier Rose": "colour-button-unchecked", "Burnt Caramel": "colour-button-unchecked"
   });
 
-  const handleColour = (colourSelection) => {
+  const handleColour = (colourSelection, colourSelectionIdx) => {
     const colourCopy = { "Black": false, "Icing Blue": false, "True Navy": false, "White": false, "Water Drop": false, "Dark Olive": false, "Green Foliage": false, "Dark Red": false, "Electric Turquoise": false, "Wasabi": false, "Pomegranate": false, "White Opal": false, "Faint Lavender": false, "Smoked Spruce": false, "Heathered Core Ultra Light Grey": false, "Carob Brown": false, "Poolside": false, "Roasted Brown": false, "Graphite Grey": false, "Red Merlot": false, "Natural Ivory": false, "Brier Rose": false, "Burnt Caramel": false };
 
     const colourStyleClassNameCopy = { "Black": "colour-button-unchecked", "Icing Blue": "colour-button-unchecked", "True Navy": "colour-button-unchecked", "White": "colour-button-unchecked", "Water Drop": "colour-button-unchecked", "Dark Olive": "colour-button-unchecked", "Green Foliage": "colour-button-unchecked", "Dark Red": "colour-button-unchecked", "Electric Turquoise": "colour-button-unchecked", "Wasabi": "colour-button-unchecked", "Pomegranate": "colour-button-unchecked", "White Opal": "colour-button-unchecked", "Faint Lavender": "colour-button-unchecked", "Smoked Spruce": "colour-button-unchecked", "Heathered Core Ultra Light Grey": "colour-button-unchecked", "Carob Brown": "colour-button-unchecked", "Poolside": "colour-button-unchecked", "Roasted Brown": "colour-button-unchecked", "Graphite Grey": "colour-button-unchecked", "Red Merlot": "colour-button-unchecked", "Natural Ivory": "colour-button-unchecked", "Brier Rose": "colour-button-unchecked", "Burnt Caramel": "colour-button-unchecked" }
@@ -60,6 +72,7 @@ const EditCartForm = ({ cartItemId, setShowModal }) => {
     setColour({ ...colourCopy, [colourSelection]: true });
     setColourStyleClassName({ ...colourStyleClassNameCopy, [colourSelection]: "colour-button-checked" })
     setColourDisplay(colourSelection);
+    setPrimaryImgIdx(colourSelectionIdx*2);
   }
 
   const [size, setSize] = useState({
@@ -93,13 +106,15 @@ const EditCartForm = ({ cartItemId, setShowModal }) => {
   }, [dispatch])
 
   const handleUpdateCartItem = () => {
+    debugger
     const updatedItem = {
       ...cartItem,
       userId: user.id,
       productId: cartItem.productId,
       quantity: cartItem.quantity,
       colour: colourDisplay,
-      size: sizeDisplay
+      size: sizeDisplay, 
+      primaryImgIdx: primaryImgIdx
     }
     dispatch(updateCartItem(updatedItem));
     setShowModal(false);
@@ -113,7 +128,7 @@ const EditCartForm = ({ cartItemId, setShowModal }) => {
     <>
       <div className='edit-cart-form-container'>
         <div className='edit-cart-img'>
-          <img src={testImg} alt="" />
+          <img src={productImgTest[primaryImgIdx]} alt="" />
         </div>
         <div className='edit-cart-form-right'>
           <div className='edit-cart-form-right-header'>
@@ -130,22 +145,22 @@ const EditCartForm = ({ cartItemId, setShowModal }) => {
           <div className='edit-cart-colour-buttons-container'>
             <h2>Colour: {colourDisplay}</h2>
             <button
-              onClick={() => handleColour(cartItem.productColours[0])}
+              onClick={() => handleColour(cartItem.productColours[0], 0)}
               className={colourStyleClassName[cartItem.productColours[0]]}
               style={{ backgroundColor: COLOURCODES[cartItem.productColours[0]] }} >
             </button>
             <button
-              onClick={() => handleColour(cartItem.productColours[1])}
+              onClick={() => handleColour(cartItem.productColours[1], 1)}
               className={colourStyleClassName[cartItem.productColours[1]]}
               style={{ backgroundColor: COLOURCODES[cartItem.productColours[1]] }}>
             </button>
             <button
-              onClick={() => handleColour(cartItem.productColours[2])}
+              onClick={() => handleColour(cartItem.productColours[2], 2)}
               className={colourStyleClassName[cartItem.productColours[2]]}
               style={{ backgroundColor: COLOURCODES[cartItem.productColours[2]] }}>
             </button>
             <button
-              onClick={() => handleColour(cartItem.productColours[3])}
+              onClick={() => handleColour(cartItem.productColours[3], 3)}
               className={colourStyleClassName[cartItem.productColours[3]]}
               style={{ backgroundColor: COLOURCODES[cartItem.productColours[3]] }}>
             </button>

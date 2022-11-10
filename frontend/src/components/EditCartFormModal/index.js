@@ -2,7 +2,7 @@ import EditCartForm from "./EditCartForm";
 import { useState } from "react";
 import { Modal } from "../../context/Modal";
 
-function EditCartFormModal({cartItemId}) {
+function EditCartFormModal({ cartItemId }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -10,7 +10,7 @@ function EditCartFormModal({cartItemId}) {
       <button className="bag-item-edit-button" onClick={() => setShowModal(true)}>Edit</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <EditCartForm cartItemId={cartItemId} setShowModal={setShowModal}/>
+          <EditCartForm cartItemId={cartItemId} setShowModal={setShowModal} />
         </Modal>
       )}
     </>
