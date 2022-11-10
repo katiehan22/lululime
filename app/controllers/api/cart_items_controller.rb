@@ -1,4 +1,6 @@
 class Api::CartItemsController < ApplicationController
+  wrap_parameters include: CartItem.attribute_names + ['productId', 'primaryImgIdx', 'userId']
+
   before_action :require_logged_in
 
   def index 

@@ -7,3 +7,5 @@
     json.product_sizes cart_item.product.sizes
   end
 end
+
+{io: URI.open(""), filename: "_.png"},

@@ -49,8 +49,14 @@ require 'open-uri';
     featured_product: true
   })
   product1.photos.attach([
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_1.png"), filename: "align_black_1.png"}, 
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/align_black_2.png"), filename: "align_black_2.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/01_align/01_black_v1.png"), filename: "01_1.png"}, 
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/01_align/01_black_v2.png"), filename: "01_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/01_align/02_icing_v1.png"), filename: "01_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/01_align/02_icing_v2.png"), filename: "01_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/01_align/03_navy_v1.png"), filename: "01_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/01_align/03_navy_v2.png"), filename: "01_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/01_align/04_white_v1.png"), filename: "01_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/01_align/04_white_v2.png"), filename: "01_8.png"}
   ])
 
   product2 = Product.create! ({
@@ -65,8 +71,14 @@ require 'open-uri';
     featured_product: false
   })
   product2.photos.attach([
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v1.png"), filename: "wunder_navy_1.png"},
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v2.png"), filename: "wunder_navy_2.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v1.png"), filename: "02_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/01_navy_v2.png"), filename: "02_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/02_water_v1.png"), filename: "02_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/02_water_v2.png"), filename: "02_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/03_olive_v1.png"), filename: "02_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/03_olive_v2.png"), filename: "02_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/04_black_v1.png"), filename: "02_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/02_wunder/04_black_v2.png"), filename: "02_8.png"}
   ])
 
   product3 = Product.create! ({
@@ -80,6 +92,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product3.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/03_instill/01_green_v1.png"), filename: "03_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/03_instill/01_green_v2.png"), filename: "03_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/03_instill/02_navy_v1.png"), filename: "03_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/03_instill/02_navy_v2.png"), filename: "03_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/03_instill/03_olive_v1.png"), filename: "03_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/03_instill/03_olive_v2.png"), filename: "03_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/03_instill/04_black_v1.png"), filename: "03_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/03_instill/04_black_v2.png"), filename: "03_8.png"}
+  ])
 
   product4 = Product.create! ({
     name: "Fast and Free High-Rise Tight 25\"",
@@ -92,6 +114,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product4.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/04_fast/01_red_v1.png"), filename: "04_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/04_fast/01_red_v2.png"), filename: "04_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/04_fast/02_navy_v1.png"), filename: "04_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/04_fast/02_navy_v2.png"), filename: "04_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/04_fast/03_olive_v1.png"), filename: "04_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/04_fast/03_olive_v2.png"), filename: "04_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/04_fast/04_black_v1.png"), filename: "04_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/04_fast/04_black_v2.png"), filename: "04_8.png"}
+  ])
 
   product5 = Product.create! ({
     name: "Groove Super-High-Rise Flared Pant Nulu",
@@ -104,6 +136,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product5.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/05_groove/01_navy_v1.png"), filename: "05_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/05_groove/01_navy_v2.png"), filename: "05_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/05_groove/02_water_v1.png"), filename: "05_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/05_groove/02_water_v2.png"), filename: "05_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/05_groove/03_olive_v1.png"), filename: "05_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/05_groove/03_olive_v2.png"), filename: "05_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/05_groove/04_black_v1.png"), filename: "05_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/leggings/05_groove/04_black_v2.png"), filename: "05_8.png"}
+  ])
 
   # Womens hoodies & sweatshirts
   product6 = Product.create! ({
@@ -117,6 +159,16 @@ require 'open-uri';
     sizes: ["XS/S", "M/L", "XL/XXL"], 
     featured_product: true
   })
+  product6.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/01_scuba/01_electric_v1.png"), filename: "06_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/01_scuba/01_electric_v2.png"), filename: "06_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/01_scuba/02_wasabi_v1.png"), filename: "06_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/01_scuba/02_wasabi_v2.png"), filename: "06_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/01_scuba/03_pom_v1.png"), filename: "06_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/01_scuba/03_pom_v2.png"), filename: "06_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/01_scuba/04_black_v1.png"), filename: "06_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/01_scuba/04_black_v2.png"), filename: "06_8.png"}
+  ])
 
   product7 = Product.create! ({
     name: "Scuba Oversized Fleece Funnel Neck",
@@ -129,6 +181,16 @@ require 'open-uri';
     sizes: ["XS/S", "M/L", "XL/XXL"], 
     featured_product: false
   })
+  product7.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/02_fleece/01_white_v1.png"), filename: "07_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/02_fleece/01_white_v2.png"), filename: "07_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/02_fleece/02_lav_v1.png"), filename: "07_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/02_fleece/02_lav_v2.png"), filename: "07_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/02_fleece/03_spruce_v1.png"), filename: "07_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/02_fleece/03_spruce_v2.png"), filename: "07_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/02_fleece/04_black_v1.png"), filename: "07_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/02_fleece/04_black_v2.png"), filename: "07_8.png"}
+  ])
 
   product8 = Product.create! ({
     name: "Loungeful Hoodie",
@@ -137,10 +199,16 @@ require 'open-uri';
     subcategory: "hoodies",
     details: ["Designed for On the Move", "Warm, Cotton-Blend Fleece Fabric", "Relaxed Fit, Hip Length"],
     description: "Where ready meets relaxed. The Loungeful collection is made of soft, premium fleece fabrics and laid-back silhouettes that redefine your comfort zone.",
-    colours: ["Heathered Core Ultra Light Grey", "Faint Lavender", "Black"],
+    colours: ["Heathered Core Ultra Light Grey", "Black"],
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product8.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/03_loungeful/01_gray_v1.png"), filename: "08_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/03_loungeful/01_gray_v2.png"), filename: "08_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/03_loungeful/02_black_v1.png"), filename: "08_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/03_loungeful/02_black_v2.png"), filename: "08_4.png"}
+  ])
 
   product9 = Product.create! ({
     name: "Perfectly Oversized Cropped Crew Softstreme",
@@ -153,6 +221,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product9.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/04_soft/01_lav_v1.png"), filename: "09_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/04_soft/01_lav_v2.png"), filename: "09_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/04_soft/02_white_v1.png"), filename: "09_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/04_soft/02_white_v2.png"), filename: "09_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/04_soft/03_water_v1.png"), filename: "09_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/04_soft/03_water_v2.png"), filename: "09_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/04_soft/04_black_v1.png"), filename: "09_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/04_soft/04_black_v2.png"), filename: "09_8.png"}
+  ])
 
   product10 = Product.create! ({
     name: "Define Jacket Luon",
@@ -165,6 +243,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product10.photos.attach([
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/01_green_v1.png"), filename: "10_.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/01_green_v2.png"), filename: "10_.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/02_navy_v1.png"), filename: "10_.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/02_navy_v2.png"), filename: "10_.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/03_white_v1.png"), filename: "10_.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/03_white_v2.png"), filename: "10_.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/04_black_v1.png"), filename: "10_.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/04_black_v2.png"), filename: "10_.png"}
+  ])
 
   # Womens joggers
   product11 = Product.create! ({
@@ -178,6 +266,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: true
   })
+  product11.photos.attach([
+    {io: URI.open(""), filename: "11_.png"},
+    {io: URI.open(""), filename: "11_.png"},
+    {io: URI.open(""), filename: "11_.png"},
+    {io: URI.open(""), filename: "11_.png"},
+    {io: URI.open(""), filename: "11_.png"},
+    {io: URI.open(""), filename: "11_.png"},
+    {io: URI.open(""), filename: "11_.png"},
+    {io: URI.open(""), filename: "11_.png"}
+  ])
 
   product12 = Product.create! ({
     name: "Scuba High-Rise Jogger 7/8 Length",
@@ -190,6 +288,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product12.photos.attach([
+    {io: URI.open(""), filename: "12_.png"},
+    {io: URI.open(""), filename: "12_.png"},
+    {io: URI.open(""), filename: "12_.png"},
+    {io: URI.open(""), filename: "12_.png"},
+    {io: URI.open(""), filename: "12_.png"},
+    {io: URI.open(""), filename: "12_.png"},
+    {io: URI.open(""), filename: "12_.png"},
+    {io: URI.open(""), filename: "12_.png"}
+  ])
 
   product13 = Product.create! ({
     name: "Loungeful High-Rise Jogger",
@@ -202,6 +310,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product13.photos.attach([
+    {io: URI.open(""), filename: "13_.png"},
+    {io: URI.open(""), filename: "13_.png"},
+    {io: URI.open(""), filename: "13_.png"},
+    {io: URI.open(""), filename: "13_.png"},
+    {io: URI.open(""), filename: "13_.png"},
+    {io: URI.open(""), filename: "13_.png"},
+    {io: URI.open(""), filename: "13_.png"},
+    {io: URI.open(""), filename: "13_.png"}
+  ])
 
   product14 = Product.create! ({
     name: "Dance Studio Mid-Rise Jogger",
@@ -214,6 +332,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product14.photos.attach([
+    {io: URI.open(""), filename: "14_.png"},
+    {io: URI.open(""), filename: "14_.png"},
+    {io: URI.open(""), filename: "14_.png"},
+    {io: URI.open(""), filename: "14_.png"},
+    {io: URI.open(""), filename: "14_.png"},
+    {io: URI.open(""), filename: "14_.png"},
+    {io: URI.open(""), filename: "14_.png"},
+    {io: URI.open(""), filename: "14_.png"}
+  ])
 
   product15 = Product.create! ({
     name: "Ready to Rulu High-Rise Jogger",
@@ -226,6 +354,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product15.photos.attach([
+    {io: URI.open(""), filename: "15_.png"},
+    {io: URI.open(""), filename: "15_.png"},
+    {io: URI.open(""), filename: "15_.png"},
+    {io: URI.open(""), filename: "15_.png"},
+    {io: URI.open(""), filename: "15_.png"},
+    {io: URI.open(""), filename: "15_.png"},
+    {io: URI.open(""), filename: "15_.png"},
+    {io: URI.open(""), filename: "15_.png"}
+  ])
 
   # Womens shirts
   product16 = Product.create! ({
@@ -239,6 +377,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: true
   })
+  product16.photos.attach([
+    {io: URI.open(""), filename: "16_.png"},
+    {io: URI.open(""), filename: "16_.png"},
+    {io: URI.open(""), filename: "16_.png"},
+    {io: URI.open(""), filename: "16_.png"},
+    {io: URI.open(""), filename: "16_.png"},
+    {io: URI.open(""), filename: "16_.png"},
+    {io: URI.open(""), filename: "16_.png"},
+    {io: URI.open(""), filename: "16_.png"}
+  ])
 
   product17 = Product.create! ({
     name: "Hold Tight Tank Top",
@@ -251,6 +399,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product17.photos.attach([
+    {io: URI.open(""), filename: "17_.png"},
+    {io: URI.open(""), filename: "17_.png"},
+    {io: URI.open(""), filename: "17_.png"},
+    {io: URI.open(""), filename: "17_.png"},
+    {io: URI.open(""), filename: "17_.png"},
+    {io: URI.open(""), filename: "17_.png"},
+    {io: URI.open(""), filename: "17_.png"},
+    {io: URI.open(""), filename: "17_.png"}
+  ])
 
   product18 = Product.create! ({
     name: "All Yours Cotton T-Shirt",
@@ -263,6 +421,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product18.photos.attach([
+    {io: URI.open(""), filename: "18_.png"},
+    {io: URI.open(""), filename: "18_.png"},
+    {io: URI.open(""), filename: "18_.png"},
+    {io: URI.open(""), filename: "18_.png"},
+    {io: URI.open(""), filename: "18_.png"},
+    {io: URI.open(""), filename: "18_.png"},
+    {io: URI.open(""), filename: "18_.png"},
+    {io: URI.open(""), filename: "18_.png"}
+  ])
 
   product19 = Product.create! ({
     name: "Swiftly Tech Long Sleeve Shirt 2.0 Race Length",
@@ -275,6 +443,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product19.photos.attach([
+    {io: URI.open(""), filename: "19_.png"},
+    {io: URI.open(""), filename: "19_.png"},
+    {io: URI.open(""), filename: "19_.png"},
+    {io: URI.open(""), filename: "19_.png"},
+    {io: URI.open(""), filename: "19_.png"},
+    {io: URI.open(""), filename: "19_.png"},
+    {io: URI.open(""), filename: "19_.png"},
+    {io: URI.open(""), filename: "19_.png"}
+  ])
 
   product20 = Product.create! ({
     name: "Back in Action Long Sleeve Shirt",
@@ -287,6 +465,16 @@ require 'open-uri';
     sizes: ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"], 
     featured_product: false
   })
+  product20.photos.attach([
+    {io: URI.open(""), filename: "20_.png"},
+    {io: URI.open(""), filename: "20_.png"},
+    {io: URI.open(""), filename: "20_.png"},
+    {io: URI.open(""), filename: "20_.png"},
+    {io: URI.open(""), filename: "20_.png"},
+    {io: URI.open(""), filename: "20_.png"},
+    {io: URI.open(""), filename: "20_.png"},
+    {io: URI.open(""), filename: "20_.png"}
+  ])
 
   # Mens joggers
   product21 = Product.create! ({
@@ -300,6 +488,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL"], 
     featured_product: true
   })
+  product21.photos.attach([
+    {io: URI.open(""), filename: "21_.png"},
+    {io: URI.open(""), filename: "21_.png"},
+    {io: URI.open(""), filename: "21_.png"},
+    {io: URI.open(""), filename: "21_.png"},
+    {io: URI.open(""), filename: "21_.png"},
+    {io: URI.open(""), filename: "21_.png"},
+    {io: URI.open(""), filename: "21_.png"},
+    {io: URI.open(""), filename: "21_.png"}
+  ])
 
   product22 = Product.create! ({
     name: "License to Train Jogger",
@@ -312,6 +510,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL"], 
     featured_product: false
   })
+  product22.photos.attach([
+    {io: URI.open(""), filename: "22_.png"},
+    {io: URI.open(""), filename: "22_.png"},
+    {io: URI.open(""), filename: "22_.png"},
+    {io: URI.open(""), filename: "22_.png"},
+    {io: URI.open(""), filename: "22_.png"},
+    {io: URI.open(""), filename: "22_.png"},
+    {io: URI.open(""), filename: "22_.png"},
+    {io: URI.open(""), filename: "22_.png"}
+  ])
 
   product23 = Product.create! ({
     name: "At Ease Jogger",
@@ -324,6 +532,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL"], 
     featured_product: false
   })
+  product23.photos.attach([
+    {io: URI.open(""), filename: "23_.png"},
+    {io: URI.open(""), filename: "23_.png"},
+    {io: URI.open(""), filename: "23_.png"},
+    {io: URI.open(""), filename: "23_.png"},
+    {io: URI.open(""), filename: "23_.png"},
+    {io: URI.open(""), filename: "23_.png"},
+    {io: URI.open(""), filename: "23_.png"},
+    {io: URI.open(""), filename: "23_.png"}
+  ])
 
   product24 = Product.create! ({
     name: "City Sweat Jogger",
@@ -336,6 +554,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL"], 
     featured_product: false
   })
+  product24.photos.attach([
+    {io: URI.open(""), filename: "24_.png"},
+    {io: URI.open(""), filename: "24_.png"},
+    {io: URI.open(""), filename: "24_.png"},
+    {io: URI.open(""), filename: "24_.png"},
+    {io: URI.open(""), filename: "24_.png"},
+    {io: URI.open(""), filename: "24_.png"},
+    {io: URI.open(""), filename: "24_.png"},
+    {io: URI.open(""), filename: "24_.png"}
+  ])
 
   product25 = Product.create! ({
     name: "Surge Jogger",
@@ -348,6 +576,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL"], 
     featured_product: false
   })
+  product25.photos.attach([
+    {io: URI.open(""), filename: "25_.png"},
+    {io: URI.open(""), filename: "25_.png"},
+    {io: URI.open(""), filename: "25_.png"},
+    {io: URI.open(""), filename: "25_.png"},
+    {io: URI.open(""), filename: "25_.png"},
+    {io: URI.open(""), filename: "25_.png"},
+    {io: URI.open(""), filename: "25_.png"},
+    {io: URI.open(""), filename: "25_.png"}
+  ])
 
   # Mens hoodies
   product26 = Product.create! ({
@@ -361,6 +599,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: true
   })
+  product26.photos.attach([
+    {io: URI.open(""), filename: "26_.png"},
+    {io: URI.open(""), filename: "26_.png"},
+    {io: URI.open(""), filename: "26_.png"},
+    {io: URI.open(""), filename: "26_.png"},
+    {io: URI.open(""), filename: "26_.png"},
+    {io: URI.open(""), filename: "26_.png"},
+    {io: URI.open(""), filename: "26_.png"},
+    {io: URI.open(""), filename: "26_.png"}
+  ])
 
   product27 = Product.create! ({
     name: "City Sweat Crew",
@@ -373,6 +621,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product27.photos.attach([
+    {io: URI.open(""), filename: "27_.png"},
+    {io: URI.open(""), filename: "27_.png"},
+    {io: URI.open(""), filename: "27_.png"},
+    {io: URI.open(""), filename: "27_.png"},
+    {io: URI.open(""), filename: "27_.png"},
+    {io: URI.open(""), filename: "27_.png"},
+    {io: URI.open(""), filename: "27_.png"},
+    {io: URI.open(""), filename: "27_.png"}
+  ])
 
   product28 = Product.create! ({
     name: "Engineered Warmth Long Sleeve Crew",
@@ -385,6 +643,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product28.photos.attach([
+    {io: URI.open(""), filename: "28_.png"},
+    {io: URI.open(""), filename: "28_.png"},
+    {io: URI.open(""), filename: "28_.png"},
+    {io: URI.open(""), filename: "28_.png"},
+    {io: URI.open(""), filename: "28_.png"},
+    {io: URI.open(""), filename: "28_.png"},
+    {io: URI.open(""), filename: "28_.png"},
+    {io: URI.open(""), filename: "28_.png"}
+  ])
 
   product29 = Product.create! ({
     name: "Drysense Training Hoodie",
@@ -397,6 +665,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product29.photos.attach([
+    {io: URI.open(""), filename: "29_.png"},
+    {io: URI.open(""), filename: "29_.png"},
+    {io: URI.open(""), filename: "29_.png"},
+    {io: URI.open(""), filename: "29_.png"},
+    {io: URI.open(""), filename: "29_.png"},
+    {io: URI.open(""), filename: "29_.png"},
+    {io: URI.open(""), filename: "29_.png"},
+    {io: URI.open(""), filename: "29_.png"}
+  ])
 
   product30 = Product.create! ({
     name: "Shift Stitch Hoodie",
@@ -409,6 +687,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product30.photos.attach([
+    {io: URI.open(""), filename: "30_.png"},
+    {io: URI.open(""), filename: "30_.png"},
+    {io: URI.open(""), filename: "30_.png"},
+    {io: URI.open(""), filename: "30_.png"},
+    {io: URI.open(""), filename: "30_.png"},
+    {io: URI.open(""), filename: "30_.png"},
+    {io: URI.open(""), filename: "30_.png"},
+    {io: URI.open(""), filename: "30_.png"}
+  ])
 
   # Mens shorts
   product31 = Product.create! ({
@@ -422,6 +710,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: true
   })
+  product31.photos.attach([
+    {io: URI.open(""), filename: "31_.png"},
+    {io: URI.open(""), filename: "31_.png"},
+    {io: URI.open(""), filename: "31_.png"},
+    {io: URI.open(""), filename: "31_.png"},
+    {io: URI.open(""), filename: "31_.png"},
+    {io: URI.open(""), filename: "31_.png"},
+    {io: URI.open(""), filename: "31_.png"},
+    {io: URI.open(""), filename: "31_.png"}
+  ])
 
   product32 = Product.create! ({
     name: "Commission Classic-Fit Short 9\" Warpstreme",
@@ -434,6 +732,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product32.photos.attach([
+    {io: URI.open(""), filename: "32_.png"},
+    {io: URI.open(""), filename: "32_.png"},
+    {io: URI.open(""), filename: "32_.png"},
+    {io: URI.open(""), filename: "32_.png"},
+    {io: URI.open(""), filename: "32_.png"},
+    {io: URI.open(""), filename: "32_.png"},
+    {io: URI.open(""), filename: "32_.png"},
+    {io: URI.open(""), filename: "32_.png"}
+  ])
 
   product33 = Product.create! ({
     name: "T.H.E. Linerless Short 7\"",
@@ -446,6 +754,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product33.photos.attach([
+    {io: URI.open(""), filename: "33_.png"},
+    {io: URI.open(""), filename: "33_.png"},
+    {io: URI.open(""), filename: "33_.png"},
+    {io: URI.open(""), filename: "33_.png"},
+    {io: URI.open(""), filename: "33_.png"},
+    {io: URI.open(""), filename: "33_.png"},
+    {io: URI.open(""), filename: "33_.png"},
+    {io: URI.open(""), filename: "33_.png"}
+  ])
 
   product34 = Product.create! ({
     name: "Surge Half Tight 10\"",
@@ -458,6 +776,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product34.photos.attach([
+    {io: URI.open(""), filename: "34_.png"},
+    {io: URI.open(""), filename: "34_.png"},
+    {io: URI.open(""), filename: "34_.png"},
+    {io: URI.open(""), filename: "34_.png"},
+    {io: URI.open(""), filename: "34_.png"},
+    {io: URI.open(""), filename: "34_.png"},
+    {io: URI.open(""), filename: "34_.png"},
+    {io: URI.open(""), filename: "34_.png"}
+  ])
 
   product35 = Product.create! ({
     name: "Bowline Short 5\" Stretch Ripstop",
@@ -470,6 +798,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product35.photos.attach([
+    {io: URI.open(""), filename: "35_.png"},
+    {io: URI.open(""), filename: "35_.png"},
+    {io: URI.open(""), filename: "35_.png"},
+    {io: URI.open(""), filename: "35_.png"},
+    {io: URI.open(""), filename: "35_.png"},
+    {io: URI.open(""), filename: "35_.png"},
+    {io: URI.open(""), filename: "35_.png"},
+    {io: URI.open(""), filename: "35_.png"}
+  ])
 
   # Mens shirts
   product36 = Product.create! ({
@@ -483,6 +821,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: true
   })
+  product36.photos.attach([
+    {io: URI.open(""), filename: "36_.png"},
+    {io: URI.open(""), filename: "36_.png"},
+    {io: URI.open(""), filename: "36_.png"},
+    {io: URI.open(""), filename: "36_.png"},
+    {io: URI.open(""), filename: "36_.png"},
+    {io: URI.open(""), filename: "36_.png"},
+    {io: URI.open(""), filename: "36_.png"},
+    {io: URI.open(""), filename: "36_.png"}
+  ])
 
   product37 = Product.create! ({
     name: "The Fundamental T-Shirt Graphic",
@@ -495,6 +843,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product37.photos.attach([
+    {io: URI.open(""), filename: "37_.png"},
+    {io: URI.open(""), filename: "37_.png"},
+    {io: URI.open(""), filename: "37_.png"},
+    {io: URI.open(""), filename: "37_.png"},
+    {io: URI.open(""), filename: "37_.png"},
+    {io: URI.open(""), filename: "37_.png"},
+    {io: URI.open(""), filename: "37_.png"},
+    {io: URI.open(""), filename: "37_.png"}
+  ])
 
   product38 = Product.create! ({
     name: "Drysense Training Short Sleeve Shirt",
@@ -507,6 +865,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL"], 
     featured_product: false
   })
+  product38.photos.attach([
+    {io: URI.open(""), filename: "38_.png"},
+    {io: URI.open(""), filename: "38_.png"},
+    {io: URI.open(""), filename: "38_.png"},
+    {io: URI.open(""), filename: "38_.png"},
+    {io: URI.open(""), filename: "38_.png"},
+    {io: URI.open(""), filename: "38_.png"},
+    {io: URI.open(""), filename: "38_.png"},
+    {io: URI.open(""), filename: "38_.png"}
+  ])
 
   product39 = Product.create! ({
     name: "Evolution Short Sleeve Polo Shirt",
@@ -519,6 +887,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"], 
     featured_product: false
   })
+  product39.photos.attach([
+    {io: URI.open(""), filename: "39_.png"},
+    {io: URI.open(""), filename: "39_.png"},
+    {io: URI.open(""), filename: "39_.png"},
+    {io: URI.open(""), filename: "39_.png"},
+    {io: URI.open(""), filename: "39_.png"},
+    {io: URI.open(""), filename: "39_.png"},
+    {io: URI.open(""), filename: "39_.png"},
+    {io: URI.open(""), filename: "39_.png"}
+  ])
 
   product40 = Product.create! ({
     name: "Airing Easy Long Sleeve Shirt",
@@ -531,6 +909,16 @@ require 'open-uri';
     sizes: ["XS", "S", "M", "L", "XL", "XXL"], 
     featured_product: false
   })
+  product40.photos.attach([
+    {io: URI.open(""), filename: "40_.png"},
+    {io: URI.open(""), filename: "40_.png"},
+    {io: URI.open(""), filename: "40_.png"},
+    {io: URI.open(""), filename: "40_.png"},
+    {io: URI.open(""), filename: "40_.png"},
+    {io: URI.open(""), filename: "40_.png"},
+    {io: URI.open(""), filename: "40_.png"},
+    {io: URI.open(""), filename: "40_.png"}
+  ])
 
   # Accessories - belt bags
   product41 = Product.create! ({
@@ -544,6 +932,16 @@ require 'open-uri';
     sizes: ["ONE SIZE"], 
     featured_product: true
   })
+  product41.photos.attach([
+    {io: URI.open(""), filename: "41_.png"},
+    {io: URI.open(""), filename: "41_.png"},
+    {io: URI.open(""), filename: "41_.png"},
+    {io: URI.open(""), filename: "41_.png"},
+    {io: URI.open(""), filename: "41_.png"},
+    {io: URI.open(""), filename: "41_.png"},
+    {io: URI.open(""), filename: "41_.png"},
+    {io: URI.open(""), filename: "41_.png"}
+  ])
 
   product42 = Product.create! ({
     name: "Fast and Free Running Belt",
@@ -556,6 +954,16 @@ require 'open-uri';
     sizes: ["XS/S", "S/M", "L/XL"], 
     featured_product: false
   })
+  product42.photos.attach([
+    {io: URI.open(""), filename: "42_.png"},
+    {io: URI.open(""), filename: "42_.png"},
+    {io: URI.open(""), filename: "42_.png"},
+    {io: URI.open(""), filename: "42_.png"},
+    {io: URI.open(""), filename: "42_.png"},
+    {io: URI.open(""), filename: "42_.png"},
+    {io: URI.open(""), filename: "42_.png"},
+    {io: URI.open(""), filename: "42_.png"}
+  ])
 
   product43 = Product.create! ({
     name: "Wunderlust Belt Bag",
@@ -568,6 +976,16 @@ require 'open-uri';
     sizes: ["ONE SIZE"], 
     featured_product: false
   })
+  product43.photos.attach([
+    {io: URI.open(""), filename: "43_.png"},
+    {io: URI.open(""), filename: "43_.png"},
+    {io: URI.open(""), filename: "43_.png"},
+    {io: URI.open(""), filename: "43_.png"},
+    {io: URI.open(""), filename: "43_.png"},
+    {io: URI.open(""), filename: "43_.png"},
+    {io: URI.open(""), filename: "43_.png"},
+    {io: URI.open(""), filename: "43_.png"}
+  ])
 
   product44 = Product.create! ({
     name: "Everyday Backpack 2.0 23L",
@@ -580,6 +998,16 @@ require 'open-uri';
     sizes: ["ONE SIZE"], 
     featured_product: false
   })
+  product44.photos.attach([
+    {io: URI.open(""), filename: "44_.png"},
+    {io: URI.open(""), filename: "44_.png"},
+    {io: URI.open(""), filename: "44_.png"},
+    {io: URI.open(""), filename: "44_.png"},
+    {io: URI.open(""), filename: "44_.png"},
+    {io: URI.open(""), filename: "44_.png"},
+    {io: URI.open(""), filename: "44_.png"},
+    {io: URI.open(""), filename: "44_.png"}
+  ])
 
   product45 = Product.create! ({
     name: "New Crew Backpack 22L",
@@ -592,6 +1020,16 @@ require 'open-uri';
     sizes: ["ONE SIZE"], 
     featured_product: false
   })
+  product45.photos.attach([
+    {io: URI.open(""), filename: "45_.png"},
+    {io: URI.open(""), filename: "45_.png"},
+    {io: URI.open(""), filename: "45_.png"},
+    {io: URI.open(""), filename: "45_.png"},
+    {io: URI.open(""), filename: "45_.png"},
+    {io: URI.open(""), filename: "45_.png"},
+    {io: URI.open(""), filename: "45_.png"},
+    {io: URI.open(""), filename: "45_.png"}
+  ])
 
   product46 = Product.create! ({
     name: "City Adventurer Backpack 20L",
@@ -604,6 +1042,16 @@ require 'open-uri';
     sizes: ["ONE SIZE"], 
     featured_product: false
   })
+  product46.photos.attach([
+    {io: URI.open(""), filename: "46_.png"},
+    {io: URI.open(""), filename: "46_.png"},
+    {io: URI.open(""), filename: "46_.png"},
+    {io: URI.open(""), filename: "46_.png"},
+    {io: URI.open(""), filename: "46_.png"},
+    {io: URI.open(""), filename: "46_.png"},
+    {io: URI.open(""), filename: "46_.png"},
+    {io: URI.open(""), filename: "46_.png"}
+  ])
 
   puts "Creating cart items..."
 
