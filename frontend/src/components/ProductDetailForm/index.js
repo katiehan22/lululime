@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { createCartItem } from "../../store/cart";
 import AddToBagModal from "../AddToBagModal";
 
-const ProductDetailForm = ({product, products, productImgTest, setImg1, setImg2}) => {
+const ProductDetailForm = ({product, products, setImg1, setImg2}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user);
   const [errors, setErrors] = useState([]);
@@ -73,8 +73,8 @@ const ProductDetailForm = ({product, products, productImgTest, setImg1, setImg2}
     setColourStyleClassName({ ...colourStyleClassNameCopy, [colourSelection]: "colour-button-checked" });
     setColourDisplay(colourSelection);
     setPrimaryImgIdx(colourSelectionIdx * 2);
-    setImg1(productImgTest[colourSelectionIdx * 2]);
-    setImg2(productImgTest[colourSelectionIdx * 2 + 1]);
+    setImg1(product.imgUrls[colourSelectionIdx * 2]);
+    setImg2(product.imgUrls[colourSelectionIdx * 2 + 1]);
   }
 
   // set first color and size as checked by default 

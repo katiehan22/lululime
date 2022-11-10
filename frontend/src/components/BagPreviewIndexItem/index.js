@@ -15,7 +15,7 @@ import testImg8 from '../../assets/images/color-test/04_white_v2.png';
 
 const BagPreviewIndexItem = ({cartItem}) => {
   const productImgTest = [testImg1, testImg2, testImg3, testImg4, testImg5, testImg6, testImg7, testImg8];
-
+  const imgSource = cartItem.productImgUrls[cartItem.primaryImgIdx];
   const dispatch = useDispatch();
 
   const handleDeleteFromCart = () => {
@@ -26,7 +26,8 @@ const BagPreviewIndexItem = ({cartItem}) => {
     <>
       <div className="bag-preview-index-item">
         <div className="bag-preview-index-item-img">
-          <img src={productImgTest[cartItem.primaryImgIdx]} alt=""/>
+          {/* <img src={productImgTest[cartItem.primaryImgIdx]} alt=""/> */}
+          <img src={imgSource} alt="" />
         </div>
         <div className="bag-preview-index-item-right">
           <div className="bag-preview-index-item-header">
