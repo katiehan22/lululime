@@ -244,14 +244,14 @@ require 'open-uri';
     featured_product: false
   })
   product10.photos.attach([
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/01_green_v1.png"), filename: "10_.png"},
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/01_green_v2.png"), filename: "10_.png"},
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/02_navy_v1.png"), filename: "10_.png"},
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/02_navy_v2.png"), filename: "10_.png"},
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/03_white_v1.png"), filename: "10_.png"},
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/03_white_v2.png"), filename: "10_.png"},
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/04_black_v1.png"), filename: "10_.png"},
-    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/04_black_v2.png"), filename: "10_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/01_green_v1.png"), filename: "10_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/01_green_v2.png"), filename: "10_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/02_navy_v1.png"), filename: "10_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/02_navy_v2.png"), filename: "10_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/03_white_v1.png"), filename: "10_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/03_white_v2.png"), filename: "10_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/04_black_v1.png"), filename: "10_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/02_hoodies/05_define/04_black_v2.png"), filename: "10_8.png"}
   ])
 
   # Womens joggers
@@ -267,14 +267,14 @@ require 'open-uri';
     featured_product: true
   })
   product11.photos.attach([
-    {io: URI.open(""), filename: "11_.png"},
-    {io: URI.open(""), filename: "11_.png"},
-    {io: URI.open(""), filename: "11_.png"},
-    {io: URI.open(""), filename: "11_.png"},
-    {io: URI.open(""), filename: "11_.png"},
-    {io: URI.open(""), filename: "11_.png"},
-    {io: URI.open(""), filename: "11_.png"},
-    {io: URI.open(""), filename: "11_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/01_relaxed/01_carob_v1.png"), filename: "11_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/01_relaxed/01_carob_v2.png"), filename: "11_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/01_relaxed/02_gray_v1.png"), filename: "11_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/01_relaxed/02_gray_v2.png"), filename: "11_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/01_relaxed/03_black_v1.png"), filename: "11_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/01_relaxed/03_black_v2.png"), filename: "11_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/01_relaxed/04_white_v1.png"), filename: "11_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/01_relaxed/04_white_v2.png"), filename: "11_8.png"}
   ])
 
   product12 = Product.create! ({
@@ -289,14 +289,14 @@ require 'open-uri';
     featured_product: false
   })
   product12.photos.attach([
-    {io: URI.open(""), filename: "12_.png"},
-    {io: URI.open(""), filename: "12_.png"},
-    {io: URI.open(""), filename: "12_.png"},
-    {io: URI.open(""), filename: "12_.png"},
-    {io: URI.open(""), filename: "12_.png"},
-    {io: URI.open(""), filename: "12_.png"},
-    {io: URI.open(""), filename: "12_.png"},
-    {io: URI.open(""), filename: "12_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/02_scuba/01_carob_v1.png"), filename: "12_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/02_scuba/01_carob_v2.png"), filename: "12_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/02_scuba/02_gray_v1.png"), filename: "12_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/02_scuba/02_gray_v2.png"), filename: "12_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/02_scuba/03_black_v1.png"), filename: "12_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/02_scuba/03_black_v2.png"), filename: "12_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/02_scuba/04_navy_v1.png"), filename: "12_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/02_scuba/04_navy_v2.png"), filename: "12_8.png"}
   ])
 
   product13 = Product.create! ({
@@ -311,14 +311,14 @@ require 'open-uri';
     featured_product: false
   })
   product13.photos.attach([
-    {io: URI.open(""), filename: "13_.png"},
-    {io: URI.open(""), filename: "13_.png"},
-    {io: URI.open(""), filename: "13_.png"},
-    {io: URI.open(""), filename: "13_.png"},
-    {io: URI.open(""), filename: "13_.png"},
-    {io: URI.open(""), filename: "13_.png"},
-    {io: URI.open(""), filename: "13_.png"},
-    {io: URI.open(""), filename: "13_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/03_loungeful/01_white_v1.png"), filename: "13_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/03_loungeful/01_white_v2.png"), filename: "13_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/03_loungeful/02_gray_v1.png"), filename: "13_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/03_loungeful/02_gray_v2.png"), filename: "13_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/03_loungeful/03_white_v1.png"), filename: "13_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/03_loungeful/03_white_v2.png"), filename: "13_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/03_loungeful/04_black_v1.png"), filename: "13_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/03_loungeful/04_black_v2.png"), filename: "13_8.png"}
   ])
 
   product14 = Product.create! ({
@@ -333,14 +333,14 @@ require 'open-uri';
     featured_product: false
   })
   product14.photos.attach([
-    {io: URI.open(""), filename: "14_.png"},
-    {io: URI.open(""), filename: "14_.png"},
-    {io: URI.open(""), filename: "14_.png"},
-    {io: URI.open(""), filename: "14_.png"},
-    {io: URI.open(""), filename: "14_.png"},
-    {io: URI.open(""), filename: "14_.png"},
-    {io: URI.open(""), filename: "14_.png"},
-    {io: URI.open(""), filename: "14_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/04_dance/01_navy_v1.png"), filename: "14_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/04_dance/01_navy_v2.png"), filename: "14_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/04_dance/02_water_v1.png"), filename: "14_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/04_dance/02_water_v2.png"), filename: "14_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/04_dance/03_carob_v1.png"), filename: "14_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/04_dance/03_carob_v2.png"), filename: "14_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/04_dance/04_black_v1.png"), filename: "14_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/04_dance/04_black_v2.png"), filename: "14_8.png"}
   ])
 
   product15 = Product.create! ({
@@ -355,14 +355,12 @@ require 'open-uri';
     featured_product: false
   })
   product15.photos.attach([
-    {io: URI.open(""), filename: "15_.png"},
-    {io: URI.open(""), filename: "15_.png"},
-    {io: URI.open(""), filename: "15_.png"},
-    {io: URI.open(""), filename: "15_.png"},
-    {io: URI.open(""), filename: "15_.png"},
-    {io: URI.open(""), filename: "15_.png"},
-    {io: URI.open(""), filename: "15_.png"},
-    {io: URI.open(""), filename: "15_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/05_rulu/01_water_v1.png"), filename: "15_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/05_rulu/01_water_v2.png"), filename: "15_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/05_rulu/02_olive_v1.png"), filename: "15_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/05_rulu/02_olive_v2.png"), filename: "15_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/05_rulu/03_black_v1.png"), filename: "15_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/03_joggers/05_rulu/03_black_v2.png"), filename: "15_6.png"}
   ])
 
   # Womens shirts
@@ -378,14 +376,14 @@ require 'open-uri';
     featured_product: true
   })
   product16.photos.attach([
-    {io: URI.open(""), filename: "16_.png"},
-    {io: URI.open(""), filename: "16_.png"},
-    {io: URI.open(""), filename: "16_.png"},
-    {io: URI.open(""), filename: "16_.png"},
-    {io: URI.open(""), filename: "16_.png"},
-    {io: URI.open(""), filename: "16_.png"},
-    {io: URI.open(""), filename: "16_.png"},
-    {io: URI.open(""), filename: "16_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/01_align/01_poolside_v1.png"), filename: "16_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/01_align/01_poolside_v2.png"), filename: "16_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/01_align/02_green_v1.png"), filename: "16_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/01_align/02_green_v2.png"), filename: "16_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/01_align/03_white_v1.png"), filename: "16_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/01_align/03_white_v2.png"), filename: "16_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/01_align/04_black_v1.png"), filename: "16_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/01_align/04_black_v2.png"), filename: "16_8.png"}
   ])
 
   product17 = Product.create! ({
@@ -400,14 +398,14 @@ require 'open-uri';
     featured_product: false
   })
   product17.photos.attach([
-    {io: URI.open(""), filename: "17_.png"},
-    {io: URI.open(""), filename: "17_.png"},
-    {io: URI.open(""), filename: "17_.png"},
-    {io: URI.open(""), filename: "17_.png"},
-    {io: URI.open(""), filename: "17_.png"},
-    {io: URI.open(""), filename: "17_.png"},
-    {io: URI.open(""), filename: "17_.png"},
-    {io: URI.open(""), filename: "17_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/02_hold/01_brown_v1.png"), filename: "17_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/02_hold/01_brown_v2.png"), filename: "17_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/02_hold/02_navy_v1.png"), filename: "17_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/02_hold/02_navy_v2.png"), filename: "17_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/02_hold/03_white_v1.png"), filename: "17_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/02_hold/03_white_v2.png"), filename: "17_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/02_hold/04_black_v1.png"), filename: "17_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/02_hold/04_black_v2.png"), filename: "17_8.png"}
   ])
 
   product18 = Product.create! ({
@@ -422,14 +420,14 @@ require 'open-uri';
     featured_product: false
   })
   product18.photos.attach([
-    {io: URI.open(""), filename: "18_.png"},
-    {io: URI.open(""), filename: "18_.png"},
-    {io: URI.open(""), filename: "18_.png"},
-    {io: URI.open(""), filename: "18_.png"},
-    {io: URI.open(""), filename: "18_.png"},
-    {io: URI.open(""), filename: "18_.png"},
-    {io: URI.open(""), filename: "18_.png"},
-    {io: URI.open(""), filename: "18_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/03_cotton/01_brown_v1.png"), filename: "18_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/03_cotton/01_brown_v2.png"), filename: "18_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/03_cotton/02_black_v1.png"), filename: "18_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/03_cotton/02_black_v2.png"), filename: "18_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/03_cotton/03_white_v1.png"), filename: "18_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/03_cotton/03_white_v2.png"), filename: "18_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/03_cotton/04_gray_v1.png"), filename: "18_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/03_cotton/04_gray_v2.png"), filename: "18_8.png"}
   ])
 
   product19 = Product.create! ({
@@ -444,14 +442,14 @@ require 'open-uri';
     featured_product: false
   })
   product19.photos.attach([
-    {io: URI.open(""), filename: "19_.png"},
-    {io: URI.open(""), filename: "19_.png"},
-    {io: URI.open(""), filename: "19_.png"},
-    {io: URI.open(""), filename: "19_.png"},
-    {io: URI.open(""), filename: "19_.png"},
-    {io: URI.open(""), filename: "19_.png"},
-    {io: URI.open(""), filename: "19_.png"},
-    {io: URI.open(""), filename: "19_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/04_swiftly/01_water_v1.png"), filename: "19_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/04_swiftly/01_water_v2.png"), filename: "19_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/04_swiftly/02_lav_v1.png"), filename: "19_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/04_swiftly/02_lav_v2.png"), filename: "19_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/04_swiftly/03_white_v1.png"), filename: "19_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/04_swiftly/03_white_v2.png"), filename: "19_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/04_swiftly/04_black_v1.png"), filename: "19_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/04_swiftly/04_black_v2.png"), filename: "19_8.png"}
   ])
 
   product20 = Product.create! ({
@@ -466,14 +464,14 @@ require 'open-uri';
     featured_product: false
   })
   product20.photos.attach([
-    {io: URI.open(""), filename: "20_.png"},
-    {io: URI.open(""), filename: "20_.png"},
-    {io: URI.open(""), filename: "20_.png"},
-    {io: URI.open(""), filename: "20_.png"},
-    {io: URI.open(""), filename: "20_.png"},
-    {io: URI.open(""), filename: "20_.png"},
-    {io: URI.open(""), filename: "20_.png"},
-    {io: URI.open(""), filename: "20_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/05_action/01_navy_v1.png"), filename: "20_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/05_action/01_navy_v2.png"), filename: "20_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/05_action/02_lav_v1.png"), filename: "20_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/05_action/02_lav_v2.png"), filename: "20_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/05_action/03_white_v1.png"), filename: "20_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/05_action/03_white_v2.png"), filename: "20_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/05_action/04_black_v1.png"), filename: "20_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/womens/04_shirts/05_action/04_black_v2.png"), filename: "20_8.png"}
   ])
 
   # Mens joggers
@@ -489,14 +487,12 @@ require 'open-uri';
     featured_product: true
   })
   product21.photos.attach([
-    {io: URI.open(""), filename: "21_.png"},
-    {io: URI.open(""), filename: "21_.png"},
-    {io: URI.open(""), filename: "21_.png"},
-    {io: URI.open(""), filename: "21_.png"},
-    {io: URI.open(""), filename: "21_.png"},
-    {io: URI.open(""), filename: "21_.png"},
-    {io: URI.open(""), filename: "21_.png"},
-    {io: URI.open(""), filename: "21_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/01_warpstreme/01_navy_v1.png"), filename: "21_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/01_warpstreme/01_navy_v2.png"), filename: "21_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/01_warpstreme/02_olive_v1.png"), filename: "21_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/01_warpstreme/02_olive_v2.png"), filename: "21_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/01_warpstreme/03_black_v1.png"), filename: "21_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/01_warpstreme/03_black_v2.png"), filename: "21_6.png"}
   ])
 
   product22 = Product.create! ({
@@ -511,14 +507,14 @@ require 'open-uri';
     featured_product: false
   })
   product22.photos.attach([
-    {io: URI.open(""), filename: "22_.png"},
-    {io: URI.open(""), filename: "22_.png"},
-    {io: URI.open(""), filename: "22_.png"},
-    {io: URI.open(""), filename: "22_.png"},
-    {io: URI.open(""), filename: "22_.png"},
-    {io: URI.open(""), filename: "22_.png"},
-    {io: URI.open(""), filename: "22_.png"},
-    {io: URI.open(""), filename: "22_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/02_license/01_gray_v1.png"), filename: "22_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/02_license/01_gray_v2.png"), filename: "22_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/02_license/02_white_v1.png"), filename: "22_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/02_license/02_white_v2.png"), filename: "22_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/02_license/03_black_v1.png"), filename: "22_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/02_license/03_black_v2.png"), filename: "22_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/02_license/04_navy_v1.png"), filename: "22_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/02_license/04_navy_v2.png"), filename: "22_8.png"}
   ])
 
   product23 = Product.create! ({
@@ -533,14 +529,14 @@ require 'open-uri';
     featured_product: false
   })
   product23.photos.attach([
-    {io: URI.open(""), filename: "23_.png"},
-    {io: URI.open(""), filename: "23_.png"},
-    {io: URI.open(""), filename: "23_.png"},
-    {io: URI.open(""), filename: "23_.png"},
-    {io: URI.open(""), filename: "23_.png"},
-    {io: URI.open(""), filename: "23_.png"},
-    {io: URI.open(""), filename: "23_.png"},
-    {io: URI.open(""), filename: "23_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/03_ease/01_spruce_v1.png"), filename: "23_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/03_ease/01_spruce_v2.png"), filename: "23_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/03_ease/02_red_v1.png"), filename: "23_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/03_ease/02_red_v2.png"), filename: "23_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/03_ease/03_olive_v1.png"), filename: "23_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/03_ease/03_olive_v2.png"), filename: "23_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/03_ease/04_black_v1.png"), filename: "23_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/03_ease/04_black_v2.png"), filename: "23_8.png"}
   ])
 
   product24 = Product.create! ({
@@ -555,14 +551,10 @@ require 'open-uri';
     featured_product: false
   })
   product24.photos.attach([
-    {io: URI.open(""), filename: "24_.png"},
-    {io: URI.open(""), filename: "24_.png"},
-    {io: URI.open(""), filename: "24_.png"},
-    {io: URI.open(""), filename: "24_.png"},
-    {io: URI.open(""), filename: "24_.png"},
-    {io: URI.open(""), filename: "24_.png"},
-    {io: URI.open(""), filename: "24_.png"},
-    {io: URI.open(""), filename: "24_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/04_city/01_black_v1.png"), filename: "24_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/04_city/01_black_v2.png"), filename: "24_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/04_city/02_navy_v1.png"), filename: "24_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/04_city/02_navy_v2.png"), filename: "24_4.png"}
   ])
 
   product25 = Product.create! ({
@@ -577,14 +569,14 @@ require 'open-uri';
     featured_product: false
   })
   product25.photos.attach([
-    {io: URI.open(""), filename: "25_.png"},
-    {io: URI.open(""), filename: "25_.png"},
-    {io: URI.open(""), filename: "25_.png"},
-    {io: URI.open(""), filename: "25_.png"},
-    {io: URI.open(""), filename: "25_.png"},
-    {io: URI.open(""), filename: "25_.png"},
-    {io: URI.open(""), filename: "25_.png"},
-    {io: URI.open(""), filename: "25_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/05_surge/01_navy_v1.png"), filename: "25_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/05_surge/01_navy_v2.png"), filename: "25_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/05_surge/02_olive_v1.png"), filename: "25_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/05_surge/02_olive_v2.png"), filename: "25_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/05_surge/03_black_v1.png"), filename: "25_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/05_surge/03_black_v2.png"), filename: "25_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/05_surge/04_red_v1.png"), filename: "25_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/01_joggers/05_surge/04_red_v2.png"), filename: "25_8.png"}
   ])
 
   # Mens hoodies
@@ -600,14 +592,12 @@ require 'open-uri';
     featured_product: true
   })
   product26.photos.attach([
-    {io: URI.open(""), filename: "26_.png"},
-    {io: URI.open(""), filename: "26_.png"},
-    {io: URI.open(""), filename: "26_.png"},
-    {io: URI.open(""), filename: "26_.png"},
-    {io: URI.open(""), filename: "26_.png"},
-    {io: URI.open(""), filename: "26_.png"},
-    {io: URI.open(""), filename: "26_.png"},
-    {io: URI.open(""), filename: "26_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/01_fleece/01_navy_v1.png"), filename: "26_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/01_fleece/01_navy_v2.png"), filename: "26_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/01_fleece/02_pom_v1.png"), filename: "26_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/01_fleece/02_pom_v2.png"), filename: "26_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/01_fleece/03_black_v1.png"), filename: "26_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/01_fleece/03_black_v2.png"), filename: "26_6.png"}
   ])
 
   product27 = Product.create! ({
@@ -622,14 +612,12 @@ require 'open-uri';
     featured_product: false
   })
   product27.photos.attach([
-    {io: URI.open(""), filename: "27_.png"},
-    {io: URI.open(""), filename: "27_.png"},
-    {io: URI.open(""), filename: "27_.png"},
-    {io: URI.open(""), filename: "27_.png"},
-    {io: URI.open(""), filename: "27_.png"},
-    {io: URI.open(""), filename: "27_.png"},
-    {io: URI.open(""), filename: "27_.png"},
-    {io: URI.open(""), filename: "27_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/02_city/01_white_v1.png"), filename: "27_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/02_city/01_white_v2.png"), filename: "27_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/02_city/02_navy_v1.png"), filename: "27_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/02_city/02_navy_v2.png"), filename: "27_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/02_city/03_black_v1.png"), filename: "27_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/02_city/03_black_v2.png"), filename: "27_6.png"}
   ])
 
   product28 = Product.create! ({
@@ -644,14 +632,12 @@ require 'open-uri';
     featured_product: false
   })
   product28.photos.attach([
-    {io: URI.open(""), filename: "28_.png"},
-    {io: URI.open(""), filename: "28_.png"},
-    {io: URI.open(""), filename: "28_.png"},
-    {io: URI.open(""), filename: "28_.png"},
-    {io: URI.open(""), filename: "28_.png"},
-    {io: URI.open(""), filename: "28_.png"},
-    {io: URI.open(""), filename: "28_.png"},
-    {io: URI.open(""), filename: "28_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/03_engineered/01_pom_v1.png"), filename: "28_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/03_engineered/01_pom_v2.png"), filename: "28_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/03_engineered/02_ivory_v1.png"), filename: "28_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/03_engineered/02_ivory_v2.png"), filename: "28_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/03_engineered/03_black_v1.png"), filename: "28_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/03_engineered/03_black_v2.png"), filename: "28_6.png"}
   ])
 
   product29 = Product.create! ({
@@ -666,14 +652,12 @@ require 'open-uri';
     featured_product: false
   })
   product29.photos.attach([
-    {io: URI.open(""), filename: "29_.png"},
-    {io: URI.open(""), filename: "29_.png"},
-    {io: URI.open(""), filename: "29_.png"},
-    {io: URI.open(""), filename: "29_.png"},
-    {io: URI.open(""), filename: "29_.png"},
-    {io: URI.open(""), filename: "29_.png"},
-    {io: URI.open(""), filename: "29_.png"},
-    {io: URI.open(""), filename: "29_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/04_drysense/01_navy_v1.png"), filename: "29_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/04_drysense/01_navy_v2.png"), filename: "29_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/04_drysense/02_black_v1.png"), filename: "29_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/04_drysense/02_black_v2.png"), filename: "29_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/04_drysense/03_ivory_v1.png"), filename: "29_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/04_drysense/03_ivory_v2.png"), filename: "29_6.png"}
   ])
 
   product30 = Product.create! ({
@@ -688,14 +672,12 @@ require 'open-uri';
     featured_product: false
   })
   product30.photos.attach([
-    {io: URI.open(""), filename: "30_.png"},
-    {io: URI.open(""), filename: "30_.png"},
-    {io: URI.open(""), filename: "30_.png"},
-    {io: URI.open(""), filename: "30_.png"},
-    {io: URI.open(""), filename: "30_.png"},
-    {io: URI.open(""), filename: "30_.png"},
-    {io: URI.open(""), filename: "30_.png"},
-    {io: URI.open(""), filename: "30_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/05_shift/01_ivory_v1.png"), filename: "30_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/05_shift/01_ivory_v2.png"), filename: "30_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/05_shift/02_carob_v1.png"), filename: "30_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/05_shift/02_carob_v2.png"), filename: "30_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/05_shift/03_black_v1.png"), filename: "30_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/02_hoodies/05_shift/03_black_v2.png"), filename: "30_6.png"}
   ])
 
   # Mens shorts
@@ -711,14 +693,14 @@ require 'open-uri';
     featured_product: true
   })
   product31.photos.attach([
-    {io: URI.open(""), filename: "31_.png"},
-    {io: URI.open(""), filename: "31_.png"},
-    {io: URI.open(""), filename: "31_.png"},
-    {io: URI.open(""), filename: "31_.png"},
-    {io: URI.open(""), filename: "31_.png"},
-    {io: URI.open(""), filename: "31_.png"},
-    {io: URI.open(""), filename: "31_.png"},
-    {io: URI.open(""), filename: "31_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/01_license/01_spruce_v1.png"), filename: "31_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/01_license/01_spruce_v2.png"), filename: "31_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/01_license/02_rose_v1.png"), filename: "31_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/01_license/02_rose_v2.png"), filename: "31_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/01_license/03_white_v1.png"), filename: "31_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/01_license/03_white_v2.png"), filename: "31_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/01_license/04_black_v1.png"), filename: "31_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/01_license/04_black_v2.png"), filename: "31_8.png"}
   ])
 
   product32 = Product.create! ({
@@ -733,14 +715,10 @@ require 'open-uri';
     featured_product: false
   })
   product32.photos.attach([
-    {io: URI.open(""), filename: "32_.png"},
-    {io: URI.open(""), filename: "32_.png"},
-    {io: URI.open(""), filename: "32_.png"},
-    {io: URI.open(""), filename: "32_.png"},
-    {io: URI.open(""), filename: "32_.png"},
-    {io: URI.open(""), filename: "32_.png"},
-    {io: URI.open(""), filename: "32_.png"},
-    {io: URI.open(""), filename: "32_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/02_commission/01_black_v1.png"), filename: "32_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/02_commission/01_black_v2.png"), filename: "32_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/02_commission/02_navy_v1.png"), filename: "32_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/02_commission/02_navy_v2.png"), filename: "32_4.png"}
   ])
 
   product33 = Product.create! ({
@@ -755,14 +733,12 @@ require 'open-uri';
     featured_product: false
   })
   product33.photos.attach([
-    {io: URI.open(""), filename: "33_.png"},
-    {io: URI.open(""), filename: "33_.png"},
-    {io: URI.open(""), filename: "33_.png"},
-    {io: URI.open(""), filename: "33_.png"},
-    {io: URI.open(""), filename: "33_.png"},
-    {io: URI.open(""), filename: "33_.png"},
-    {io: URI.open(""), filename: "33_.png"},
-    {io: URI.open(""), filename: "33_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/03_linerless/01_carob_v1.png"), filename: "33_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/03_linerless/01_carob_v2.png"), filename: "33_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/03_linerless/02_black_v1.png"), filename: "33_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/03_linerless/02_black_v2.png"), filename: "33_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/03_linerless/03_navy_v1.png"), filename: "33_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/03_linerless/03_navy_v2.png"), filename: "33_6.png"}
   ])
 
   product34 = Product.create! ({
@@ -777,14 +753,10 @@ require 'open-uri';
     featured_product: false
   })
   product34.photos.attach([
-    {io: URI.open(""), filename: "34_.png"},
-    {io: URI.open(""), filename: "34_.png"},
-    {io: URI.open(""), filename: "34_.png"},
-    {io: URI.open(""), filename: "34_.png"},
-    {io: URI.open(""), filename: "34_.png"},
-    {io: URI.open(""), filename: "34_.png"},
-    {io: URI.open(""), filename: "34_.png"},
-    {io: URI.open(""), filename: "34_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/04_surge/01_black_v1.png"), filename: "34_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/04_surge/01_black_v2.png"), filename: "34_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/04_surge/02_carob_v1.png"), filename: "34_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/04_surge/02_carob_v2.png"), filename: "34_4.png"}
   ])
 
   product35 = Product.create! ({
@@ -799,14 +771,12 @@ require 'open-uri';
     featured_product: false
   })
   product35.photos.attach([
-    {io: URI.open(""), filename: "35_.png"},
-    {io: URI.open(""), filename: "35_.png"},
-    {io: URI.open(""), filename: "35_.png"},
-    {io: URI.open(""), filename: "35_.png"},
-    {io: URI.open(""), filename: "35_.png"},
-    {io: URI.open(""), filename: "35_.png"},
-    {io: URI.open(""), filename: "35_.png"},
-    {io: URI.open(""), filename: "35_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/05_bowline/01_spruce_v1.png"), filename: "35_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/05_bowline/01_spruce_v2.png"), filename: "35_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/05_bowline/02_rose_v1.png"), filename: "35_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/05_bowline/02_rose_v2.png"), filename: "35_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/05_bowline/03_navy_v1.png"), filename: "35_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/03_shorts/05_bowline/03_navy_v2.png"), filename: "35_6.png"}
   ])
 
   # Mens shirts
@@ -822,14 +792,14 @@ require 'open-uri';
     featured_product: true
   })
   product36.photos.attach([
-    {io: URI.open(""), filename: "36_.png"},
-    {io: URI.open(""), filename: "36_.png"},
-    {io: URI.open(""), filename: "36_.png"},
-    {io: URI.open(""), filename: "36_.png"},
-    {io: URI.open(""), filename: "36_.png"},
-    {io: URI.open(""), filename: "36_.png"},
-    {io: URI.open(""), filename: "36_.png"},
-    {io: URI.open(""), filename: "36_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/01_metal/01_carob_v1.png"), filename: "36_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/01_metal/01_carob_v2.png"), filename: "36_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/01_metal/02_white_v1.png"), filename: "36_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/01_metal/02_white_v2.png"), filename: "36_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/01_metal/03_black_v1.png"), filename: "36_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/01_metal/03_black_v2.png"), filename: "36_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/01_metal/04_white_v1.png"), filename: "36_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/01_metal/04_white_v2.png"), filename: "36_8.png"}
   ])
 
   product37 = Product.create! ({
@@ -844,14 +814,14 @@ require 'open-uri';
     featured_product: false
   })
   product37.photos.attach([
-    {io: URI.open(""), filename: "37_.png"},
-    {io: URI.open(""), filename: "37_.png"},
-    {io: URI.open(""), filename: "37_.png"},
-    {io: URI.open(""), filename: "37_.png"},
-    {io: URI.open(""), filename: "37_.png"},
-    {io: URI.open(""), filename: "37_.png"},
-    {io: URI.open(""), filename: "37_.png"},
-    {io: URI.open(""), filename: "37_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/02_fundamental/01_merlot_v1.png"), filename: "37_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/02_fundamental/01_merlot_v2.png"), filename: "37_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/02_fundamental/02_spruce_v1.png"), filename: "37_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/02_fundamental/02_spruce_v2.png"), filename: "37_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/02_fundamental/03_black_v1.png"), filename: "37_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/02_fundamental/03_black_v2.png"), filename: "37_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/02_fundamental/04_white_v1.png"), filename: "37_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/02_fundamental/04_white_v2.png"), filename: "37_8.png"}
   ])
 
   product38 = Product.create! ({
@@ -866,14 +836,12 @@ require 'open-uri';
     featured_product: false
   })
   product38.photos.attach([
-    {io: URI.open(""), filename: "38_.png"},
-    {io: URI.open(""), filename: "38_.png"},
-    {io: URI.open(""), filename: "38_.png"},
-    {io: URI.open(""), filename: "38_.png"},
-    {io: URI.open(""), filename: "38_.png"},
-    {io: URI.open(""), filename: "38_.png"},
-    {io: URI.open(""), filename: "38_.png"},
-    {io: URI.open(""), filename: "38_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/03_drysense/01_rose_v1.png"), filename: "38_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/03_drysense/01_rose_v2.png"), filename: "38_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/03_drysense/02_navy_v1.png"), filename: "38_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/03_drysense/02_navy_v2.png"), filename: "38_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/03_drysense/03_black_v1.png"), filename: "38_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/03_drysense/03_black_v2.png"), filename: "38_6.png"}
   ])
 
   product39 = Product.create! ({
@@ -888,14 +856,14 @@ require 'open-uri';
     featured_product: false
   })
   product39.photos.attach([
-    {io: URI.open(""), filename: "39_.png"},
-    {io: URI.open(""), filename: "39_.png"},
-    {io: URI.open(""), filename: "39_.png"},
-    {io: URI.open(""), filename: "39_.png"},
-    {io: URI.open(""), filename: "39_.png"},
-    {io: URI.open(""), filename: "39_.png"},
-    {io: URI.open(""), filename: "39_.png"},
-    {io: URI.open(""), filename: "39_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/04_polo/01_carob_v1.png"), filename: "39_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/04_polo/01_carob_v2.png"), filename: "39_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/04_polo/02_spruce_v1.png"), filename: "39_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/04_polo/02_spruce_v2.png"), filename: "39_4.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/04_polo/03_white_v1.png"), filename: "39_5.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/04_polo/03_white_v2.png"), filename: "39_6.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/04_polo/04_black_v1.png"), filename: "39_7.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/04_polo/04_black_v2.png"), filename: "39_8.png"}
   ])
 
   product40 = Product.create! ({
@@ -910,14 +878,10 @@ require 'open-uri';
     featured_product: false
   })
   product40.photos.attach([
-    {io: URI.open(""), filename: "40_.png"},
-    {io: URI.open(""), filename: "40_.png"},
-    {io: URI.open(""), filename: "40_.png"},
-    {io: URI.open(""), filename: "40_.png"},
-    {io: URI.open(""), filename: "40_.png"},
-    {io: URI.open(""), filename: "40_.png"},
-    {io: URI.open(""), filename: "40_.png"},
-    {io: URI.open(""), filename: "40_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/05_airing/01_black_v1.png"), filename: "40_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/05_airing/01_black_v2.png"), filename: "40_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/05_airing/02_white_v1.png"), filename: "40_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/mens/04_shirts/05_airing/02_white_v2.png"), filename: "40_4.png"}
   ])
 
   # Accessories - belt bags
@@ -933,14 +897,8 @@ require 'open-uri';
     featured_product: true
   })
   product41.photos.attach([
-    {io: URI.open(""), filename: "41_.png"},
-    {io: URI.open(""), filename: "41_.png"},
-    {io: URI.open(""), filename: "41_.png"},
-    {io: URI.open(""), filename: "41_.png"},
-    {io: URI.open(""), filename: "41_.png"},
-    {io: URI.open(""), filename: "41_.png"},
-    {io: URI.open(""), filename: "41_.png"},
-    {io: URI.open(""), filename: "41_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/01_everywherebelt/01_black_v1.png"), filename: "41_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/01_everywherebelt/01_black_v2.png"), filename: "41_2.png"}
   ])
 
   product42 = Product.create! ({
@@ -955,14 +913,8 @@ require 'open-uri';
     featured_product: false
   })
   product42.photos.attach([
-    {io: URI.open(""), filename: "42_.png"},
-    {io: URI.open(""), filename: "42_.png"},
-    {io: URI.open(""), filename: "42_.png"},
-    {io: URI.open(""), filename: "42_.png"},
-    {io: URI.open(""), filename: "42_.png"},
-    {io: URI.open(""), filename: "42_.png"},
-    {io: URI.open(""), filename: "42_.png"},
-    {io: URI.open(""), filename: "42_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/02_fastbelt/01_black_v1.png"), filename: "42_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/02_fastbelt/01_black_v2.png"), filename: "42_2.png"}
   ])
 
   product43 = Product.create! ({
@@ -977,14 +929,8 @@ require 'open-uri';
     featured_product: false
   })
   product43.photos.attach([
-    {io: URI.open(""), filename: "43_.png"},
-    {io: URI.open(""), filename: "43_.png"},
-    {io: URI.open(""), filename: "43_.png"},
-    {io: URI.open(""), filename: "43_.png"},
-    {io: URI.open(""), filename: "43_.png"},
-    {io: URI.open(""), filename: "43_.png"},
-    {io: URI.open(""), filename: "43_.png"},
-    {io: URI.open(""), filename: "43_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/03_wunderlustbelt/01_black_v1.png"), filename: "43_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/03_wunderlustbelt/01_black_v2.png"), filename: "43_2.png"}
   ])
 
   product44 = Product.create! ({
@@ -999,14 +945,10 @@ require 'open-uri';
     featured_product: false
   })
   product44.photos.attach([
-    {io: URI.open(""), filename: "44_.png"},
-    {io: URI.open(""), filename: "44_.png"},
-    {io: URI.open(""), filename: "44_.png"},
-    {io: URI.open(""), filename: "44_.png"},
-    {io: URI.open(""), filename: "44_.png"},
-    {io: URI.open(""), filename: "44_.png"},
-    {io: URI.open(""), filename: "44_.png"},
-    {io: URI.open(""), filename: "44_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/04_everydayback/01_navy_v1.png"), filename: "44_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/04_everydayback/01_navy_v2.png"), filename: "44_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/04_everydayback/02_black_v1.png"), filename: "44_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/04_everydayback/02_black_v2.png"), filename: "44_4.png"}
   ])
 
   product45 = Product.create! ({
@@ -1021,14 +963,8 @@ require 'open-uri';
     featured_product: false
   })
   product45.photos.attach([
-    {io: URI.open(""), filename: "45_.png"},
-    {io: URI.open(""), filename: "45_.png"},
-    {io: URI.open(""), filename: "45_.png"},
-    {io: URI.open(""), filename: "45_.png"},
-    {io: URI.open(""), filename: "45_.png"},
-    {io: URI.open(""), filename: "45_.png"},
-    {io: URI.open(""), filename: "45_.png"},
-    {io: URI.open(""), filename: "45_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/05_newcrew/01_caramel_v1.png"), filename: "45_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/05_newcrew/01_caramel_v2.png"), filename: "45_2.png"}
   ])
 
   product46 = Product.create! ({
@@ -1043,14 +979,10 @@ require 'open-uri';
     featured_product: false
   })
   product46.photos.attach([
-    {io: URI.open(""), filename: "46_.png"},
-    {io: URI.open(""), filename: "46_.png"},
-    {io: URI.open(""), filename: "46_.png"},
-    {io: URI.open(""), filename: "46_.png"},
-    {io: URI.open(""), filename: "46_.png"},
-    {io: URI.open(""), filename: "46_.png"},
-    {io: URI.open(""), filename: "46_.png"},
-    {io: URI.open(""), filename: "46_.png"}
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/06_cityback/01_caramel_v1.png"), filename: "46_1.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/06_cityback/01_caramel_v2.png"), filename: "46_2.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/06_cityback/02_black_v1.png"), filename: "46_3.png"},
+    {io: URI.open("https://lululime.s3.us-west-2.amazonaws.com/accessories/06_cityback/02_black_v2.png"), filename: "46_4.png"}
   ])
 
   puts "Creating cart items..."
