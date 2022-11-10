@@ -8,6 +8,7 @@ const ProductDetailForm = ({product, products, productImgTest, setImg1, setImg2}
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user);
   const [errors, setErrors] = useState([]);
+  const [primaryImgIdx, setPrimaryImgIdx] = useState(0);
 
   const COLOURCODES = {
     "Black": "#212121", 
@@ -71,6 +72,7 @@ const ProductDetailForm = ({product, products, productImgTest, setImg1, setImg2}
     setColour({ ...colourCopy, [colourSelection]: true });
     setColourStyleClassName({ ...colourStyleClassNameCopy, [colourSelection]: "colour-button-checked" });
     setColourDisplay(colourSelection);
+    setPrimaryImgIdx(colourSelectionIdx * 2);
     setImg1(productImgTest[colourSelectionIdx * 2]);
     setImg2(productImgTest[colourSelectionIdx * 2 + 1]);
   }
@@ -96,7 +98,8 @@ const ProductDetailForm = ({product, products, productImgTest, setImg1, setImg2}
           productId: product.id,
           quantity: 1,
           colour: colourDisplay,
-          size: sizeDisplay
+          size: sizeDisplay,
+          primaryImgIdx: primaryImgIdx
         }
       }
       dispatch(createCartItem(newCartItem))

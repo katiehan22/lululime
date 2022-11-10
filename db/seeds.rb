@@ -21,13 +21,18 @@ require 'open-uri';
     password: 'password'
   )
 
+  reviewUser = User.create!(
+    email: 'reviews@mail.com',
+    password: 'password'
+  )
+
   # More users
-  10.times do 
-    User.create!({
-      email: Faker::Internet.unique.email,
-      password: 'password'
-    }) 
-  end
+  # 10.times do 
+  #   User.create!({
+  #     email: Faker::Internet.unique.email,
+  #     password: 'password'
+  #   }) 
+  # end
 
   puts "Creating products..."
 
@@ -607,7 +612,8 @@ require 'open-uri';
     product_id: product1.id,
     quantity: 1, 
     colour: "Black",
-    size: "4"
+    size: "4",
+    primary_img_idx: 0
   })
 
   cartItem2 = CartItem.create! ({
@@ -615,7 +621,8 @@ require 'open-uri';
     product_id: product21.id,
     quantity: 1, 
     colour: "True Navy",
-    size: "M"
+    size: "M",
+    primary_img_idx: 0
   })
 
   puts "Creating reviews..."

@@ -2,17 +2,18 @@
 #
 # Table name: cart_items
 #
-#  id         :bigint           not null, primary key
-#  user_id    :bigint           not null
-#  product_id :bigint           not null
-#  quantity   :integer          not null
-#  colour     :string           not null
-#  size       :string           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id              :bigint           not null, primary key
+#  user_id         :bigint           not null
+#  product_id      :bigint           not null
+#  quantity        :integer          not null
+#  colour          :string           not null
+#  size            :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  primary_img_idx :integer
 #
 class CartItem < ApplicationRecord
-  validates :user_id, :product_id, :quantity, :colour, :size, presence: true
+  validates :user_id, :product_id, :quantity, :colour, :size, :primary_img_idx, presence: true
 
   belongs_to :user,
     primary_key: :id, 
