@@ -11,7 +11,20 @@ import BagPreviewIndex from "../BagPreviewIndex";
 import ReviewIndexItem from "../ReviewIndexItem";
 import ReviewFormModal from "../ReviewFormModal";
 
+import testImg1 from '../../assets/images/color-test/01_black_v1.png';
+import testImg2 from '../../assets/images/color-test/01_black_v2.png';
+import testImg3 from '../../assets/images/color-test/02_icingblue_v1.png';
+import testImg4 from '../../assets/images/color-test/02_icingblue_v2.png';
+import testImg5 from '../../assets/images/color-test/03_navy_v1.png';
+import testImg6 from '../../assets/images/color-test/03_navy_v2.png';
+import testImg7 from '../../assets/images/color-test/04_white_v1.png';
+import testImg8 from '../../assets/images/color-test/04_white_v2.png';
+
 const ProductDetailPage = () => {
+  const productImgTest = [testImg1, testImg2, testImg3, testImg4, testImg5, testImg6, testImg7, testImg8 ];
+  const [img1, setImg1] = useState(productImgTest[0]);
+  const [img2, setImg2] = useState(productImgTest[1]);
+
   const dispatch = useDispatch();
   const { productId } = useParams();
   let productIdInt = parseInt(productId);
@@ -78,7 +91,7 @@ const ProductDetailPage = () => {
         <div className="product-details-page">
           <div className="product-details-top">
             <div className="product-details-img">
-              <img src={testImg} alt=""/>
+              <img src={img1} alt=""/>
               {/* <img src={product.imgUrls[0]} alt="" /> */}
             </div>
 
@@ -93,7 +106,7 @@ const ProductDetailPage = () => {
                 <h3>${product.price} USD</h3>
               </div>
 
-              <ProductDetailForm product={product} products={products}/>
+              <ProductDetailForm product={product} products={products} productImgTest={productImgTest} setImg1={setImg1} setImg2={setImg2}/>
 
               <div className="reviews-anchor" onClick={() => scrollToReviews()}>
                 <i class="fa-regular fa-star"></i>
@@ -126,11 +139,11 @@ const ProductDetailPage = () => {
               </div>
             </div>
             <div className="description-middle">
-              <img src={testImg} alt="" />
+              <img src={img2} alt="" />
               {/* <img src={product.imgUrls[1]} alt="" /> */}
             </div>
             <div className="description-right">
-              <img src={testImg} alt="" />
+              <img src={img1} alt="" />
               {/* <img src={product.imgUrls[0]} alt="" /> */}
             </div>
           </div>

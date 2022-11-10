@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { createCartItem } from "../../store/cart";
 import AddToBagModal from "../AddToBagModal";
 
-const ProductDetailForm = ({product, products}) => {
+const ProductDetailForm = ({product, products, productImgTest, setImg1, setImg2}) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user);
   const [errors, setErrors] = useState([]);
@@ -63,14 +63,16 @@ const ProductDetailForm = ({product, products}) => {
     setSizeDisplay(sizeSelection);
   }
 
-  const handleColour = (colourSelection) => {
+  const handleColour = (colourSelection, colourSelectionIdx) => {
     const colourCopy = { "Black": false, "Icing Blue": false, "True Navy": false, "White": false, "Water Drop": false, "Dark Olive": false, "Green Foliage": false, "Dark Red": false, "Electric Turquoise": false, "Wasabi": false, "Pomegranate": false, "White Opal": false, "Faint Lavender": false, "Smoked Spruce": false, "Heathered Core Ultra Light Grey": false, "Carob Brown": false, "Poolside": false, "Roasted Brown": false, "Graphite Grey": false, "Red Merlot": false, "Natural Ivory": false, "Brier Rose": false, "Burnt Caramel": false };
 
     const colourStyleClassNameCopy = { "Black": "colour-button-unchecked", "Icing Blue": "colour-button-unchecked", "True Navy": "colour-button-unchecked", "White": "colour-button-unchecked", "Water Drop": "colour-button-unchecked", "Dark Olive": "colour-button-unchecked", "Green Foliage": "colour-button-unchecked", "Dark Red": "colour-button-unchecked", "Electric Turquoise": "colour-button-unchecked", "Wasabi": "colour-button-unchecked", "Pomegranate": "colour-button-unchecked", "White Opal": "colour-button-unchecked", "Faint Lavender": "colour-button-unchecked", "Smoked Spruce": "colour-button-unchecked", "Heathered Core Ultra Light Grey": "colour-button-unchecked", "Carob Brown": "colour-button-unchecked", "Poolside": "colour-button-unchecked", "Roasted Brown": "colour-button-unchecked", "Graphite Grey": "colour-button-unchecked", "Red Merlot": "colour-button-unchecked", "Natural Ivory": "colour-button-unchecked", "Brier Rose": "colour-button-unchecked", "Burnt Caramel": "colour-button-unchecked" }
 
     setColour({ ...colourCopy, [colourSelection]: true });
-    setColourStyleClassName({ ...colourStyleClassNameCopy, [colourSelection]: "colour-button-checked" })
+    setColourStyleClassName({ ...colourStyleClassNameCopy, [colourSelection]: "colour-button-checked" });
     setColourDisplay(colourSelection);
+    setImg1(productImgTest[colourSelectionIdx * 2]);
+    setImg2(productImgTest[colourSelectionIdx * 2 + 1]);
   }
 
   // set first color and size as checked by default 
@@ -107,22 +109,22 @@ const ProductDetailForm = ({product, products}) => {
         <div className="colour-buttons-containter">
           <h2>Colour: {colourDisplay}</h2>
           <button 
-            onClick={() => handleColour(product.colours[0])}
+            onClick={() => handleColour(product.colours[0], 0)}
             className={colourStyleClassName[product.colours[0]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[0]]}} >
           </button>
           <button 
-            onClick={() => handleColour(product.colours[1])}
+            onClick={() => handleColour(product.colours[1], 1)}
             className={colourStyleClassName[product.colours[1]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[1]]}}>
           </button>
           <button  
-            onClick={() => handleColour(product.colours[2])}
+            onClick={() => handleColour(product.colours[2], 2)}
             className={colourStyleClassName[product.colours[2]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[2]]}}>
           </button>
           <button 
-            onClick={() => handleColour(product.colours[3])}
+            onClick={() => handleColour(product.colours[3], 3)}
             className={colourStyleClassName[product.colours[3]]} 
             style={{ backgroundColor: COLOURCODES[product.colours[3]]}}>
           </button>
