@@ -43,6 +43,15 @@ export const fetchProductAndRelatedProducts = (productId) => async dispatch => {
   }
 }
 
+export const searchProducts = (query) => async dispatch => {
+  const res = await csrfFetch(`/api/products/search/${query}`);
+
+  if (res.ok) {
+    const products = await res.json();
+    dispatch(receiveProducts(products));
+  }
+}
+
 export default function productsReducer(state={}, action) {
   switch (action.type) {
     case RECEIVE_PRODUCTS:

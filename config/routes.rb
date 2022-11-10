@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :show] do 
       resources :reviews, only: [:index]
     end
+    get '/products/search/:query', to: 'products#search'
     resources :cart_items, only: [:index, :create, :update, :destroy, :show]
     resources :reviews, only: [:create, :update, :destroy]
   end

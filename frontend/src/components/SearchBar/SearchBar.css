@@ -1,0 +1,13 @@
+.search-bar-container {
+  border: 1.5px solid black;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#magnifying-glass {
+  margin-left: 5px;
+  margin-right: 5px;
+}

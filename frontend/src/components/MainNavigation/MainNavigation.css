@@ -7,6 +7,16 @@
   display: flex;
   font-size: 14px;
   align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav-container-left {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav-container-right {
+  display: flex;
 }
 
 #womens-li, #mens-li, #accessories-li {
@@ -16,7 +26,7 @@
 #logo-img {
   width: 40px;
   margin-right: 10px;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .main-nav-li {

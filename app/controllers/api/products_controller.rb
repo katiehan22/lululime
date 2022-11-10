@@ -42,8 +42,6 @@ class Api::ProductsController < ApplicationController
   end
 
   def show 
-    # @product = Product.find_by(id: params[:id])
-    # render :show 
     product_id = params[:id].to_i
     @products = [];
     @products.push(Product.find_by(id: product_id))
@@ -54,5 +52,12 @@ class Api::ProductsController < ApplicationController
     end
 
     render :show
+  end
+
+  def search 
+    query = params[:query]
+    @products = Product.where("name ILIKE ?", "%#{query}%")
+
+    render :index
   end
 end
