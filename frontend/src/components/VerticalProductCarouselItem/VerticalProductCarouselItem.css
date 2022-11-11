@@ -1,0 +1,11 @@
+.vert-carousel-item-img {
+  cursor: pointer;
+}
+
+.vert-carousel-item-container {
+  margin-top: 10px;
+}
+
+.vert-carousel-item-name {
+  font-size: 12px;
+}

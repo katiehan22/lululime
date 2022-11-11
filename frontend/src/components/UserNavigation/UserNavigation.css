@@ -4,12 +4,16 @@
   justify-content: flex-end;
 }
 
+.user-nav i {
+  font-weight: bold;
+}
+
 .user-button {
   border: none;
-  background-color: f1f2f4;
   display: inline-block;
   position: relative;
   font-size: 16px;
+  font-weight: bold;
   padding: 5px;
 }
 
@@ -30,7 +34,3 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
-/* .user-button:hover {
-  border-bottom: 1px solid red;
-} */

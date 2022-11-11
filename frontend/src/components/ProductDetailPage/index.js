@@ -10,6 +10,7 @@ import ProductCarousel from "../ProductCarousel";
 import BagPreviewIndex from "../BagPreviewIndex";
 import ReviewIndexItem from "../ReviewIndexItem";
 import ReviewFormModal from "../ReviewFormModal";
+import VerticalProductCarouselItem from "../VerticalProductCarouselItem";
 
 const ProductDetailPage = () => {
 
@@ -112,9 +113,13 @@ const ProductDetailPage = () => {
               </div>
             </div>
 
-            <div className="product-details-recommended-top">
+            {/* <div className="product-details-recommended-top">
               <h2>You may like</h2>
-            </div>
+              <VerticalProductCarouselItem product={products[1]} />
+              <VerticalProductCarouselItem product={products[2]} />
+              <VerticalProductCarouselItem product={products[3]} />
+              <VerticalProductCarouselItem product={products[4]} />
+            </div> */}
           </div>
 
           <div className="product-description-container">

@@ -34,7 +34,7 @@ const BagPreviewIndexItem = ({cartItem}) => {
                 <p>Quantity {cartItem.quantity}</p>
               </div>
               <div className="bag-preview-index-item-price">
-                <p>${cartItem.productPrice}</p>
+                <p>${(cartItem.productPrice).toFixed(2)}</p>
               </div>
             </div>
           </div>

@@ -37,7 +37,7 @@ const SplashPage = () => {
   }
 
   useEffect(() => {
-    dispatch(fetchProductAndRelatedProducts(19));
+    dispatch(fetchProductAndRelatedProducts(18));
   }, [dispatch])
 
   if(products.length === 0) {

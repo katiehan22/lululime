@@ -81,7 +81,7 @@ const BagIndex = () => {
               <p>Subtotal</p>
             </div>
             <div className="bag-index-summary-subtotal-amount">
-              <p>${calculateSubtotal()}</p>
+              <p>${calculateSubtotal().toFixed(2)}</p>
             </div>
           </div>
           <div className="bag-index-summary-shipping-container">
@@ -97,7 +97,7 @@ const BagIndex = () => {
               <p>Total</p>
             </div>
             <div className="bag-index-summary-total-amount">
-              <p>${calculateSubtotal()}</p>
+              <p>${calculateSubtotal().toFixed(2)}</p>
             </div>
           </div>
           <CheckoutConfirmModal handleCheckout={handleCheckout} cartItems={cartItems} />

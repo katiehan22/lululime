@@ -69,7 +69,7 @@ const BagPreviewIndex = () => {
               <p>Subtotal {calculateNumItems()}</p>
             </div>
             <div className="bag-preview-summary-subtotal-amount">
-              ${calculateSubtotal()}
+              ${calculateSubtotal().toFixed(2)}
             </div>
           </div>
           <div className="bag-preview-summary-shipping-container">

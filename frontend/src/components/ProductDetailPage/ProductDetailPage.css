@@ -15,7 +15,8 @@
 
 .product-details-recommended-top {
   width: 10%;
-  border: 1px dashed black;
+  /* padding: 10px; */
+  /* border: 1px dashed black; */
 }
 
 .product-details-recommended-top h2 {

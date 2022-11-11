@@ -41,7 +41,7 @@ const BagIndexItem = ({cartItem}) => {
             <div className="bag-item-price-qty-container">
               <div className="bag-item-single-price">
                 <p>Item Price</p>
-                <p className="bag-item-price-qty-value">${cartItem.productPrice}</p>
+                <p className="bag-item-price-qty-value">${(cartItem.productPrice).toFixed(2)}</p>
               </div>
               <div className="bag-item-qty">
                 <p>Quantity</p>
@@ -62,7 +62,7 @@ const BagIndexItem = ({cartItem}) => {
               </div>
               <div className="bag-item-total-price">
                 <p>Total Price</p>
-                <p className="bag-item-price-qty-value">${cartItem.productPrice * cartItem.quantity}</p>
+                <p className="bag-item-price-qty-value">${(cartItem.productPrice * cartItem.quantity).toFixed(2)}</p>
               </div>
             </div>
           </div>
