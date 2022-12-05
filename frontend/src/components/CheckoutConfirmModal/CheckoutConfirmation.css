@@ -9,6 +9,12 @@
   flex-wrap: wrap;
 }
 
+.checkout-confirmation-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .checkout-confirmation-header h2 {
   font-size: 30px;
   font-weight: bold;
@@ -22,7 +28,7 @@
   background-color: #d31334;
   color: white;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 #continue-shopping-button:hover {
