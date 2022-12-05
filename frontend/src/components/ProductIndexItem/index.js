@@ -58,6 +58,7 @@ const ProductIndexItem = ({product}) => {
           onMouseLeave={() => setImgSource(product.imgUrls[0])}
           onClick={handleClickToDetailsPage}>
           <img src={imgSource} alt="" />
+          {/* <img src={testImg} alt="" /> */}
         </div>
 
         <div className="product-index-colours-container">

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../../store/products";
 import "./ReviewForm.css";
 import { createReview } from "../../store/reviews";
+import testImg from '../../assets/images/product-item-test.png';
 
 const ReviewForm = ({ productId, setShowReviewModal }) => {
   const dispatch = useDispatch();
@@ -64,11 +65,16 @@ const ReviewForm = ({ productId, setShowReviewModal }) => {
     dispatch(fetchProduct(productId))
   }, [dispatch, productId])
 
+  if (!product) {
+    return null;
+  }
+
   return (
     <>
       <div className="create-review-form-container">
         <div className="review-img">
           <img src={product.imgUrls[0]} alt="" />
+          {/* <img src={testImg} alt="" /> */}
         </div>
         <div className="create-review-form-right">
           <div className="create-review-header">

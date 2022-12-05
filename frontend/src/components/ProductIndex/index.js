@@ -103,6 +103,10 @@ const ProductIndex = () => {
       break;
   }
 
+  if (products.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <div className='product-index-page'>

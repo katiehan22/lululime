@@ -72,7 +72,7 @@ const ProductDetailPage = () => {
     fillStars();
   }, [dispatch, calculatedRoundedRating()])
 
-  if (!product || !product.sizes) {
+  if (!product || !product.sizes || products.length === 0) {
     return null;
   }
 
@@ -83,6 +83,7 @@ const ProductDetailPage = () => {
           <div className="product-details-top">
             <div className="product-details-img">
               <img src={img1} alt=""/>
+              {/* <img src={testImg} alt="" /> */}
             </div>
 
             <div className="product-details-top-middle">
@@ -134,9 +135,11 @@ const ProductDetailPage = () => {
             </div>
             <div className="description-middle">
               <img src={img2} alt="" />
+              {/* <img src={testImg} alt="" /> */}
             </div>
             <div className="description-right">
               <img src={img1} alt="" />
+              {/* <img src={testImg} alt="" /> */}
             </div>
           </div>
 

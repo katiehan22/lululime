@@ -26,6 +26,7 @@ const BagIndexItem = ({cartItem}) => {
       <div className="bag-index-item">
         <div className="bag-index-item-left">
           <img src={imgSource} alt="" />
+          {/* <img src={testImg} alt="" /> */}
         </div>
         <div className="bag-index-item-right">
           <div className="bag-item-name">

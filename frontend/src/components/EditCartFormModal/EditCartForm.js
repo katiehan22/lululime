@@ -117,6 +117,7 @@ const EditCartForm = ({ cartItemId, setShowModal}) => {
       <div className='edit-cart-form-container'>
         <div className='edit-cart-img'>
           <img src={imgSource} alt="" />
+          {/* <img src={testImg} alt="" /> */}
         </div>
         <div className='edit-cart-form-right'>
           <div className='edit-cart-form-right-header'>

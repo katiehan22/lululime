@@ -16,6 +16,7 @@ const BagPreviewIndexItem = ({cartItem}) => {
       <div className="bag-preview-index-item">
         <div className="bag-preview-index-item-img">
           <img src={imgSource} alt="" />
+          {/* <img src={testImg} alt="" /> */}
         </div>
         <div className="bag-preview-index-item-right">
           <div className="bag-preview-index-item-header">

@@ -77,6 +77,7 @@ const ReviewEditForm = ({ review, setShowEditReviewModal }) => {
       <div className="create-review-form-container">
         <div className="review-img">
           <img src={product.imgUrls[0]} alt="" />
+          {/* <img src={testImg} alt="" /> */}
         </div>
         <div className="create-review-form-right">
           <div className="create-review-header">
