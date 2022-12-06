@@ -143,12 +143,12 @@ const ProductDetailPage = () => {
             </div>
           </div>
 
-          <div className="pdp-carousel-container">
+          {/* <div className="pdp-carousel-container">
             <div className='pdp-carousel-header'>
               You may also like
             </div>
             <ProductCarousel products={products} productIdInt={productIdInt}/>
-          </div>
+          </div> */}
 
           <div className="reviews-container">
             <div className="reviews-header-container">

@@ -82,6 +82,7 @@ const ProductIndex = () => {
         default:
           break;
       }
+      break;
     case "accessories":
       switch (subcategory) {
         case undefined:
