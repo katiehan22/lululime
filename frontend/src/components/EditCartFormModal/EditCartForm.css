@@ -8,6 +8,12 @@
   /* width: 417px; */
   margin-right: 2%;
   /* height: 100%; */
+  max-height: 593px;
+  overflow: hidden;
+}
+
+.edit-cart-img img {
+  height: 593px;
 }
 
 .edit-cart-form-right {

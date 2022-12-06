@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+.review-img img {
+  height: 593px;
+}
+
 .create-review-form-right {
   width: 50%;
 }
