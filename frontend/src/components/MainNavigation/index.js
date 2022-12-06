@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from "react";
 import { fetchCartItems } from '../../store/cart';
 import './MainNavigation.css';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo2.png';
 import BagPreviewIndex from '../BagPreviewIndex';
 import bagIcon from '../../assets/images/shoppingbag.png';
 import SearchBar from '../SearchBar';
