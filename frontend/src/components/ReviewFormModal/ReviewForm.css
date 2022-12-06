@@ -5,8 +5,9 @@
 
 .review-img {
   width: 50%;
-  /* max-height: 593px; */
+  max-height: 593px;
   margin-right: 2%;
+  overflow: hidden;
 }
 
 .create-review-form-right {

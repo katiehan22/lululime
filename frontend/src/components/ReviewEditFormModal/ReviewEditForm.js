@@ -139,7 +139,7 @@ const ReviewEditForm = ({ review, setShowEditReviewModal }) => {
               </div>
             </form>
             <div className="create-review-button-container">
-              <button onClick={() => handleSubmitReview()} className="submit-review-button">SUBMIT REVIEW</button>
+              <button onClick={() => handleSubmitReview()} className="submit-review-button">EDIT REVIEW</button>
             </div>
             <ul className="review-form-errors">
               {errors.map(error => <li key={error}>{error}</li>)}
