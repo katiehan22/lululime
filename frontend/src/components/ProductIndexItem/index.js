@@ -50,6 +50,10 @@ const ProductIndexItem = ({product}) => {
     history.push(`/productdetail/${product.id}`)
   }
 
+  if (!product) {
+    return null;
+  }
+
   return (
     <>
       <div className="product-index-item-container" >
