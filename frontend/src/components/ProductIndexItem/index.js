@@ -50,7 +50,7 @@ const ProductIndexItem = ({product}) => {
     history.push(`/productdetail/${product.id}`)
   }
 
-  if (!product) {
+  if (!product || product.imgUrls.length === 0) {
     return null;
   }
 

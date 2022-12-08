@@ -22,8 +22,13 @@ const ProductDetailPage = () => {
 
   let product = products.find(product => product.id === productIdInt);
 
+  // console.log(product, "product");
+  // console.log(product.imgUrls.length, "productImgUrls");
+
   const [img1, setImg1] = useState(product.imgUrls[0]);
   const [img2, setImg2] = useState(product.imgUrls[1]);
+  // const [img1, setImg1] = useState("");
+  // const [img2, setImg2] = useState("");
 
   const scrollToReviews = () => {
     document.querySelector('.reviews-container').scrollIntoView({behavior: "smooth"});
@@ -63,16 +68,25 @@ const ProductDetailPage = () => {
     setStarStyles(starStylesCopy);
   }
 
+  const setImages = () => {
+    console.log(product, "product");
+    if(product) {
+      setImg1(product.imgUrls[0]);
+      setImg2(product.imgUrls[1]);
+    } 
+  }
+
   useEffect(() => {
     dispatch(fetchProductAndRelatedProducts(productId));
     dispatch(fetchReviews(productId));
+    // setImages();
   }, [dispatch, productId])
 
   useEffect(() => {
     fillStars();
   }, [dispatch, calculatedRoundedRating()])
 
-  if (!product || !product.sizes || products.length === 0) {
+  if (!product || product.imgUrls.length === 0 || !product.sizes || products.length === 0) {
     return null;
   }
 
@@ -82,7 +96,8 @@ const ProductDetailPage = () => {
         <div className="product-details-page">
           <div className="product-details-top">
             <div className="product-details-img">
-              <img src={img1} alt=""/>
+              <img src={img1} alt="" />
+              {/* <img src={product.imgUrls[0]} alt=""/> */}
               {/* <img src={testImg} alt="" /> */}
             </div>
 
@@ -134,10 +149,12 @@ const ProductDetailPage = () => {
               </div>
             </div>
             <div className="description-middle">
+              {/* <img src={product.imgUrls[1]} alt="" /> */}
               <img src={img2} alt="" />
               {/* <img src={testImg} alt="" /> */}
             </div>
             <div className="description-right">
+              {/* <img src={product.imgUrls[0]} alt="" /> */}
               <img src={img1} alt="" />
               {/* <img src={testImg} alt="" /> */}
             </div>

@@ -106,6 +106,10 @@ const ProductDetailForm = ({product, products, setImg1, setImg2}) => {
     }
   }
 
+  if (!product || !product.sizes || products.length === 0) {
+    return null;
+  }
+  
   return (
     <>
       <div className="product-details-form-container">

@@ -21,6 +21,10 @@ const BagIndexItem = ({cartItem}) => {
     }
   }
 
+  if (!cartItem) {
+    return null;
+  }
+
   return (
     <>
       <div className="bag-index-item">
