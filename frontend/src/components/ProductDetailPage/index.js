@@ -22,13 +22,12 @@ const ProductDetailPage = () => {
 
   let product = products.find(product => product.id === productIdInt);
 
-  // console.log(product, "product");
-  // console.log(product.imgUrls.length, "productImgUrls");
+  console.log(product, "product");
+  console.log(reviews, "reviews");
+  console.log(product.imgUrls.length, "productImgUrls");
 
   const [img1, setImg1] = useState(product.imgUrls[0]);
   const [img2, setImg2] = useState(product.imgUrls[1]);
-  // const [img1, setImg1] = useState("");
-  // const [img2, setImg2] = useState("");
 
   const scrollToReviews = () => {
     document.querySelector('.reviews-container').scrollIntoView({behavior: "smooth"});

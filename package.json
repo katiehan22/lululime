@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/katiehan22/lululime/issues"
   },
-  "homepage": "https://github.com/katiehan22/lululime#readme"
+  "homepage": "https://github.com/katiehan22/lululime#readme",
+  "dependencies": {
+    "redux-persist": "^6.0.0"
+  }
 }
