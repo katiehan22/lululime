@@ -11,6 +11,8 @@ const BagPreviewIndexItem = ({cartItem}) => {
     dispatch(deleteCartItem(cartItem.id))
   }
 
+  if (!cartItem) return null;
+
   return (
     <>
       <div className="bag-preview-index-item">
