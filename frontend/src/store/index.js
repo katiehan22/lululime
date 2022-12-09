@@ -4,6 +4,8 @@ import productsReducer from './products';
 import sessionReducer from './session';
 import cartItemsReducer from './cart';
 import reviewsReducer from './reviews';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer, persistStore } from 'redux-persist';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -11,6 +13,13 @@ const rootReducer = combineReducers({
   cartItems: cartItemsReducer,
   reviews: reviewsReducer
 });
+
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 let enhancer;
 
@@ -23,8 +32,14 @@ if (process.env.NODE_ENV === 'production') {
   enhancer = composeEnhancers(applyMiddleware(thunk, logger));
 }
 
-const configureStore = (preloadedState) => {
-  return createStore(rootReducer, preloadedState, enhancer);
-};
+// const configureStore = (preloadedState) => {
+//   // return createStore(rootReducer, preloadedState, enhancer);
+//   return createStore(persistedReducer, preloadedState, enhancer);
+// };
 
-export default configureStore;
+const store = createStore(persistedReducer, enhancer);
+
+const persistor = persistStore(store);
+
+// export default configureStore;
+export {persistor, store}
