@@ -9,7 +9,7 @@ const ProductCarousel = ({ products, productIdInt }) => {
   // let product2 = products.find(product => product.id === ((productIdInt + 1) % 46 + 1));
   // let product3 = products.find(product => product.id === ((productIdInt + 2) % 46 + 1));
   // let product4 = products.find(product => product.id === ((productIdInt + 3) % 46 + 1));
-  if (products.length === 0 ) {
+  if (products.length < 4 ) {
     return null;
   }
 
