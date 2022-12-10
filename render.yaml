@@ -1,7 +1,7 @@
 databases:
   - name: lululime
     user: lululime
-    plan: free
+    plan: starter
     region: oregon
 
 services:

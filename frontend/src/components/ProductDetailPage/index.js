@@ -22,10 +22,6 @@ const ProductDetailPage = () => {
 
   let product = products.find(product => product.id === productIdInt);
 
-  console.log(product, "product");
-  console.log(reviews, "reviews");
-  console.log(product.imgUrls.length, "productImgUrls");
-
   const [img1, setImg1] = useState(product.imgUrls[0]);
   const [img2, setImg2] = useState(product.imgUrls[1]);
 
@@ -68,7 +64,6 @@ const ProductDetailPage = () => {
   }
 
   const setImages = () => {
-    console.log(product, "product");
     if(product) {
       setImg1(product.imgUrls[0]);
       setImg2(product.imgUrls[1]);
