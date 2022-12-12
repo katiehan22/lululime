@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
-import { fetchProduct, fetchProductAndRelatedProducts } from "../../store/products";
+import { fetchProduct, fetchProductAndRelatedProducts, removeProducts } from "../../store/products";
 import { fetchReviews } from "../../store/reviews";
 import "./ProductDetailPage.css";
 import testImg from '../../assets/images/product-item-test.png';
@@ -22,8 +22,10 @@ const ProductDetailPage = () => {
 
   let product = products.find(product => product.id === productIdInt);
 
-  const [img1, setImg1] = useState(product.imgUrls[0]);
-  const [img2, setImg2] = useState(product.imgUrls[1]);
+  // const [img1, setImg1] = useState(product.imgUrls[0]);
+  // const [img2, setImg2] = useState(product.imgUrls[1]);
+  const [img1, setImg1] = useState("");
+  const [img2, setImg2] = useState("");
 
   const scrollToReviews = () => {
     document.querySelector('.reviews-container').scrollIntoView({behavior: "smooth"});
@@ -73,12 +75,17 @@ const ProductDetailPage = () => {
   useEffect(() => {
     dispatch(fetchProductAndRelatedProducts(productId));
     dispatch(fetchReviews(productId));
+    return () => dispatch(removeProducts());
     // setImages();
   }, [dispatch, productId])
 
   useEffect(() => {
     fillStars();
   }, [dispatch, calculatedRoundedRating()])
+
+  useEffect(() => {
+    setImages();
+  }, [productId])
 
   if (!product || product.imgUrls.length === 0 || !product.sizes || products.length === 0) {
     return null;
@@ -154,12 +161,12 @@ const ProductDetailPage = () => {
             </div>
           </div>
 
-          {/* <div className="pdp-carousel-container">
+          <div className="pdp-carousel-container">
             <div className='pdp-carousel-header'>
               You may also like
             </div>
             <ProductCarousel products={products} productIdInt={productIdInt}/>
-          </div> */}
+          </div>
 
           <div className="reviews-container">
             <div className="reviews-header-container">

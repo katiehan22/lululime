@@ -2,7 +2,7 @@ import './ProductIndex.css';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { fetchProducts } from '../../store/products';
+import { fetchProducts, removeProducts } from '../../store/products';
 import ProductIndexItem from '../ProductIndexItem';
 import womens from '../../assets/images/index-pov/womens.png';
 import womensLeggings from '../../assets/images/index-pov/womens-leggings.png';
@@ -25,6 +25,7 @@ const ProductIndex = () => {
 
   useEffect(() => {
     dispatch(fetchProducts(category, subcategory));
+    return () => dispatch(removeProducts());
   }, [dispatch, category, subcategory])
 
   let headerText = "";

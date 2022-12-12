@@ -2,6 +2,7 @@ import csrfFetch from "./csrf";
 
 const RECEIVE_PRODUCTS = "products/RECEIVE_PRODUCTS";
 const RECEIVE_PRODUCT = "products/RECEIVE_PRODUCT";
+const REMOVE_PRODUCTS = 'products/REMOVE_PRODUCTS';
 
 export const receiveProducts = (products) => {
   return {
@@ -14,6 +15,12 @@ export const receiveProduct = (product) => {
   return {
     type: RECEIVE_PRODUCT,
     product
+  }
+}
+
+export const removeProducts = () => {
+  return {
+    type: REMOVE_PRODUCTS
   }
 }
 
@@ -57,7 +64,9 @@ export default function productsReducer(state={}, action) {
     case RECEIVE_PRODUCTS:
       return {...action.products};
     case RECEIVE_PRODUCT:
-      return { ...state, [action.product.id]: action.product }
+      return { ...state, [action.product.id]: action.product };
+    case REMOVE_PRODUCTS:
+      return {};
     default:
       return state;
   }

@@ -9,7 +9,7 @@ import SplashMembership from "../SplashMembership";
 import ProductCarousel from "../ProductCarousel";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchProductAndRelatedProducts } from "../../store/products";
+import { fetchProductAndRelatedProducts, removeProducts } from "../../store/products";
 
 const SplashPage = () => {
   const history = useHistory();
@@ -38,9 +38,10 @@ const SplashPage = () => {
 
   useEffect(() => {
     dispatch(fetchProductAndRelatedProducts(18));
+    return () => dispatch(removeProducts());
   }, [dispatch])
 
-  if(products.length === 0) {
+  if(products.length < 5) {
     return null;
   }
 

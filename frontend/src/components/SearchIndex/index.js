@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
-import { searchProducts } from "../../store/products";
+import { removeProducts, searchProducts } from "../../store/products";
 import "./SearchIndex.css";
 import ProductIndexItem from "../ProductIndexItem";
 
@@ -50,6 +50,7 @@ const SearchIndex = () => {
 
   useEffect(() => {
     dispatch(searchProducts(query));
+    return () => dispatch(removeProducts());
   }, [dispatch, query]);
 
   return (
