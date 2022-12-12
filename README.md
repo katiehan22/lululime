@@ -1,9 +1,9 @@
 # Lululime
 
-Live Site: [Lululime](https://lululime.onrender.com/)
+Check out the live site here! [https://lululime.onrender.com/](https://lululime.onrender.com/)
 
 ## Background
-Lululime is a full-stack React/Redux website clone of [Lululemon](https://shop.lululemon.com/), the athletic apparel retailer. 
+Lululime is a full-stack React/Redux website clone of Lululemon, the athletic apparel retailer. 
 
 ## Features
 ### User Authentication - Login/Signup
@@ -40,3 +40,28 @@ Lululime is a full-stack React/Redux website clone of [Lululemon](https://shop.l
 * Ruby on Rails
 * PostgreSQL
 * AWS S3
+
+## Code Snippets
+### useState Hook
+```javascript
+const [ratingSelection, setRatingSelection] = useState(review.rating);
+const [nickname, setNickname] = useState(review.nickname);
+const [title, setTitle] = useState(review.title);
+const [body, setBody] = useState(review.body);
+```
+Above is a snippet from the Edit Review form. The useState hook is used to pre-fill the form with the values of the existing review so the user can easily edit the content. 
+
+### jBuilder Views
+```ruby
+@cart_items.each do |cart_item|
+  json.set! cart_item.id do 
+    json.extract! cart_item, :id, :user_id, :product_id, :quantity, :colour, :size, :primary_img_idx
+    json.product_name cart_item.product.name
+    json.product_price cart_item.product.price
+    json.product_colours cart_item.product.colours
+    json.product_sizes cart_item.product.sizes
+    json.product_img_urls cart_item.product.photos.map { |file| file.url }
+  end
+end
+```
+jBuilder was used to format the JSON responses from the backend to store in the frontend state. It allowed for less requests to the backend through active record associations.
